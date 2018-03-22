@@ -1,0 +1,15 @@
+*.aux
+*.bak
+*.dvi
+*.log
+*.out
+*.synctex.gz
+*.tdo
+*.spl
+*.bbl
+*.blg
+*.idx
+*.lof
+*.lot
+*.toc
+*.bib
