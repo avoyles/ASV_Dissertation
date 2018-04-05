@@ -5,7 +5,10 @@
 % The Current Maintainer of this work is Paul Vojta.
 
 \documentclass{ucbthesis}
-\usepackage{natbib}
+% \usepackage[sort&compress]{natbib}
+% \usepackage{natbib}
+
+\usepackage{lineno}
 
 \usepackage[american]{babel}
 \usepackage{amsmath}
@@ -27,8 +30,10 @@
 \usepackage{mcode}
 \usepackage [autostyle, english = american]{csquotes}
 % \usepackage{longtable}
-\usepackage{subcaption}
-\usepackage{booktabs,siunitx}
+
+% \let\subcaption\undefined
+% \usepackage{subcaption}
+\usepackage{booktabs}
 % \usepackage{gensymb}
 \usepackage[normalem]{ulem}
 
@@ -43,6 +48,89 @@
 \usepackage[section]{placeins}
 \usepackage{multirow}
 
+
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+
+\usepackage{fancyvrb}
+\usepackage{color}
+
+\usepackage[]{siunitx}
+\usepackage{textcomp}
+
+% Insert PDF multiple pages
+\usepackage{pdfpages}
+
+
+ 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+% Sin and Cos with auto-parentheses 
+\newcommand{\sinp}[1]{\sin{\left( #1\right)}}
+\newcommand{\cosp}[1]{\cos{\left( #1\right)}}
+\newcommand{\expp}[1]{\exp{\left( #1\right)}}
+\newcommand{\sinhp}[1]{\sinh{\left( #1\right)}}
+\newcommand{\lnp}[1]{\ln{\left( #1\right)}}
+\newcommand{\pp}[1]{\left( #1\right)}
+\newcommand{\sci}[2]{ #1 \cdot 10^{#2}\ }
+\newcommand{\angstrom}{\mbox{\normalfont\AA}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
+\newcommand{\textred}[1]{\textcolor{red}{ #1}}
+\newcommand{\redactedit}[1]{\textcolor{blue}{ \sout{#1}}}
+
+\newcommand{\cmmnt}[1]{}
+
+
+
+
+\newcommand{\colornote}[1]{\textcolor{red}{ COMMENT\large\footnote{\textcolor{red}{#1}}}}
+
+\newcommand{\mycomment}[1]{\todo[color=blue!20!white,inline]{ASV: #1}} 
+
+\newcommand{\etal}{\emph{et\,al.}} 
+
+
+% Tweak sim for better inline text tilde
+\newcommand{\mytilde}{\raisebox{0.5ex}{\texttildelow}}
+% \newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle‌​\sim$}}
+
+\sisetup{separate-uncertainty=true,table-space-text-post = *}
+
+\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
+
+% \newcounter{subfigure}[figure]
+
+\newcommand{\subfigimg}[4][,]{%
+  \setbox1=\hbox{\includegraphics[#1]{#3}}% Store image in box
+  \leavevmode\rlap{\usebox1}% Print image
+  \rlap{\hspace*{#4pt}\raisebox{\dimexpr\ht1-2\baselineskip}{#2}}% Print label
+  \phantom{\usebox1}% Insert appropriate spcing
+}
+% \subfigimg[scale=0.59]{a)}{./figures/after_minimization_plot_alt.pdf}{80pt}
+
+
+\makeatletter
+% Make common definition of mean
+\newcommand*\mean[1]{\overline{#1\raisebox{3mm}{}}}
+
+\makeatother
 
 % \usepackage{biblatex}
 
@@ -60,28 +148,33 @@
 
 \newtheorem{theorem}{Jibberish}
 
-\bibliography{../../library}
+
+
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
 
 \begin{document}
 
+\sisetup{math-micro=\text{µ},text-micro=µ}
+
+
 % Declarations for Front Matter
 
-\title{Eulerian Knowledge Prexy and Lyman Zig on Wiggly}
-\author{Tom Lifesaver}
-\degreesemester{Spring}
-\degreeyear{1995}
+\title{Nuclear Excitation Functions for Production of Novel Medical Radionuclides}
+\author{Andrew Steven Voyles}
+\degreesemester{Summer}
+\degreeyear{2018}
 \degree{Doctor of Philosophy}
-\chair{Professor Richard Francis Sony}
-\othermembers{Professor Roger Spam \\
-  Associate Professor Michael Chex}
-\numberofmembers{3}
+\chair{Adjunct Professor Lee  Bernstein}
+\othermembers{Professor Emeritus Joseph Cerny \\
+  Assistant Professor Rebecca Abergel\\
+  Professor Karl van Bibber}
+\numberofmembers{4}
 % Previous degrees are no longer to be listed on the title page.
 % \prevdegrees{B.A. (University of Northern South Dakota at Hoople) 1978 \\
 %   M.S. (Ed's School of Quantum Mechanics and Muffler Repair) 1989}
-\field{Mathematics}
+\field{Engineering --- Nuclear Engineering}
 % Designated Emphasis -- this is optional, and rare
 % \emphasis{Colloidal Telemetry}
 % This is optional, and rare
@@ -153,5 +246,7 @@ And exposition? Of go. No upstairs do fingering.
 
 
 % \printbibliography
+\bibliography{../library}
+\bibliographystyle{ieeetr}
 
 \end{document}

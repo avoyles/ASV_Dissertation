@@ -20,8 +20,8 @@
 %%% ====================================================================
 %%%  @LaTeX-class-file{
 %%%     filename        = "ucbthesis.cls",
-%%%     version         = "3.4",
-%%%     date            = "11 April 2014",
+%%%     version         = "3.5",
+%%%     date            = "1 June 2015",
 %%%     license         = "LPPL",
 %%%     codetable       = "ISO/ASCII",
 %%%     keywords        = "LaTeX, ucbthesis",
@@ -108,6 +108,9 @@
 %%%			   dissertation/thesis committee, joint degrees, and
 %%%			   degrees with a Designated Emphasis.
 %%%
+%%%			   Version 3.5 adds the designated emphasis to the
+%%%			   abstract (which is required).
+%%%
 %%%			   A problem that some people have had is
 %%%			   that you can't use \pagestyle{headings}
 %%%			   and \markboth if you use \part.  The solution
@@ -117,7 +120,7 @@
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ucbthesis}[2014/04/11 v3.4 University of California, Berkeley Thesis Class]
+\ProvidesClass{ucbthesis}[2015/06/01 v3.5 University of California, Berkeley Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -534,6 +537,10 @@ by\par
 \@author\par
 \vspace{.1in}
 {\@degree} in \@field\par
+    \ifdefined\@emphasis
+      and the Designated Emphasis in\par
+      {\@emphasis}\par
+    \fi
 \vspace{.1in}
 University of California, {\@campus}\par
 \vspace{.1in}
