@@ -5,13 +5,12 @@
 % The Current Maintainer of this work is Paul Vojta.
 
 \documentclass{ucbthesis}
-% \usepackage[sort&compress]{natbib}
+\usepackage[square,numbers,sort&compress]{natbib}
 % \usepackage{natbib}
 
 \usepackage{lineno}
 
 \usepackage[american]{babel}
-\usepackage{amsmath}
 \usepackage[version=3]{mhchem} 
 % \usepackage{fixltx2e}
 % \usepackage{refcount}
@@ -22,7 +21,7 @@
 
 \usepackage{xfrac}
 \usepackage{lmodern}
-\usepackage[hidelinks]{hyperref}
+% \usepackage[hidelinks]{hyperref}
 % \usepackage{cool}
 % \usepackage{cancel}
 \usepackage{microtype}
@@ -36,6 +35,8 @@
 \usepackage{booktabs}
 % \usepackage{gensymb}
 \usepackage[normalem]{ulem}
+\usepackage{adjustbox}
+
 
 % \usepackage{mathtools, cuted}
 
@@ -61,8 +62,8 @@
 \usepackage[]{siunitx}
 \usepackage{textcomp}
 
-% Insert PDF multiple pages
-\usepackage{pdfpages}
+% % Insert PDF multiple pages
+% \usepackage{pdfpages}
 
 
  
@@ -115,7 +116,13 @@
 
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
 
-% \newcounter{subfigure}[figure]
+% \usepackage[caption=false]{subfig}
+\usepackage{subfig}
+% Remove a), b), etc labels from subfigs
+% \captionsetup[subfigure]{labelformat=empty}
+
+% \usepackage{subfigure}
+% \usepackage[subfigure]{tocloft}
 
 \newcommand{\subfigimg}[4][,]{%
   \setbox1=\hbox{\includegraphics[#1]{#3}}% Store image in box
@@ -123,6 +130,13 @@
   \rlap{\hspace*{#4pt}\raisebox{\dimexpr\ht1-2\baselineskip}{#2}}% Print label
   \phantom{\usebox1}% Insert appropriate spcing
 }
+% Old version of macro
+% \newcommand{\subfigimg}[3][,]{%
+%   \setbox1=\hbox{\includegraphics[#1]{#3}}% Store image in box
+%   \leavevmode\rlap{\usebox1}% Print image
+%   \rlap{\hspace*{50pt}\raisebox{\dimexpr\ht1-2\baselineskip}{#2}}% Print label
+%   \phantom{\usebox1}% Insert appropriate spcing
+% }
 % \subfigimg[scale=0.59]{a)}{./figures/after_minimization_plot_alt.pdf}{80pt}
 
 
@@ -163,7 +177,6 @@
 %   \ifnum\prevgraf<4 \vspace{\baselineskip}\fi
 % }
 \def\Fpar{\hfil\vadjust{\vskip\parskip}\break\indent}
-
 \makeatletter
 \let\ltx@@chapter\@chapter
 \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
@@ -173,14 +186,35 @@
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
+\hyphenation{gamma-rays}
+
 
 % Increase head height for long chapter titles
 \setlength{\headheight}{30pt}
 
+% Custom multirows package, to fix bug with CTAN release
+\usepackage{multirows}
+
+
+% Try to fix compatibility beteween hyperref and memoir 
+\let\subcaption\relax
+\let\subfloat\relax
+
+\let\captioncaption\caption
+\usepackage[hidelinks,plainpages=false]{hyperref}
+\let\caption\captioncaption
+\usepackage{amsmath}
+
+
+% Sick of fighting siunitx - consistent text micro symbol
+% DO NOT uncomment this!!! or else broken unicode (Âţ)
+% \sisetup{math-micro=\text{µ},text-micro=µ}
+% \si\micro
+\newcommand{\mmicro}{\si\micro} 
+
 
 \begin{document}
 
-\sisetup{math-micro=\text{µ},text-micro=µ}
 
 
 % Declarations for Front Matter
@@ -228,7 +262,9 @@ And exposition? Of go. No upstairs do fingering. Or obstructive, or purposeful.
 In the glitter. For so talented. Which is confines cocoa accomplished.
 Masterpiece as devoted. My primal the narcotic. For cine? To by recollection
 bleeding. That calf are infant. In clause. Be a popularly. A as midnight
-transcript alike. Washable an acre. To canned, silence in foreign.
+transcript alike. Washable an acre. To canned, silence in foreign.\\\vspace{2cm}
+
+Soli Deo gloria
 \end{center}
 \vfil\null
 \end{dedication}
