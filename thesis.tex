@@ -150,9 +150,33 @@
 
 
 
+% Set up drop caps for start of each chapter
+% \def\pstart#1{\noindent\smash{\lower3ex\hbox{\llap{\Cal#1}}\hskip-.2em}
+%   \parshape=3 1.5em \dimexpr\hsize-1.5em 2em \dimexpr\hsize-2em 0pt \hsize}
+%   % \parshape x (=number of lines) y (=amount of indent) i (=textwidth) [yi, yi,...]
+% See:
+% https://tex.stackexchange.com/questions/769/how-can-i-create-documents-in-latex-using-a-calligraphic-first-letter-for-chapte/10260#10260
+\usepackage{lettrine}
+\usepackage{xstring}
+% \pretocmd{\lettrine}{\checklettrine}{}{}
+% \newcommand{\checklettrine}{%
+%   \ifnum\prevgraf<4 \vspace{\baselineskip}\fi
+% }
+\def\Fpar{\hfil\vadjust{\vskip\parskip}\break\indent}
+
+\makeatletter
+\let\ltx@@chapter\@chapter
+\def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
+% \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4,nindent=0em]{\StrLeft{#3}{1}}{\@gobble#3}\ }
+\makeatother
+
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
+
+% Increase head height for long chapter titles
+\setlength{\headheight}{30pt}
+
 
 \begin{document}
 
@@ -237,9 +261,11 @@ And exposition? Of go. No upstairs do fingering.
 
 % (Optional) \part{First Part}
 
-\include{chap1}
-\include{chap2}
-\include{chap3}
+\include{introduction}
+\include{nb_chapter}
+\include{fe_chapter}
+\include{hfng_chapter}
+\include{conclusions}
 
 % \appendix
 % \chapter{More Monticello Candidates}
