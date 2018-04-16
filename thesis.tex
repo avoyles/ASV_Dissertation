@@ -172,17 +172,85 @@
 % https://tex.stackexchange.com/questions/769/how-can-i-create-documents-in-latex-using-a-calligraphic-first-letter-for-chapte/10260#10260
 \usepackage{lettrine}
 \usepackage{xstring}
-% \pretocmd{\lettrine}{\checklettrine}{}{}
-% \newcommand{\checklettrine}{%
-%   \ifnum\prevgraf<4 \vspace{\baselineskip}\fi
+% % \pretocmd{\lettrine}{\checklettrine}{}{}
+% % \newcommand{\checklettrine}{%
+% %   \ifnum\prevgraf<4 \vspace{\baselineskip}\fi
+% % }
+% \def\Fpar{\hfil\vadjust{\vskip\parskip}\break\indent}
+% \makeatletter
+% \let\ltx@@chapter\@chapter
+% \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
+% % \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4,nindent=0em]{\StrLeft{#3}{1}}{\@gobble#3}\ }
+% \makeatother
+% Try new version, with manual macro trigger
+% See:
+% https://tex.stackexchange.com/questions/186701/thoughts-on-turning-this-dropcap-lettrine-code-into-a-macro
+%% macros
+% \def\declCap #1#2{\sxdef{cap:=#1}{#2}}
+% \def\Capinsert{\def\leftCapmaterial{}\futurelet\next\CapinsertA}
+% \def\CapinsertA{\ifx\next\bgroup \expandafter\CapinsertB \else \expandafter\CapinsertC \fi}
+% \def\CapinsertB #1{\def\leftCapmaterial{#1}\CapinsertC}
+% \def\CapinsertC #1{\par
+%   \isdefined{cap:=#1}\iftrue \edef\tmp{\csname cap:=#1\endcsname}%
+%                      \else   \edef\tmp{\csname cap:=default\endcsname}\fi
+%   \setbox0=\hbox{{\thefontsize[\expandafter\ignorept\the\Capsize]\Capprefix#1}\kern\Capafter}%
+%   \expandafter \CapinsertD \tmp,,%  
+%   \noindent\kern-\firstlineindent
+%       \rlap{\kern-\protrudeCap\ptem\llap{\leftCapmaterial}%
+%               \vbox to0pt{\kern-\Capabove\box0\vss}}%
+%   \kern\firstlineindent
 % }
-\def\Fpar{\hfil\vadjust{\vskip\parskip}\break\indent}
-\makeatletter
-\let\ltx@@chapter\@chapter
-\def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
-% \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4,nindent=0em]{\StrLeft{#3}{1}}{\@gobble#3}\ }
-\makeatother
+% \def\CapinsertD #1;{\tmpnum=1 \let\firstlineindent=\undefined
+%    \def\parshapeparams{}\def\protrudeCap{#1}\CapinsertE}
+% \def\CapinsertE #1,{\ifx,#1,\parshape =\tmpnum \parshapeparams 0pt \hsize
+%   \else
+%      \advance\tmpnum by1
+%      \tmpdim=\wd0 \advance\tmpdim by-#1\ptem \advance\tmpdim by-\protrudeCap\ptem
+%      \edef\parshapeparams{\parshapeparams\the\tmpdim}%
+%      \ifx\firstlineindent\undefined \let\firstlineindent\parshapeparams \fi
+%      \advance\tmpdim by-\hsize \tmpdim=-\tmpdim
+%      \edef\parshapeparams{\parshapeparams\the\tmpdim}%
+%      \expandafter \CapinsertE \fi
+% }
+% \def\hboxshift#1#2{\vbox to0pt{\vss\hbox{#2}\kern-#1}}
+% 
+% %% data declarations:
+% 
+% \newdimen\ptem     \ptem=.1em
+% \newdimen\Capsize  \Capsize=44\ptem
+% \newdimen\Capabove \Capabove=8\ptem
+% \newdimen\Capafter \Capafter=1\ptem
+% \def\Capprefix{\localcolor\Red}
+% 
+% \declCap {default} {0;0,0,0}
 
+% \def\Capinsert{\def\leftCapmaterial{}\futurelet\next\CapinsertA}
+% \def\Capinsert#1{\lettrine[lines=4]{\StrLeft{#1}{1}}{\@gobble#1}\ }
+\def\Capinsertold#1{\lettrine[lines=4]{\StrLeft{#1}{1}}{}\ }
+% \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
+
+
+\makeatletter
+
+% \usepackage{graphicx}
+
+\newlength\CLett% Nuova dimensione
+
+ \newcommand*\Capinsert[3][2]{% #1 lettera da ingrandire #2 testo in maiuscoletto
+    \par
+    \noindent
+    \setbox8\hbox{\textsc{#3}}%
+    \setbox\z@\hbox{%
+        \resizebox{!}{\dimexpr#1\baselineskip-\baselineskip+\ht8\relax}{\huge#2}%
+    }%
+    \CLett=\wd\z@%
+    \hangindent\CLett
+    \hangafter-#1\relax
+    \raisebox{\dimexpr-#1\baselineskip+\baselineskip\relax}[0pt][0pt]%
+        {\llap{\box\z@\kern1pt}}{\unhbox8}%
+}
+
+\makeatother
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -211,6 +279,21 @@
 % \sisetup{math-micro=\text{µ},text-micro=µ}
 % \si\micro
 \newcommand{\mmicro}{\si\micro} 
+
+
+% Setup custom MCNP listings style for including code
+\lstdefinelanguage{MCNP6}{
+    morekeywords={IMP:, ble, blt, bne,
+%         ldr, str,
+%         r0, r1, r2, r3, r4, r5, r6, r7, rr8, r9, r10, r11, r12,
+          P=},
+    sensitive=false, % keywords are not case-sensitive
+    morecomment=[l]{C\ }, % l is for line comment
+    morecomment=[l]{\$ }, % l is for line comment
+    morecomment=[l]{TITLE}, % l is for line comment
+    morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+    morestring=[b]" % defines that strings are enclosed in double quotes
+} %
 
 
 \begin{document}
@@ -303,12 +386,21 @@ And exposition? Of go. No upstairs do fingering.
 \include{hfng_chapter}
 \include{conclusions}
 
-% \appendix
-% \chapter{More Monticello Candidates}
 
-
+{             %%<--- start the group
+  \backmatter
 % \printbibliography
 \bibliography{../library}
 \bibliographystyle{ieeetr}
+  }             %%<--- end the group
+
+
+% % 
+% 
+% Add appendices here
+% 
+% % 
+\include{back_appendices}
+
 
 \end{document}
