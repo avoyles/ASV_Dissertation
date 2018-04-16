@@ -209,6 +209,10 @@
 
 \LoadClass{memoir}
 
+% Turn on subsection numbering  (A.S. Voyles custom tweak)
+\setsecnumdepth{subsection}
+
+
 \setlrmarginsandblock{1in}{*}{*}
   \@tempdima=1in  \advance\@tempdima 25pt \advance\@tempdima\normalbaselineskip
   \@tempdimb=.75in  \advance\@tempdimb 30pt
