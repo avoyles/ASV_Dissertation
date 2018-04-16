@@ -230,6 +230,9 @@
 % \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
 
 
+
+
+
 \makeatletter
 
 % \usepackage{graphicx}
@@ -249,6 +252,15 @@
     \raisebox{\dimexpr-#1\baselineskip+\baselineskip\relax}[0pt][0pt]%
         {\llap{\box\z@\kern1pt}}{\unhbox8}%
 }
+
+% Add appendix letter-numbering
+\renewcommand*{\cftappendixname}{Appendix\space}
+
+% \addtolength{\cftchapternumwidth}{.5em}
+% \renewcommand*{\l@appendix}[2]{%
+%   \renewcommand{\chapternumberlinehook}[1]{\def\@cftbsnum{Appendix\ }}%
+%   \l@chapapp{#1}{#2}{}}
+% \g@addto@macro\appendix{\renewcommand{\printchaptername}{\normalfont\bfseries Appendix}}
 
 \makeatother
 
@@ -387,12 +399,12 @@ And exposition? Of go. No upstairs do fingering.
 \include{conclusions}
 
 
-{             %%<--- start the group
-  \backmatter
+% {             %%<--- start the group
+%   \backmatter
 % \printbibliography
 \bibliography{../library}
 \bibliographystyle{ieeetr}
-  }             %%<--- end the group
+%   }             %%<--- end the group
 
 
 % % 
