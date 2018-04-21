@@ -1,0 +1,142 @@
+\appendix
+\chapter{MCNP Input Files}
+
+\Capinsert[4]{\textbf{T}}{his} appendix contains the various MCNP6 input files used in the analysis of the work presented in this dissertation. 
+They are provided for the purposes of both documentation and reproducibility, that anyone with a license for the code (version MCNP-6.1) might be able to run them.
+These models are in general used for the primary purpose of determining the energy distributions for each irradiation scenario, using the rigorous particle transport methods of the MCNP code.
+Since the energy assignment, and thus, particle fluence, for each of the experiments presented here are based upon these transport models, they represent a systematic factor in the magnitude of all cross sections reported in this work.
+By providing the transport models used, these input files allow for the renormalization of the reported cross sections, in the event of an error in the model inputs.
+
+
+
+\section{HFNG Irradiation Input} \label{sec:hfng_mcnp_deck}
+
+The following MCNP code simulates the operation of the UC Berkeley HFNG, as it existed at the time of the experiments described in the present work.
+This includes both the \enquote{single foil}  (one target foil + one indium monitor foil, used for cross section measurements) and \enquote{nine foil} (3$\times$3 indium foils, used for verifying  that the beam is centered on the middle of mounted foils, as in  \autoref{fig:in_heat_plot}) modes of operation.
+These modes differ only in terms of which foils are \enquote{loaded} into the simulation --- the \enquote{single foil} mode is used when Cells 11--18 are commented out and Cells 10 \& 20 are uncommented.
+Similarly,  the \enquote{nine foil} mode is used when Cell 20 is commented out and Cells 10--18 are uncommented.
+In the version presented here, the input is configured for a single-foil irradiation, using a zinc target foil and an indium monitor foil.
+This target configuration may be modified (to a titanium  foil, or some other alternative) by modifying Cell 20 in the code.
+
+
+The basic design characteristics and operation of the HFNG have been described in \autoref{sec:n_source}, and a more detailed discussion of the generator may be found in the recent work of Unzueta \etal\ \cite{ayllon2018design}.
+In short, the generator, running with only one of the two available ion sources, extracts deuterium ions from an RF-heated deuterium plasma, forming a flat-profile beam, approximately 5 mm in diameter.
+This deuterium beam is incident upon a water-cooled, self-loading titanium-coated copper target \cite{Waltz2017,Waltz2016a,ayllon2018design}, where the titanium layer acts as a reaction surface for DD fusion, producing a forward-focused neutron flux.
+% While the machine's design features two deuterium ion sources impinging from both sides of the target, only a single source was used in the present work.
+Irradiation targets are inserted in the center of the titanium layer deuteron target, approximately 8 mm from the DD reaction surface, prior to startup.
+The following benchmarked MCNP model recreates the structural design and operation of the generator, for the configurations used in the work described in \autoref{sec:chapter_hfng}.
+This model is used to simulate the production of DD neutrons according to the well-known energy distribution as a function of  emission angle \cite{Liskien_Paulsen_1973}, and transport them throughout the generator.
+Using this transport model, the energy-differential neutron flux is calculated throughout the geometry of the HFNG, accounting for both attenuation and energy loss throughout the neutron production target, the irradiation target, and all structural components.
+These flux calculations are used (in \autoref{sec:neutron_energies}) to determine the effective neutron energy range subtended by the irradiation targets, which are used in the reporting of the measured cross sections.
+
+
+
+\lstinputlisting[basicstyle=\tiny,linewidth=\columnwidth,
+% language=Python,
+language=MCNP6,
+breaklines=true
+% ,frame=single
+]{./codes/HFNGSimp9PDCR39.txt}
+
+
+
+\section{IPF Nb(p,x) Target Stack Input} \label{sec:ipf_mcnp_deck}
+
+
+The following MCNP code simulates the irradiation of the \ce{^{nat}Nb}(p,x) target stack, used for the experiments described in  \autoref{sec:chapter_ipf}.
+The model consists of a 3D simulation of the full target stack, as outlined in \autoref{sec:target_design} and  \autoref{tab:stack_table}.
+This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25\,\mmicro m \ce{^{nat}Nb} target foils, and the nominal 25\,\mmicro m \ce{^{nat}Al}  and 50\,\mmicro m \ce{^{nat}Cu} monitor foils.
+The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 43.2\,\mmicro m of a silicone adhesive (nominal 4.79\,mg/cm$^2$) on 25.4\,\mmicro m of a polyimide backing (nominal 3.61\,mg/cm$^2$).
+The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
+The target stack is not pumped down to the beamline vacuum, but exists at the local atmospheric pressure of approximately 77.6\,kPa.
+
+
+
+Incident upon the front of the stack is  beam of protons in an elliptical beam spot, with a major axis 1.696 cm in diameter, and a minor axis 0.784 cm in diameter.  
+This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \autoref{fig:gafchromic_nb}.
+Based on historical beam characterization at LANSCE-IPF, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 1.696 cm, to avoid under-representing beam filling of target foils.
+The beam intensity has a linear radial $\sfrac{1}{r}$ intensity, and an average energy of 100 MeV  with a Gaussian energy distribution width of 0.1 MeV.
+This beam definition is transported through the target stack, accounting for both attenuation, secondary reactions, and energy loss throughout the stack.
+The proton energy-differential flux is calculated in each stack element --- as described in \autoref{sec:proton_transport},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
+In addition, this transport model allows one to estimate the fluence loss down the stack, due to (p,x) reactions and scattering of the beam.
+
+
+
+
+
+
+
+
+
+
+
+\lstinputlisting[basicstyle=\tiny,linewidth=\columnwidth,
+% language=Python,
+language=MCNP6,
+breaklines=true
+% ,frame=single
+]{./codes/100MeVNb_p0.i}
+
+
+
+\section{88-Inch Cyclotron 55 MeV Fe(p,x) Target Stack Input} \label{sec:88_mcnp_deck}
+
+\textred{Update references and specifics here!}
+
+
+The following MCNP code simulates the irradiation of the 55 MeV \ce{^{nat}Fe}(p,x) target stack, used for the experiments described in  \autoref{sec:chapter_fe}.
+The model consists of a 3D simulation of the full target stack, as outlined in \textred{\autoref{sec:target_design}} and  \textred{\autoref{tab:stack_table}}.
+This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25 \mmicro m \ce{^{nat}Nb} target foils, and the nominal 25 \mmicro m \ce{^{nat}Al}  and 50 \mmicro m \ce{^{nat}Cu} monitor foils.
+The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 43.2 \mmicro m of a silicone adhesive (nominal 4.79 mg/cm$^2$) on 25.4 \mmicro m of a polyimide backing (nominal 3.61 mg/cm$^2$).
+The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
+The target stack is not pumped down to the beamline vacuum, but exists at the local atmospheric pressure of approximately 77.6 kPa.
+
+
+
+Incident upon the front of the stack is  beam of protons in an elliptical beam spot, with a major axis 1.696 cm in diameter, and a minor axis 0.784 cm in diameter.  
+This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \textred{\autoref{fig:gafchromic_nb}}.
+Based on historical beam characterization at LANSCE-IPF, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 1.696 cm, to avoid under-representing beam filling of target foils.
+The beam intensity has a linear radial $\sfrac{1}{r}$ intensity, and an average energy of 100 MeV  with a Gaussian energy distribution width of 0.1 MeV.
+This beam definition is transported through the target stack, accounting for both attenuation, secondary reactions, and energy loss throughout the stack.
+The proton energy-differential flux is calculated in each stack element --- as described in \textred{\autoref{sec:proton_transport}},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
+In addition, this transport model allows one to estimate the fluence loss down the stack, due to (p,x) reactions and scattering of the beam.
+
+
+% \lstinputlisting[basicstyle=\tiny,linewidth=\columnwidth,
+% % language=Python,
+% language=MCNP6,
+% breaklines=true
+% % ,frame=single
+% ]{./codes/HFNGSimp9PDCR39.txt}
+
+
+
+\section{88-Inch Cyclotron 25 MeV Fe(p,x) Target Stack Input} \label{sec:88_mcnp_deck_lowE}
+
+\textred{Update references and specifics here!}
+
+
+The following MCNP code simulates the irradiation of the 25 MeV \ce{^{nat}Fe}(p,x) target stack, used for the experiments described in  \autoref{sec:chapter_fe}.
+The model consists of a 3D simulation of the full target stack, as outlined in \textred{\autoref{sec:target_design}} and  \textred{\autoref{tab:stack_table}}.
+This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25 \mmicro m \ce{^{nat}Nb} target foils, and the nominal 25 \mmicro m \ce{^{nat}Al}  and 50 \mmicro m \ce{^{nat}Cu} monitor foils.
+The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 43.2 \mmicro m of a silicone adhesive (nominal 4.79 mg/cm$^2$) on 25.4 \mmicro m of a polyimide backing (nominal 3.61 mg/cm$^2$).
+The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
+The target stack is not pumped down to the beamline vacuum, but exists at the local atmospheric pressure of approximately 77.6 kPa.
+
+
+
+Incident upon the front of the stack is  beam of protons in an elliptical beam spot, with a major axis 1.696 cm in diameter, and a minor axis 0.784 cm in diameter.  
+This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \textred{\autoref{fig:gafchromic_nb}}.
+Based on historical beam characterization at LANSCE-IPF, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 1.696 cm, to avoid under-representing beam filling of target foils.
+The beam intensity has a linear radial $\sfrac{1}{r}$ intensity, and an average energy of 100 MeV  with a Gaussian energy distribution width of 0.1 MeV.
+This beam definition is transported through the target stack, accounting for both attenuation, secondary reactions, and energy loss throughout the stack.
+The proton energy-differential flux is calculated in each stack element --- as described in \textred{\autoref{sec:proton_transport}},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
+In addition, this transport model allows one to estimate the fluence loss down the stack, due to (p,x) reactions and scattering of the beam.
+
+
+% \lstinputlisting[basicstyle=\tiny,linewidth=\columnwidth,
+% % language=Python,
+% language=MCNP6,
+% breaklines=true
+% % ,frame=single
+% ]{./codes/HFNGSimp9PDCR39.txt}

@@ -1,20 +1,20 @@
 \chapter{Measurement of the \texorpdfstring{\ce{^{64}Zn}, \ce{^{47}Ti}}{64Zn, 47Ti}(n,p) cross sections using a DD neutron generator for medical isotope studies}
-\Capinsert This chapter details a measurement of the \ce{^{64}Zn}(n,p)\ce{^{64}Cu} and \ce{^{47}Ti}(n,p)\ce{^{47}Sc} cross sections.
+% \Capinsertold This chapter 
+\chaptermark{Measurement of the \texorpdfstring{\ce{^{64}Zn}, \ce{^{47}Ti}}{64Zn, 47Ti}(n,p) cross sections}
+
+
+\Capinsert[4]{\textbf{T}}{his} chapter details a measurement of the \ce{^{64}Zn}(n,p)\ce{^{64}Cu} and \ce{^{47}Ti}(n,p)\ce{^{47}Sc} cross sections.
 The measurement was performed using the UC Berkeley High Flux Neutron Generator (HFNG), a compact generator which produces a neutron flux through the DD fusion reaction.
 This generator, commissioned in 2015, was originally designed for radiometric dating applications in geochronology, with an emphasis on the \ce{^{40}Ar}/\ce{^{39}Ar} dating technique.
 The work presented in this chapter was a result of the first characterization experiments  at the HFNG.
-While other experiments have been carried out at the HFNG since this work
+While other experiments have been carried out at the HFNG since this work was published, the work presented in this chapter was the first scientific measurement to be carried out in this new research facility.
+
+In addition to the pivotal role played in the early development of the HFNG, this work is notable for several aspects related to the development of alternative production pathways for medical radionuclides.
 
 
-ionization yield (Qy) of 6.7 keV 40Ar atoms stopping in a liquid argon detector.
-Washable an acre. To canned, silence in foreign.
-Be a popularly. A as midnight transcript alike.
-To by recollection bleeding. That calf are infant. In clause.
-Buckaroo loquaciousness?  Aristotelian!
-Masterpiece as devoted. My primal the narcotic. For cine?
-In the glitter. For so talented. Which is confines cocoa accomplished.
-Or obstructive, or purposeful.
-And exposition? Of go. No upstairs do fingering.
+The (n,p) production pathway 
+
+
 
 
 
@@ -38,7 +38,7 @@ And exposition? Of go. No upstairs do fingering.
 The text and figures of this paper (copyright Elsevier B.V. 2017), of which I was the primary author, are
 included in this chapter with the permission of all authors. 
 Some of the figures and and content in this chapter have been altered to better fit the page formatting, but all changes made to the published journal article are purely stylistic in nature.
-% Additional discussion of the installation of the neutron source at CAMS and problems with the Li-target are included in Appendix A.
+
 
 % \lstinputlisting[basicstyle=\small,linewidth=\columnwidth,
 % % language=Python,
@@ -63,6 +63,18 @@ Some of the figures and and content in this chapter have been altered to better 
 % % 
 \input{../Manuscripts/First_np_Paper/np_body_text}
 
+
+
+%
+% Additional figures
+% 
+\section{Additional information on the experimental setup} \label{sec:extra_np}
+
+Additional discussion of the experimental and analytical details for this work, which were excluded from the published journal article to preserve its scope, are included here.
+
+
+\cite{ayllon2018design}
+\textred{blah blah}
 
 
 % Example text from template file
