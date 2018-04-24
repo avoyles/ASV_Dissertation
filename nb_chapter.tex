@@ -5,78 +5,45 @@
 \chaptermark{Development of the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} reaction as an intermediate-energy proton monitor}
 
 
-\Capinsert[4]{\textbf{B}}{ovinely} invasive brag; cerulean forebearance.
-Washable an acre. To canned, silence in foreign.
-Be a popularly. A as midnight transcript alike.
-To by recollection bleeding. That calf are infant. In clause.
-Buckaroo loquaciousness?  Aristotelian!
-Masterpiece as devoted. My primal the narcotic. For cine?
-In the glitter. For so talented. Which is confines cocoa accomplished.
-Or obstructive, or purposeful.
-And exposition? Of go. No upstairs do fingering.
-
-%  Move these first two commented sentences into PhD thesis.
-% 
-% % % 
-% An accurate integrated proton current is one of the most important factors in performing high-fidelity cross section measurements.
-% At the time of this work, the nondestructive beam current monitors in the LANSCE-IPF beamline had a  resolution of 100 nAh.
-% For a low-current irradiation such as this work, where a nominal fluence of 200 nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified EoB activities into cross sections.
+\Capinsert[4]{\textbf{I}}{ntermediate-energy} proton beams are used to produce a wide range of radionuclides for use in medical treatments and research.  
+However, reaction modeling in this energy range remains largely untested, and there is a paucity of monitor reactions 
+in this energy range 
+needed to establish beam characteristics  for quantitative cross section measurements.  
+The development of new monitor reaction standards and the improved evaluation of existing standards is one of the areas of greatest cross-cutting need for nuclear data \cite{bernstein2015nuclear}. 
+To address this need, a stack  of thin Nb, Cu, and Al monitor foils was irradiated with the 100 MeV proton beam at  Los Alamos National Laboratory's Isotope Production Facility,  to investigate the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} nuclear reaction as a  monitor for intermediate-energy proton experiments and to benchmark state-of-the-art reaction model codes.
+This chapter details a measurement to develop new methods for the monitoring of charged-particle beams.
+In the process, a set of 38 measured  cross sections for  \ce{^{nat}Nb}(p,x) and  \ce{^{nat}Cu}(p,x) reactions between 40--90 MeV, as well as 5 independent measurements of isomer branching ratios, are reported. 
+Variance minimization techniques were employed  to correct for uncertainties in  the characterization of the stack components, often the largest cause of uncertainties in energy and  fluence assignments.
+In addition to the set of reported cross sections, this measurement serves three important purposes.
 
 
-% Variance minimization techniques were employed  to correct for uncertainties in  the characterization of the stack components, the largest cause of uncertainties in energy and  fluence assignments.
 
-\vspace{1cm}
-
-\noindent \textbf{Relevant Publications:}
-
-\vspace{0.5cm}
-
-
-\hangindent=\parindent  \textbf{Andrew S. Voyles}, Lee A. Bernstein, Eva R. Birnbaum, Jonathan W. Engle,
-Stephen A. Graves, Toshihiko Kawano, Amanda M. Lewis, and Francois M. Nortier, \enquote{Excitation functions for (p,x) reactions of niobium (E$_{\text{p}}$ = 40--90 MeV):  development of the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} reaction as an intermediate-energy proton monitor.} Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms, 
-% vol. 410, pp. 230--239, Nov. 2017.
-% Update following acceptance
-(Submitted 2018).
-% \cite{Voyles2017}
-textred{Update this BibTeX reference following acceptance!}
-
-\vspace{0.5cm}
+First, it provides a rigorous  description of the analysis of stacked-target activation experiments.
+This method of cross section measurement is commonly employed, as it allows for measurements at multiple energy positions within a single irradiation.
+However, many such manuscripts treat these experiments as \enquote{simple} measurements, spending a single page (or less) describing the both the experimental setup and analysis methods used for extracting cross sections.
+In fact, there are a multitude of subtleties involved in activation experiments, which can have significant systematic impacts on the measurement.
+Many  are often written off without attempting to quantify them, as a 5--10\% systematic uncertainty, but are even more frequently assumed to be negligible. 
+Since energy assignment and cross section magnitude have recursive impacts on each other, small systematic uncertainties in stack modeling may 
+% have a significant
+propagate into significant errors in measurement.
+This is a particularly insidious problem for dosimetry and monitor reaction data, as they tend to be self-referencing.
+Experiments rely upon existing monitor data --- if erroneous monitor reaction data it is published, it will likely propagate into future cross section measurements and monitor reaction development, creating a deeply-embedded issue with the body of nuclear data.
+It is for this reason that the analysis is presented here in somewhat pedagogical detail, to illustrate one take on how stacked-target experiments should be performed and analyzed, as well as to provide sufficient detail for evaluators to correct any errors which might be spotted at a later date.
 
 
-% T.H. Joshi, S. Sangiorgio, V. Mozin, E.B. Norman, P. Sorensen, M. Foxe, G. Bench, A. Bernstein. Design and characterization of a quasi-monoenergetic neutron source. Nuclear Instruments and Methods in Physics Research B (in press). [44]
+
+In addition, this work seeks to outline many of the small systematic issues which can be unwittingly introduced into such measurements even with careful experimental design, and the methods developed to deal with them.
+Nearly all of the issues presented in this work stem from the use of Kapton tape to encapsulate activation foils and prevent dispersible contamination.
+While the issues have been identified and accounted for in the analysis described here, they serve as a cautionary note to future stacked-target cross section measurements.
+Finally, this measurement provides some commentary on the importance and selection of monitor reactions, and how \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} fits this perfectly in the intermediate-energy region.
+The success of \ce{^{90}Mo} as a monitor reaction product is mainly due to it avoiding the co-production and contamination issues that several of the current monitor standards (namely, Al, Ti, and Ni) are plagued with.
 
 
-% Does \mmicro still work?
-The text and figures of this paper
-% (copyright Elsevier B.V. 2017)
-, of which I was the primary author, are
-included in this chapter with the permission of all authors. 
-Some of the figures and and content in this chapter have been altered to better fit the page formatting, but all changes made to the published journal article are purely stylistic in nature.
 
-% Additional discussion of the installation of the neutron source at CAMS and problems with the Li-target are included in Appendix A.
+\subsubsection{Criteria for monitor reaction selection}
 
 
-\section{Transitory stuff}
 
-
-Every year, approximately 17 million nuclear medicine procedures (both diagnostic and therapeutic) are performed in the U.S. alone,  which has made incredible strides in improving our ability to detect and treat a variety of life-threatening diseases \cite{Delbeke2011,NSACIsotopesSubcommittee2015}.
-The vast majority of the radioisotopes currently used for these procedures are produced in the field's array of low- (E \textless\ 30 MeV / A) and intermediate-energy (30 \textless\ E \textless\ 200 MeV / A) accelerator capabilities, which routinely produce many of the staple medical radionuclides, such as \ce{^{11}C}, \ce{^{18}F}, \ce{^{68}Ge}, \ce{^{82}Rb}, and \ce{^{123}I}, as well as many  
-% of the 
-non-medical radioisotopes of commercial value, such as  \ce{^{32}Si}, \ce{^{73}As}, \ce{^{95m}Tc}, and  \ce{^{109}Cd} \cite{international2009iaea,schlyer2008cyclotron}. 
-% \comment{Should \enquote{intermediate-energy} be less than 200 MeV, or 100 MeV?  I find conflicting descriptions in the literature.\\Lee:  I believe that 60 MeV is considered as the transition point\\ Stephen: In this context, I would make this definition based on what machines in the US are routinely used for medical isotope production - based on this, I agree with 200 MeV. }
-The future of nuclear medicine would appear to be the paradigm of personalized medicine --- targeted radionuclide therapy to spare healthy tissue \cite{Mulford2005,Qaim201731}, and theranostic medicine, which pairs an imaging isotope with a therapeutic isotope (frequently, of the same element), to provide simultaneous, real-time dose delivery and verification, leading to drastic reductions in prescribed patient dose \cite{Muller2014,Bentzen2005,Srivastava2012}. 
-Other variants of theranostic medicine exist, including pre-imaging for treatment planning, or delivery of a single compound with different radioelements for imaging/therapy where the inter-element biodistribution has been validated.  
-Candidate isotopes to meet these needs have been identified based on their chemical and radioactive decay properties \cite{NSACIsotopesSubcommittee2015,Qaim201731,bernstein2015nuclear}, and a series of campaigns are underway to perform targeted, high-priority measurements of thin-target cross sections and thick-target integral yields.
-These studies will serve to facilitate the production of pre-clinical quantities of radioactivity.
-
-
-One significant obstacle to both high-fidelity measurements of production cross sections for emerging medical radionuclides, as well as conventional isotope production, is a lack of well-characterized  monitor reaction standards.  
-This is particularly true for higher-energy charged particle beams, where there is currently a paucity of such data. 
-Indeed, the development of new monitor reaction standards and the improved evaluation of existing standards is one of the areas of greatest cross-cutting need for nuclear data \cite{bernstein2015nuclear}. 
-Charged particle monitor reaction data currently exists for several low-to-intermediate energy charged particle beams (E \textless\ 50 MeV / A), but even the experimental data used for this evaluation are  sparse above approximately 30 MeV / A and  uncertainties in experimental cross sections are large (6--15\%) \cite{gul2001charged}. 
-While work is needed to improve upon existing monitor reaction data, the development of new reactions can expand the available range of options for the monitoring of charged particle beams.
-This work in particular seeks to improve this range of options by characterizing a new monitor reaction for  proton beams in excess of 40 MeV, for possible use at isotope production facilities such as BLIP, IPF, or iThemba LABS.
-% \comment{Stephen: I'm having a hard time following this paragraph. Some of your syntax overlaps significantly with nuclear medicine \& medical physics terminology with different intended meanings. For example 'dosimetry' is typically taken to mean the measurement of absorbed energy per unit mass (J/kg) and associated measurements/specifications. Another example, 'dosimetry standard' is used quite often when referring to NIST air kerma reference standards which are the bedrock of Accredited Dosimetry Calibration Lab (ADCL) measurements. As you are more familiar with classic Nuclear Physics writing, perhaps you better know how this language will be interpreted. }
 
 
 
@@ -140,28 +107,39 @@ Any monitor reaction channel which can be populated by anything other than the p
 
 
 
-One  reaction which satisfies these requirements is that of a new, intermediate-energy proton monitor reaction standard based on \ce{^{93}Nb}(p,4n)\ce{^{90}Mo}. 
-Niobium is naturally mono-isotopic, readily  available commercially in high purity, is chemically inert, and can easily be rolled down to foils as thin as 1 \mmicro m.  
-\ce{^{90}Mo} also has excellent decay properties --- its fairly long-lived lifetime ($\epsilon=100\%, t_{1/2}=5.56 \pm 0.09$ h) allows it to be counted at leisure without fear of the product \ce{^{90}Mo} decaying away excessively between end-of-beam and the start of counting, and it possesses seven strong, distinct gamma lines (notably its 122.370 keV ($I_\gamma = 64 \pm 3\%$) and 257.34 keV ($I_\gamma = 78 \pm 4\%$) lines) which can be used to uniquely and easily   quantify \ce{^{90}Mo} production \cite{Browne1997}. 
-In addition,  \ce{^{90}Mo} is completely immune from (n,x) production on  \ce{^{93}Nb}, being produced only via the primary proton beam, and the \ce{^{90}Mo} decay lines can only be observed in its decay, as its daughter, \ce{^{90}Nb}, is also unstable and decays via $\epsilon$ to stable \ce{^{90}Zr}. 
- 
-The purpose of the present work is to  measure the production of the long-lived radionuclide \ce{^{90}Mo} ($t_{1/2}=5.56 \pm 0.09$ h \cite{Browne1997}) via the $^\text{nat}$Nb(p,x) reaction. 
-In addition to the $^\text{nat}$Nb(p,x)\ce{^{90}Mo} measurement, this experiment has also yielded measurements of 37 other (p,x) production cross sections between 40--90 MeV  for a number of additional reaction products, including several emerging radionuclides with medical applications.
-These include the non-standard positron emission tomography (PET) agent \ce{^{57}Ni}  ($t_{1/2}=35.60\pm0.06$ h \cite{Bhat1998}), \ce{^{64}Cu} ($t_{1/2}=12.701 \pm 0.002$ h \cite{Singh2007}), \ce{^{86}Y}  ($t_{1/2}=14.74\pm0.02$ h \cite{NEGRET20151}), \ce{^{89}Zr} ($t_{1/2}=78.41\pm0.12$ h \cite{Singh2013}),  \ce{^{90}Nb} ($t_{1/2}=14.60 \pm 0.05$ h \cite{Browne1997}),  and the diagnostic agent \ce{^{82\text{m}}Rb} ($t_{1/2}=6.472\pm0.006$ h \cite{Tuli2003}). 
 
 
-%   \comment{The following paragraph should only be included if we decide to touch on spin physics in this manuscript, or split it into a follow-on PhysRev C, etc.}
-%   
-%   \comment{Stephen:  If included in this paper, I would move to the discussion. It's not clear yet in the paper that you have the data required to make these determinations.}
+\vspace{1cm}
 
-  
-In addition to being a potentially highly-valuable beam monitor, the Nb(p,x) reactions offer an opportunity to study the angular momentum deposition via pre-equilibrium reactions and the spin distribution in g$_{9/2}$ subshell nuclei via the observation of isomer-to-ground state ratios.  
-Measurements of isomer-to-ground state ratios have been used for over 20 years to probe the spin distribution of excited nuclear states in the A $\approx$ 190 region \cite{PhysRevC.73.034613,PhysRevC.45.1171}.
-These include the \ce{^{52\text{m}}Mn} ($t_{1/2}=21.1\pm0.2$ m; J$^\pi=2^+$) to \ce{^{52\text{g}}Mn}  ($t_{1/2}=5.591\pm0.003$ d; J$^\pi=6^+$), \ce{^{58\text{m}}Co} ($t_{1/2}=9.10\pm0.09$ h; J$^\pi=5^+$) to \ce{^{58\text{g}}Co}  ($t_{1/2}=70.86\pm0.06$ d; J$^\pi=2^+$),  \ce{^{85\text{m}}Y} ($t_{1/2}=4.86\pm0.13$ h; J$^\pi=\sfrac{9}{2}^+$) to \ce{^{85\text{g}}Y}  ($t_{1/2}=2.68\pm0.05$ h; J$^\pi=\sfrac{1}{2}^-$),  \ce{^{87\text{m}}Y} ($t_{1/2}=13.37\pm0.03$ h; J$^\pi=\sfrac{9}{2}^+$) to \ce{^{87\text{g}}Y}  ($t_{1/2}=79.8\pm0.3$ h; J$^\pi=\sfrac{1}{2}^-$),  and \ce{^{89\text{m}}Nb} ($t_{1/2}=66\pm2$ m; J$^\pi=\sfrac{1}{2}^-$) to \ce{^{89\text{g}}Nb}  ($t_{1/2}=2.03\pm0.07$ h; J$^\pi=\sfrac{9}{2}^+$)  ratios \cite{Dong2015,Nesaraja2010,Singh2014,Johnson2015,Singh2013}.  
- 
- 
-The measurements described in this paper involve the use of multiple monitor reactions in conjunction with statistical calculations and proton transport simulations to reduce systematic uncertainties in beam energy assignments, leading to some of the first and most precise measurements  for many of the excitation functions reported here. 
-By expanding the available set of monitor reaction standards and well-characterized isotope production excitation functions, this work should help optimize medical isotope production modalities, making more options   available for modern medical imaging and cancer therapy.
+\noindent \textbf{Relevant Publications:}
+
+\vspace{0.5cm}
+
+
+\hangindent=\parindent  \textbf{Andrew S. Voyles}, Lee A. Bernstein, Eva R. Birnbaum, Jonathan W. Engle,
+Stephen A. Graves, Toshihiko Kawano, Amanda M. Lewis, and Francois M. Nortier, \enquote{Excitation functions for (p,x) reactions of niobium (E$_{\text{p}}$ = 40--90 MeV):  development of the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} reaction as an intermediate-energy proton monitor.} Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms, 
+% vol. 410, pp. 230--239, Nov. 2017.
+% Update following acceptance
+(Submitted 2018).
+% \cite{Voyles2017}
+\textred{Update this BibTeX reference following acceptance!}
+
+\vspace{0.5cm}
+
+
+% T.H. Joshi, S. Sangiorgio, V. Mozin, E.B. Norman, P. Sorensen, M. Foxe, G. Bench, A. Bernstein. Design and characterization of a quasi-monoenergetic neutron source. Nuclear Instruments and Methods in Physics Research B (in press). [44]
+
+
+% Does \mmicro still work?
+The text and figures of this paper
+% (copyright Elsevier B.V. 2017)
+, of which I was the primary author, are
+included in this chapter with the permission of all authors. 
+Some of the figures and and content in this chapter have been altered to better fit the page formatting, but all changes made to the published journal article are purely stylistic in nature.
+% Additional discussion of the installation of the neutron source at CAMS and problems with the Li-target are included in Appendix A.
+
+
+% \section{Transitory stuff}
 
 
 
@@ -193,12 +171,24 @@ By expanding the available set of monitor reaction standards and well-characteri
 \input{../Manuscripts/nb_px_paper/nb_appendix_text}
 
 
-\section{Additional information on the analysis}
+\section{Additional discussion}
 
 
 % Clean this up
 
 add pictures of gafchromic films 
+
+
+
+
+%  Move these first two commented sentences into PhD thesis.
+% 
+% % % 
+% An accurate integrated proton current is one of the most important factors in performing high-fidelity cross section measurements.
+% At the time of this work, the nondestructive beam current monitors in the LANSCE-IPF beamline had a  resolution of 100 nAh.
+% For a low-current irradiation such as this work, where a nominal fluence of 200 nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified EoB activities into cross sections.
+
+
 
 
 
@@ -238,6 +228,42 @@ picture of mcnp stack model
 }
  \label{fig:ipf_vised}
 \end{figure}
+
+
+
+
+
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.497\textwidth]{}{./figures/91mNb.pdf}{50}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.497\textwidth]{}{./figures/92mNb.pdf}{50}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \\
+    \subfloat{
+        \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.497\textwidth]{}{./figures/93mMo.pdf}{50}
+%         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
+%         \refstepcounter{subfigure}
+%          \label{fig:93mMo}
+   }%
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}, and (d) decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%      \phantomcaption{}
+     \label{fig:xs_curves_p7}
+\end{figure*}
 
 
 

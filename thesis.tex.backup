@@ -226,9 +226,43 @@
 
 % \def\Capinsert{\def\leftCapmaterial{}\futurelet\next\CapinsertA}
 % \def\Capinsert#1{\lettrine[lines=4]{\StrLeft{#1}{1}}{\@gobble#1}\ }
-\def\Capinsert#1{\lettrine[lines=4]{\StrLeft{#1}{1}}{}\ }
+\def\Capinsertold#1{\lettrine[lines=4]{\StrLeft{#1}{1}}{}\ }
 % \def\@chapter[#1]#2 #3 {\ltx@@chapter[#1]{#2}\lettrine[lines=4]{\StrLeft{#3}{1}}{\@gobble#3}\ }
 
+
+
+
+
+\makeatletter
+
+% \usepackage{graphicx}
+
+\newlength\CLett% Nuova dimensione
+
+ \newcommand*\Capinsert[3][2]{% #1 lettera da ingrandire #2 testo in maiuscoletto
+    \par
+    \noindent
+    \setbox8\hbox{\textsc{#3}}%
+    \setbox\z@\hbox{%
+        \resizebox{!}{\dimexpr#1\baselineskip-\baselineskip+\ht8\relax}{\huge#2}%
+    }%
+    \CLett=\wd\z@%
+    \hangindent\CLett
+    \hangafter-#1\relax
+    \raisebox{\dimexpr-#1\baselineskip+\baselineskip\relax}[0pt][0pt]%
+        {\llap{\box\z@\kern1pt}}{\unhbox8}%
+}
+
+% Add appendix letter-numbering
+\renewcommand*{\cftappendixname}{Appendix\space}
+
+% \addtolength{\cftchapternumwidth}{.5em}
+% \renewcommand*{\l@appendix}[2]{%
+%   \renewcommand{\chapternumberlinehook}[1]{\def\@cftbsnum{Appendix\ }}%
+%   \l@chapapp{#1}{#2}{}}
+% \g@addto@macro\appendix{\renewcommand{\printchaptername}{\normalfont\bfseries Appendix}}
+
+\makeatother
 
 \hyphenation{mar-gin-al-ia}
 \hyphenation{bra-va-do}
@@ -266,10 +300,12 @@
 %         r0, r1, r2, r3, r4, r5, r6, r7, rr8, r9, r10, r11, r12,
           P=},
     sensitive=false, % keywords are not case-sensitive
-    morecomment=[l]{C\ }, % l is for line comment
+    morecomment=[f][\color{red}][0]{C\ }, % l is for line comment
     morecomment=[l]{\$ }, % l is for line comment
-    morecomment=[l]{TITLE}, % l is for line comment
+    morecomment=[l][\color{red}]{TITLE}, % l is for line comment
+%     morecomment=[l]{100 MeV}, % l is for line comment
     morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+%     morecomment=[s][\color{red}]{C\ }{\n}, % s is for start and end delimiter
     morestring=[b]" % defines that strings are enclosed in double quotes
 } %
 
@@ -308,7 +344,7 @@
 
 \maketitle
 % Delete (or comment out) the \approvalpage line for the final version.
-\approvalpage
+% \approvalpage
 \copyrightpage
 
 \include{abstract}
@@ -350,6 +386,19 @@ In the glitter. For so talented. Which is confines cocoa accomplished.
 Or obstructive, or purposeful.
 And exposition? Of go. No upstairs do fingering.
 
+
+Jon
+
+Stephen
+
+Meiring/ Eva / LANL folks
+
+Cyclotron staff
+
+Oslo crowd
+
+
+
 \end{acknowledgements}
 
 \end{frontmatter}
@@ -365,12 +414,12 @@ And exposition? Of go. No upstairs do fingering.
 \include{conclusions}
 
 
-{             %%<--- start the group
-  \backmatter
+% {             %%<--- start the group
+%   \backmatter
 % \printbibliography
 \bibliography{../library}
 \bibliographystyle{ieeetr}
-  }             %%<--- end the group
+%   }             %%<--- end the group
 
 
 % % 
