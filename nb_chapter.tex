@@ -148,7 +148,7 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % %
 % 
-%  Dump abstract text from HFNG (n,p) paper into this chapter
+%  Dump abstract text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \section{Abstract}
@@ -157,7 +157,7 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % % 
 % 
-%  Dump body text from HFNG (n,p) paper into this chapter
+%  Dump body text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \input{../Manuscripts/nb_px_paper/nb_body_text}
@@ -165,13 +165,17 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % % 
 % 
-%  Dump appendices text from HFNG (n,p) paper into this chapter
+%  Dump appendices text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \input{../Manuscripts/nb_px_paper/nb_appendix_text}
 
 
 \section{Additional discussion}
+
+
+Additional discussion of the experimental and analytical details for this work, which were excluded from the published journal article to preserve its scope, are included here.
+
 
 
 % Clean this up
@@ -238,7 +242,7 @@ picture of mcnp stack model
     \subfloat{
         \centering
 %         \includegraphics[width=\textwidth]{./figures/target2.png}
-        \subfigimg[width=0.497\textwidth]{}{./figures/91mNb.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{a)}{./figures/Al_ntallies.pdf}{50}
 %         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
         %         \refstepcounter{subfigure}
 %          \label{fig:91mNb}
@@ -246,7 +250,7 @@ picture of mcnp stack model
 %      \subfloat{
 %         \centering
 %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.497\textwidth]{}{./figures/92mNb.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{b)}{./figures/Cu_ntallies.pdf}{50}
 %         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
 %         \refstepcounter{subfigure} 
 %         \label{fig:92mNb}
@@ -255,15 +259,118 @@ picture of mcnp stack model
     \subfloat{
         \centering
 %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.497\textwidth]{}{./figures/93mMo.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{c)}{./figures/Nb_ntallies.pdf}{50}
 %         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
 %         \refstepcounter{subfigure}
 %          \label{fig:93mMo}
    }%
-    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}, and (d) decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
 %      \phantomcaption{}
-     \label{fig:xs_curves_p7}
+     \label{fig:ipf_ntallies}
 \end{figure*}
+
+
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.495\textwidth]{a)}{./figures/Al_ptallies.pdf}{80}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.495\textwidth]{b)}{./figures/Cu_ptallies.pdf}{80}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+%      \phantomcaption{}
+     \label{fig:ipf_ptallies_appendix}
+\end{figure*}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_preexp_beam_spot-cropped.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{ipf preexp beam spot.}
+ \label{fig:ipf_preexp_beam_spot}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/peak_stairsteps.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{peak stairsteps.}
+ \label{fig:peak_stairsteps}
+\end{figure}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/9778586991_67c3aeabdb_b.jpg}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the 977858699167c3aeabdb.}
+ \label{fig:9778586991_67c3aeabdb_b}
+\end{figure}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.5\columnwidth]{./figures/FWHM_plot.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:FWHM_plot}
+\end{figure}
+
+
+
+
+
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.495\textwidth]{}{./figures/22Na.pdf}{80}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.495\textwidth]{}{./figures/24Na.pdf}{80}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+%      \phantomcaption{}
+     \label{fig:tentative_ipf_na}
+\end{figure*}
+
 
 
 
