@@ -4,7 +4,9 @@
 %
 % The Current Maintainer of this work is Paul Vojta.
 
-\documentclass{ucbthesis}
+\documentclass[
+% draft
+]{ucbthesis}
 \usepackage[square,numbers,sort&compress]{natbib}
 % \usepackage{natbib}
 
@@ -64,6 +66,14 @@
 
 % % Insert PDF multiple pages
 % \usepackage{pdfpages}
+
+
+% Increase padding wodth for Table of Contents, to prevent overfull hbox
+% This is due to the List of Tables starting on page 'viii', which is too long
+% This will hopefully resolev itself when the page increments up to ix?
+% \renewcommand*{\cftdotsep}{1}
+% \setpnumwidth{3em}
+% \setrmarg{4em}
 
 
  
