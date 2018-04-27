@@ -29,7 +29,7 @@ propagate into significant errors in measurement.
 This is a particularly insidious problem for dosimetry and monitor reaction data, as they tend to be self-referencing.
 Experiments rely upon existing monitor data --- if erroneous monitor reaction data it is published, it will likely propagate into future cross section measurements and monitor reaction development, creating a deeply-embedded issue with the body of nuclear data.
 It is for this reason that the analysis is presented here in somewhat pedagogical detail, to illustrate one take on how stacked-target experiments should be performed and analyzed, as well as to provide sufficient detail for evaluators to correct any errors which might be spotted at a later date.
-
+It is my fervent hope that this level of analysis and uncertainty quantification, to improve reliability of cross section measurements and to aid in the process of nuclear data evaluation, might become  de rigueur for the field.
 
 
 In addition, this work seeks to outline many of the small systematic issues which can be unwittingly introduced into such measurements even with careful experimental design, and the methods developed to deal with them.
@@ -148,7 +148,7 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % %
 % 
-%  Dump abstract text from HFNG (n,p) paper into this chapter
+%  Dump abstract text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \section{Abstract}
@@ -157,7 +157,7 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % % 
 % 
-%  Dump body text from HFNG (n,p) paper into this chapter
+%  Dump body text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \input{../Manuscripts/nb_px_paper/nb_body_text}
@@ -165,7 +165,7 @@ Some of the figures and and content in this chapter have been altered to better 
 
 % % 
 % 
-%  Dump appendices text from HFNG (n,p) paper into this chapter
+%  Dump appendices text from IPF Nb(p,x) paper into this chapter
 % 
 % % 
 \input{../Manuscripts/nb_px_paper/nb_appendix_text}
@@ -174,9 +174,218 @@ Some of the figures and and content in this chapter have been altered to better 
 \section{Additional discussion}
 
 
-% Clean this up
+Additional discussion of the experimental and analytical details for this work, which were excluded from the published journal article to preserve its scope, are included here.
 
-add pictures of gafchromic films 
+\subsubsection{LANSCE overview}
+
+
+As discussed in \autoref{sec:experiment}, the target stack for this work was assembled and irradiated at the Isotope Production Facility (IPF) at the Los Alamos National Laboratory (LANL), using the LANSCE linear accelerator. 
+The LANSCE complex, constructed in 1972, is a large facility at the Los Alamos National Laboratory's Technical Area 53, housing many basic and applied science facilities supported by the LANSCE-LINAC linear accelerator \cite{Lisowski2006}.
+The accelerator has proton injector ion sources capable of supplying both positive- and negative-ion beams.
+The ions are accelerated up to 750\,keV, where they are injected into a drift-tube linear accelerator.
+This accelerator, which operates as a standing-wave linear accelerator in the \enquote{zero mode} (or TM$_{010}$) electromagnetic field configuration, accelerates the ions up to 100\,MeV.  
+From here, the negative-ion beam is injected into the side-coupled cavity linear accelerator (800\,m in length), which accelerates the ions up to the facility's maximum 800\,MeV.
+This beam is passed along to the various research centers at the LANSCE complex, which include the Lujan Center, Proton Radiography Center, Ultracold Neutron Source, and the Weapons Neutrons Research Facility.
+Alternatively, the 100\,MeV positive-ion beam may be \enquote{peeled off} following acceleration in the drift-tube linac, where it is diverted to the Isotope Production Facility.
+At IPF, thick production targets and thin-target stacks may be lowered through a dedicated hot cell into the IPF beamline for irradiation.
+This facility serves to produce a variety of commercial isotopes for  medical, industrial, basic science, and national security applications.
+A schematic of the LANSCE beamline is presented in \autoref{fig:ipf_beamline_schematic}, and a photograph of the LANSCE complex is seen in \autoref{fig:ipf_beamline_alternate}.
+
+% The stack was irradiated for approximately 2 hours with a nominal current of 1 mA, using a 50 \mmicro s pulse at a frequency of 2 Hz, for an anticipated integral current of 205.9 nAh.
+
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_beamline_schematic.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{Schematic diagram of the LANSCE beamline at LANL. From the initial injectors, a proton beam is accelerated to 100\,MeV in a drift-tube linear accelerator, where it is diverted away to the IPF beamline, highlighted in red.}
+ \label{fig:ipf_beamline_schematic}
+\end{figure}
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_beamline_alternate.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{Aerial photograph of the LANSCE beamline. Proton injectors are seen in the foreground building near the arrow's tail. The IPF beamline and operations facility is seen to the left of the main LANSCE beamline, circled in red.  The target box seen in \autoref{fig:target_stack} is lowered into the beamline here, through a hot cell.}
+ \label{fig:ipf_beamline_alternate}
+\end{figure}
+
+
+
+\subsubsection{Radiation damage of materials}
+
+
+% Following  tuning of the 100\,MeV proton beam into the IPF beamline, the current is measured immediately upstream of the target position using a pair of nondestructive inductive pickups.
+% The final remaining step prior to loading the  target box for irradiation is to tune the beam optics and spatial profile.
+% This is performed by loading a sheet of polyethylene (approximately 3\,mm thick) into the the IPF beamline, at the same location of the target box's beam entrance window. 
+% This sheet acts as a beam profile monitor, and is irradiated with 5 \mmicro A-min of the proton beam.
+As charged particles traverse a material, they transfer energy primarily through scattering reactions, leaving a damage trail along their path \cite{koutský2013radiation,krane1987introductory}.
+The average energy transfer in a collision by an incident particle of energy $E$ and mass $m$, on a single atom
+with mass $M$, is given by:
+\begin{equation}
+\langle T\rangle = \dfrac{1}{2}T_{max} = \dfrac{2mM}{\pp{m+M}^2}E
+\end{equation}
+For crystalline, metallic, and other ionic materials with a  well-defined bulk  lattice structure, if the energy transferred to an atom  is large enough, the atoms can  be knocked out of their lattice sites.
+This displacement energy, $E_d$ , is typically about 25\,eV for most solid materials \cite{olander1990fundamental}. 
+This displaced atom is referred to as the primary knock-on atom (PKA), and is now mobile and capable moving throughout the material, with energy $T$. 
+If $T \ge E_d$, the PKA is free to collide with another atom in the lattice, transferring:
+\begin{equation}
+\langle T_2\rangle = \dfrac{1}{2}T_{max} = \dfrac{2mM}{\pp{m+M}^2}\langle T\rangle
+\end{equation}
+to the second atom. 
+If $T_2 \ge E_d$, the PKA is free to collide with yet another atom, transferring:
+\begin{equation}
+\langle T_3\rangle = \dfrac{1}{2}T_{max} = \dfrac{2mM}{\pp{m+M}^2}\langle T_2\rangle
+\end{equation}
+% For crystalline, metallic, and other materials with a  well-defined bulk material lattice structure,  
+
+
+This process keeps repeating, as long as $T_n \ge E_d$, producing a cascade of  atoms knocked out of their lattice sites, all of which are heavy charged ions, and will rapidly scatter in the nearby material. 
+Each time an atom is knocked out of its lattice site, it produces a Frenkel pair --- the interstitial atom displaced from its lattice site, and a vacancy in its old lattice site \cite{olander1990fundamental,Pehl1978}. 
+These are known as zero-dimensional defects in the material. 
+During the cascade, all of the secondary interstitial displaced atoms may go on to knock out many other atoms themselves.
+The cascade will continue on for $N_f$ total collisions, until the average energy of the cascade knock on particles is:
+\begin{equation}
+2E_d = \dfrac{T}{2^{N_f}}
+\end{equation}
+for an original incident radiation particle with energy $T$. 
+This cascade will thus produce a total number of displaced particles, $\nu$, such that:
+\begin{equation}
+\nu = \dfrac{T}{2E_d}
+\end{equation}
+For the example of an original incident 1\,MeV proton, the proton may produce as many as
+\begin{equation}
+\nu = \dfrac{1\,MeV}{2\pp{25\,eV}} = 20,000\text{ displacements}
+\end{equation}
+
+All of the vacancy and interstitials formed by the cascade are extremely thermodynamically unstable, especially the interstitials, which are stuck in between lattice sites in the crystal lattice. 
+To minimize the energy of the system, vacancies and interstitials diffuse from their primary site, and may recombine, annealing the damage caused by that pair \cite{shackelford2009introduction}. 
+However, vacancies and interstitials may also diffuse towards like defects instead, linking to up form large three-dimensional void and precipitate cluster defects in the material, which also reduces the energy of the crystal system.
+These defect clusters may easily be as large as 150\,\angstrom\ across. 
+In addition, if the energy transfer in a PKA cascade is $\langle T \rangle \approx$ 5\,keV, cascades of such cluster defects may be formed nearly instantaneously, instead of single displacements \cite{Moll2000,Fourches2012a}.
+It is worth pointing out that, in addition to the primary beam, secondary ionizing radiation may also cause material damage. 
+However, due to the different interaction mechanisms for the different types of ionizing radiation, observed displacement cascades may have different energy thresholds.
+Some typical threshold values for cascades are reported in \autoref{tab:cascade_thresholds} below.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\caption{Displacement cascade approximate thresholds \cite{Moll2000}}
+\label{tab:cascade_thresholds}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Incident Radiation Type & Single Displacements & Defect Clusters \\ \midrule
+Charged Particles       & 0.2 keV/A            & 8 keV/A         \\
+Neutrons                & 185 eV               & 5 keV           \\
+Gammas                  & 1 MeV                & Not observed    \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+
+While this gives a brief overview of radiation damage in ionic materials, for plastics and other amorphous polymer solids, a different damage  mechanism exists.
+This is due to the fact that these types of material are dominated by covalent bonding.
+In such materials, when atoms are sufficiently excited following scattering by ionizing radiation,  they are not displaced from their lattice position, but instead may have their electron bond pairs broken up.
+This results in the original molecule  disintegrating, and potentially re-forming into one or more new, different molecules.
+Thus, radiation damage in covalent materials results in chemical changes, as opposed to the physical changes seen in ionic materials.
+Plastics and other polymers exist as a massive single macromolecule, formed by repeating chains of smaller molecules called monomers.
+In the case of polymers, the extensive bond geometry in the overall molecule determines many of its properties and appearance, making such materials highly vulnerable to radiation damage \cite{Aframian1974}.
+
+
+
+
+When polymer bonds are broken, free radicals are formed in the severed chain segments.
+These free radicals are highly likely to propagate and terminate by reforming in new arrangements, which can be loosely lumped into three categories.
+Cross-linking is the formation of new bonds between previously-separate chains.
+This rearrangement produces a more rigid and brittle polymer with increased molecular mass, and is a common damage mechanism in softer polymers, such as silicones and polyethylenes.
+Fragmentation is the termination of segments with broken bonds, leading to the formation of many separate short-chain polymers.
+This rearrangement produces a softer, more fluid polymer with decreased molecular mass, and is a common damage mechanism in harder polymers, such as Lucite and synthetic rubbers.
+Both cross-linking and fragmentation affect the materials properties of a polymer --- mechanical strength, solubility, and discoloration are commonly affected by these damage mechanisms. 
+Finally, fragmented chain segments may polymerize to form completely new polymers than the original macromolecule, with a wide variety and chemical and physical properties \cite{Reichmanis1993}.
+
+
+Of these materials properties, discoloration is one of the most commonly encountered radiation damage effects seen in the context of activation experiments.
+Permanent discoloration occurs in polymers primarily due to heating effects from the beam.
+Temporary, annealable discoloration is more common in activation experiments.
+This variety is caused when residual free radicals become trapped in the polymer, and are unable to recombine and terminate.
+Moreover, they are able to be reversed through annealing, disappearing as oxygen diffuses into the polymer, helping to terminate the residual free radicals.
+This process will often occur at room temperature, but is greatly catalyzed when the polymer is heated \cite{international1999iaea,Davenas2002}.
+
+
+
+
+
+\subsubsection{Beam profile measurements}
+
+\textred{Verify that we used polyethylene!!!}
+
+
+Following  tuning of the 100\,MeV proton beam into the IPF beamline, the current is measured immediately upstream of the target position using a pair of nondestructive inductive pickups.
+The final remaining step prior to loading the  target box for irradiation is to tune the beam optics and spatial profile.
+This is performed by loading a sheet of polyethylene (approximately 3\,mm thick) into the the IPF beamline, at the same location of the target box's beam entrance window. 
+This sheet acts as a beam profile monitor, and is irradiated with 5 \mmicro A-min of the proton beam.
+Following exposure, the polyethylene monitor is withdrawn back into the IPF hot cell, where it is inspected to verify the shape and location of the beam profile.
+These beam profile irradiations leave an annealable discoloration of the beam profile, which resembles a \enquote{burn mark}, and are observed to passively revert within 1--2 weeks.
+The final pre-irradiation beam spot from the Nb(p.x) measurement is seen in  \autoref{fig:ipf_preexp_beam_spot}.
+LANSCE accelerator operations staff use this feedback to fine-tune the beam, centering the beam spot upon the target stack and focusing it to ensure that it underfills the target foils.
+This process of  optics tuning via polyethylene profile monitors is repeated until an acceptable beam profile is attained.
+At this point, the target box is lowered into the beamline, and the irradiation commences.
+ 
+
+
+
+
+
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_preexp_beam_spot-cropped.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{Final beam spot profile for the IPF Nb(p.x) measurement. The 100\,MeV proton beam is confirmed to be centered on the target position, and is focused to underfill the 25\times25\,mm target foils.}
+ \label{fig:ipf_preexp_beam_spot}
+\end{figure}
+
+
+
+
+This polyethylene beam profile monitor is useful for determining the beam profile incident upon the stack's beam entrance window.
+However, the beam broadens as it traverses the target stack, with large-angle deflections (primarily in the aluminum degraders) from scattering of the beam.
+To image the actual beam profile incident upon the first foil in the stack (Al-1), a 316 stainless steel foil (SS-6) is inserted upstream of Al-1 to serve as a beam profile monitor for the activation foils.
+Likewise, another stainless steel profile monitor (SS-1) is inserted downstream of the last foil in the stack (Nb-6).
+These stainless steel monitors are cut to the same length and width as the plastic frames used for mounting foils, and are characterized in \autoref{tab:stack_table}.
+
+
+
+\textred{Update the type of film used at IPF, here and in the paper!!!}
+
+
+As described in \autoref{sec:target_design}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (\textred{Gafchromic EBT3}), revealing the spatial profile of the beam entering and exiting the stack.
+Radiochromic films, such as \textred{Gafchromic EBT3}, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
+In general, such films are commonly self-developing, containing a radiation-sensitive organic polymer dye as the active layer.
+This dye, much like the polyethylene beam profile monitors, is damaged by ionizing radiation, with multiple free radicals initiated in the process.
+These free radicals result in cross-linking, breaking of double bonds, and fragmentation of the dye polymer, which causes the damaged dye to undergo a large visible change in  color.
+The intensity of this color change is often proportional to the dose received by the film, and is preferred to be energy-independent \cite{Azam1998}.
+Many such films are sensitive to prolonged UV exposure, and will slowly develop if not kept in a  cool, dark environment, leading to systematic errors in observed dose.
+The thin dye layer in most films is extremely sensitive, so care must be taken to avoid bending or deforming, which can make them insensitive to development when irradiated.
+% Following exposure, the film may be scanned 
+For reference, the \textred{Gafchromic EBT3} film used in this work is comprised of a 28\,\mmicro m active layer containing a dye sensitive to ionizing radiation, sandwiched in between a pair of 125\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
+
+
 
 
 
@@ -189,6 +398,28 @@ add pictures of gafchromic films
 % For a low-current irradiation such as this work, where a nominal fluence of 200 nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified EoB activities into cross sections.
 
 
+The radiochromic films developed by the SS-6 and SS-1 stainless steel beam profile monitors are seen in \autoref{fig:gafchromic_nb}.
+In addition, extra aluminum monitor foils mounted on  plastic frames are superimposed behind each film.
+It is clear from the upstream (SS-6) film that the proton beam profile was consistent with that seen in the final pre-irradiation beam spot check of  \autoref{fig:ipf_preexp_beam_spot}.
+The downstream (SS-1) film  reveals that the beam was not completely attenuated,  
+% in the target stack
+and clearly displays the  broadening expected due to scattering in the target stack. 
+More importantly, the beam profiles in both films appears to be completely contained within the 25\times25\,mm activation foils, including the beam envelope.
+If the beam were to be misaligned on the foils, or were to have sufficiently broadened such that it greatly overfilled the foils, the activation foils would be exposed to only a fraction of the total beam current.
+If  fluence measurements are purely taken from an external  current monitor (such as an inductive pickup upstream of a target, or an electrically-isolated target in a Faraday cup), the  fraction of current which misses the foils will not be detected.
+This leads to reporting a false, larger  fluence, which will cause all cross sections to be erroneously reported with a reduced magnitude.
+Thus, beam profile monitors play a vital role in the screening of lost beam fluence. 
+Additionally, it is for this reason that having monitor foils at each energy position in a target stack
+
+
+
+
+
+Following exposure, the film may be scanned 
+
+\cite{Andre2011,David2012}
+
+\cite{Rueden2017}     
 
 
 
@@ -211,17 +442,83 @@ add pictures of gafchromic films
          %         \refstepcounter{subfigure}
          \label{fig:gafchromic_nb_downstream}
    \hspace{-5pt}}%
-    \caption{The radiochromic films.}
+    \caption{Radiochromic films for the IPF Nb(p,x) measurement, developed by the stainless steel beam profile monitors in (a) the front of the stack (SS-6) and (b) the rear of the stack (SS-1). An unused Al monitor foils is aligned behind each film, confirming that both the beam core and envelope underfilled the activation foils.}
      \label{fig:gafchromic_nb}
 \end{figure}
 
+
+
+
+\begin{figure}
+    \centering
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.496\textwidth]{}{./figures/horz_ipf_beam_profile.pdf}{50}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:54Mn}
+%
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.496\textwidth]{}{./figures/vert_ipf_beam_profile.pdf}{50}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:55Co}
+   \hspace{-10pt}}%
+    \caption{The radiochromic films.}
+     \label{fig:gafchromic_nb_profiles}
+\end{figure}
+
+
+
+
+\subsubsection{Target preparation}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/IMG_1969.JPG}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:IMG_1969}
+\end{figure}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/image2993.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:IMG_1984}
+\end{figure}
+
+
+
+\subsubsection{MCNP modeling}
+
+
 picture of mcnp stack model
+
+
+A rendering of the HFNG target chamber, as modeled in MCNP6, is seen in \autoref{fig:ipf_vised}.
+This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
+This model is the same described in \autoref{sec:proton_transport} for simulation of neutron transport in the HFNG.
+The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:ipf_mcnp_deck}.
+
 
 
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels.PNG}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
  \caption{Blah blah blah
 %  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
@@ -238,7 +535,7 @@ picture of mcnp stack model
     \subfloat{
         \centering
 %         \includegraphics[width=\textwidth]{./figures/target2.png}
-        \subfigimg[width=0.497\textwidth]{}{./figures/91mNb.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{a)}{./figures/Al_ntallies.pdf}{50}
 %         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
         %         \refstepcounter{subfigure}
 %          \label{fig:91mNb}
@@ -246,7 +543,7 @@ picture of mcnp stack model
 %      \subfloat{
 %         \centering
 %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.497\textwidth]{}{./figures/92mNb.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{b)}{./figures/Cu_ntallies.pdf}{50}
 %         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
 %         \refstepcounter{subfigure} 
 %         \label{fig:92mNb}
@@ -255,15 +552,124 @@ picture of mcnp stack model
     \subfloat{
         \centering
 %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.497\textwidth]{}{./figures/93mMo.pdf}{50}
+        \subfigimg[width=0.497\textwidth]{c)}{./figures/Nb_ntallies.pdf}{50}
 %         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
 %         \refstepcounter{subfigure}
 %          \label{fig:93mMo}
    }%
-    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}, and (d) decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
 %      \phantomcaption{}
-     \label{fig:xs_curves_p7}
+     \label{fig:ipf_ntallies}
 \end{figure*}
+
+
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.495\textwidth]{a)}{./figures/Al_ptallies.pdf}{80}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.495\textwidth]{b)}{./figures/Cu_ptallies.pdf}{80}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+%      \phantomcaption{}
+     \label{fig:ipf_ptallies_appendix}
+\end{figure*}
+
+
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/peak_stairsteps.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{peak stairsteps.}
+ \label{fig:peak_stairsteps}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.5\columnwidth]{./figures/FWHM_plot.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:FWHM_plot}
+\end{figure}
+
+
+
+
+
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.495\textwidth]{}{./figures/22Na.pdf}{80}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.495\textwidth]{}{./figures/24Na.pdf}{80}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+%      \phantomcaption{}
+     \label{fig:tentative_ipf_na}
+\end{figure*}
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_nb_product_table.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:ipf_nb_product_table}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{the FWHM plot.}
+ \label{fig:ipf_cu_product_table}
+\end{figure}
+
+
+
 
 
 
