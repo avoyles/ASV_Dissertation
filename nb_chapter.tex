@@ -371,11 +371,11 @@ These stainless steel monitors are cut to the same length and width as the plast
 
 
 
-\textred{Update the type of film used at IPF, here and in the paper!!!}
+% \textred{Update the type of film used at IPF, here and in the paper!!!}
 
 
-As described in \autoref{sec:target_design}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (\textred{Gafchromic EBT3}), revealing the spatial profile of the beam entering and exiting the stack.
-Radiochromic films, such as \textred{Gafchromic EBT3}, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
+As described in \autoref{sec:target_design}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (Gafchromic EBT), revealing the spatial profile of the beam entering and exiting the stack.
+Radiochromic films, such as Gafchromic EBT, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
 In general, such films are commonly self-developing, containing a radiation-sensitive organic polymer dye as the active layer.
 This dye, much like the polyethylene beam profile monitors, is damaged by ionizing radiation, with multiple free radicals initiated in the process.
 These free radicals result in cross-linking, breaking of double bonds, and fragmentation of the dye polymer, which causes the damaged dye to undergo a large visible change in  color.
@@ -383,7 +383,7 @@ The intensity of this color change is often proportional to the dose received by
 Many such films are sensitive to prolonged UV exposure, and will slowly develop if not kept in a  cool, dark environment, leading to systematic errors in observed dose.
 The thin dye layer in most films is extremely sensitive, so care must be taken to avoid bending or deforming, which can make them insensitive to development when irradiated.
 % Following exposure, the film may be scanned 
-For reference, the \textred{Gafchromic EBT3} film used in this work is comprised of a 28\,\mmicro m active layer containing a dye sensitive to ionizing radiation, sandwiched in between a pair of 125\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
+For reference, the Gafchromic EBT film used in this work is comprised of a 28\,\mmicro m active layer containing a dye sensitive to ionizing radiation, sandwiched in between a pair of 125\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
 
 
 
@@ -416,11 +416,38 @@ However, profile monitors play a vital role in the detection of lost beam fluenc
 
 
 
-Following exposure, the film may be digitized using any flatbed scanner.
 
-\cite{Andre2011,David2012}
 
-\cite{Rueden2017}     
+Since the color change developed by irradiation is proportional to the dose deposited in the film, the optical density of the film may be used to measure dose.
+In clinical external-beam radiation therapy, these films are commonly used in quality assurance  to map and verify  the dose contours for therapeutic gamma-ray fields.
+However, the dose sensitivity of these films is often greater than the ability to be visually distinguished beyond simple qualitative inspection.
+As a result, following exposure, the film may be digitized using any flatbed scanner.
+Image analysis may be thus used to measure the optical density profile as a surrogate for dose or beam intensity profiles.
+The optical density is often fit to a curve of the form
+\begin{equation}
+d_x\pp{D} = a + \dfrac{b}{D-c}
+\end{equation}
+where $d_x\pp{D}$ is the optical density of exposed radiochromic film in scanner color channel $x$ at dose $D$, and $a$, $b$, and $c$ are calibration parameters.
+Using a standard irradiation source (commonly a collimated \ce{^{60}Co} source), a calibration curve can thus be measured to convert optical density into an absolute dose.
+This is most common in clinical and quality assurance applications.
+In addition, modern radiochromic films are often designed such that the characteristic exposure curve for the active layer dye differs between the red, green, and blue color channels, offering even further enhanced sensitivity to dose \cite{bushberg2011essential,Andre2011,David2012}.
+
+
+
+
+
+However, for cases where an absolute dose is not necessary, the optical density can still be used for a qualitative measure of relative beam intensity, or relative dose.
+Using the image analysis code  ImageJ-2.0.0,  profiles of the total optical density were extracted for both the SS-1 and SS-6 radiochromic films \cite{Rueden2017}.
+These are seen in \autoref{fig:gafchromic_nb_profiles}, as relative beam intensity profiles along the major and minor axis of each film.
+As seen visually, for both axes, the peak beam intensity drops from SS-6 to SS-1, as the proton fluence is clearly broadened by scattering reactions in the target stack.
+% As seen visually, there is a clear broadening of the beam spot in the rear of the target stack.
+Along the major (\enquote{horizontal}) axis, the FWHM of the beam profile broadens from 0.679\,cm to 1.039\,cm, and along the minor (\enquote{vertical}) axis, the FWHM of the beam profile broadens from 0.453\,cm to 0.902\,cm.
+In addition, the centroid position of the minor axis appears to shift by approximately 0.19\,cm between the front and rear of the stack. 
+The measured beam profiles were fit using a Gaussian model with linear background, to aid in comparing the widths of each profile.
+The Gaussian model does well to fit the beam profiles overall, though it overestimates the peak height for a given Gaussian width.
+This is likely due to the fact that the beam itself has an intrinsic spatial width before any interactions with the target stack; this leads to more broadening of the beam envelope than of its core.
+
+    
 
 
 
@@ -455,18 +482,18 @@ Following exposure, the film may be digitized using any flatbed scanner.
     \subfloat{
         \centering
 %         \includegraphics[width=\textwidth]{./figures/target2.png}
-        \subfigimg[width=0.496\textwidth]{}{./figures/horz_ipf_beam_profile.pdf}{50}
+        \subfigimg[width=0.496\textwidth]{a)}{./figures/horz_ipf_beam_profile.pdf}{100}
 %         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
         %         \refstepcounter{subfigure}
 %          \label{fig:54Mn}
 %
 %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.496\textwidth]{}{./figures/vert_ipf_beam_profile.pdf}{50}
+        \subfigimg[width=0.496\textwidth]{b)}{./figures/vert_ipf_beam_profile.pdf}{50}
 %         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
 %         \refstepcounter{subfigure} 
 %         \label{fig:55Co}
    \hspace{-10pt}}%
-    \caption{The radiochromic films.}
+    \caption{Relative beam intensity profiles for the radiochromic films seen in \autoref{fig:gafchromic_nb}. The intensity profiles were analyzed using ImageJ along (a) the major axis and (b) minor axis of each beam spot. }
      \label{fig:gafchromic_nb_profiles}
 \end{figure}
 
@@ -474,6 +501,23 @@ Following exposure, the film may be digitized using any flatbed scanner.
 
 
 \subsubsection{Target preparation}
+
+As described in \autoref{sec:target_design}, all activation  foils in this work were   tightly sealed into \enquote{packets} using two pieces of  3M 5413-Series Kapton polyimide film tape.
+The sealed foils were then mounted over the hollow center of a 1.575 mm-thick plastic frame.
+This gives each foil a fixed, rigid, position, preventing it from shifting out of alignment as the target stack is lowered into the beamline.
+In addition, the hollow center is cut out such that the plastic frame does not degrade and scatter the beam at each foil position.
+% to minimize the 
+One \ce{^{nat}Al}, one \ce{^{nat}Cu}, and one \ce{^{nat}Nb} mounted foil were bundled together using baling wire for each energy position.
+One such bundle is seen in \autoref{fig:IMG_1969}, illustrating how the three foils of each bundle are aligned with each other.
+This is primarily to maintain a comparable area of exposed foil at each energy position, in the case of significant beam spot broadening
+These foil packet bundles were lowered into the beamline by inserting them into a  water-cooled production target box.
+After sealing the target box, it is inserted into the IPF hot cell, seen in \autoref{fig:IMG_1984}. 
+In the hot cell, robotic manipulators are used to attach a mounting frame to the top of the target box.
+The frame is used to mount the target box onto a motorized track, which extends  below the hot cell, and is used to lower the target box by approximately 12\,m into its position in the IPF beamline.
+Following irradiation, the track raises the target box back into the hot cell, where it is detached and opened via manipulators.
+Foil removal is performed in the hot cell via the manipulators, as the target box becomes highly activated with short-lived Al activation products, which makes manual handling hazardous.
+The foil bundles are removed using the baling wire loop \enquote{handles}, and  removed from the hot cell via a pass-through, for decontamination and transfer to the counting lab.
+
 
 
 
@@ -484,7 +528,7 @@ Following exposure, the film may be digitized using any flatbed scanner.
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/IMG_1969.JPG}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{the FWHM plot.}
+ \caption{A stacked bundle of Nb (visible on top), Cu, and Al activation foils, for the 60\,MeV position of the Nb(p,x) target stack. All foils are mounted over the aperture of a 1.575 mm-thick plastic frame and bundled together with baling wire.}
  \label{fig:IMG_1969}
 \end{figure}
 
@@ -497,7 +541,7 @@ Following exposure, the film may be digitized using any flatbed scanner.
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/image2993.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{the FWHM plot.}
+ \caption{The IPF hot cell, used for lowering and retrieving the target stack (circled in black) and polyethylene beam profile monitors from the IPF beamline. Robotic manipulators are used for handling of all components in the hot cell, including mounting them onto a motorized track for insertion into the beamline. This track and mount are seen circled in red.}
  \label{fig:IMG_1984}
 \end{figure}
 
@@ -506,22 +550,25 @@ Following exposure, the film may be digitized using any flatbed scanner.
 \subsubsection{MCNP modeling}
 
 
-picture of mcnp stack model
 
 
-A rendering of the HFNG target chamber, as modeled in MCNP6, is seen in \autoref{fig:ipf_vised}.
-This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
-This model is the same described in \autoref{sec:proton_transport} for simulation of neutron transport in the HFNG.
+A rendering of the IPF Nb(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:ipf_vised}.
+% This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
+This model is the same described in \autoref{sec:proton_transport} for simulation of proton transport.
 The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:ipf_mcnp_deck}.
-
+In this figure, the 100\,MeV proton beam enters from the left of the figure, where it is incident (in the positive $x$ direction) upon the Inconel beam entrance window (yellow).
+The other stack elements, described in  \autoref{tab:stack_table} are illustrated here, as well.
+The green cell is the cooling water channel for the target box, the air filling the target box is shown in light blue, and the 6061 aluminum beam degraders are shown in dark blue.  
+The thin black lines seen in between degraders are the Nb, Cu, and Al activation points at each energy position, sealed in Kapton tape. 
+The detail of each foil sealed in the Kapton is not visible here, simply due to the size scale of the stack assembly.
 
 
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels.PNG}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.PNG}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
- \caption{Blah blah blah
+ \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 %  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
 }
  \label{fig:ipf_vised}
@@ -530,6 +577,36 @@ The full input file for this MCNP model is included here for reference, in Appen
 
 
 
+\begin{figure*}
+    \centering    
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.495\textwidth]{a)}{./figures/Al_ptallies.pdf}{80}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:91mNb}
+%    }
+%      \subfloat{
+%         \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.495\textwidth]{b)}{./figures/Cu_ptallies.pdf}{80}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:92mNb}
+   \hspace{-10pt}}%
+    \caption{Final variance minimized incident proton energy distributions for the (a) Al and (b) Cu foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, proton energy distributions become visibly broadened due to straggling, and drop in magnitude due to scattering losses.}
+%      \phantomcaption{}
+     \label{fig:ipf_ptallies_appendix}
+\end{figure*}
+
+
+
+Using this MCNP6 model, the proton energy distribution is tallied in all volumes of the stack assembly.
+As seen in \autoref{fig:Nb_ptallies} of \autoref{sec:proton_transport}, the corresponding incident proton  energy distributions $\frac{d\phi}{dE}$ from MCNP6 simulation (using the variance minimized degrader density) are shown for the six irradiated Cu and Al  foils in \autoref{fig:ipf_ptallies_appendix}. 
+In addition, the MCNP6 model tracks the production and transport of secondary neutrons produced through (p,xn) reactions on the target stack components.
+The the proton energy distribution is tallied in all Al, Cu, and Nb foils, and is seen in \autoref{fig:ipf_ntallies}. 
+The neutron flux is consistently 3--4 orders of magnitude smaller than the corresponding proton flux, and is seen to be visibly  downscattered when moving down the stack.
 
 \begin{figure*}
     \centering    
@@ -558,49 +635,25 @@ The full input file for this MCNP model is included here for reference, in Appen
 %         \refstepcounter{subfigure}
 %          \label{fig:93mMo}
    }%
-    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+    \caption{Final variance minimized incident neutron energy distributions for the (a) Al, (b) Cu, and (C) Nb foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, neutron energy distributions become visibly downscattered.}
 %      \phantomcaption{}
      \label{fig:ipf_ntallies}
 \end{figure*}
 
 
-\begin{figure*}
-    \centering    
-    \subfloat{
-        \centering
-%         \includegraphics[width=\textwidth]{./figures/target2.png}
-        \subfigimg[width=0.495\textwidth]{a)}{./figures/Al_ptallies.pdf}{80}
-%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
-        %         \refstepcounter{subfigure}
-%          \label{fig:91mNb}
-%    }
-%      \subfloat{
-%         \centering
-%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
-        \subfigimg[width=0.495\textwidth]{b)}{./figures/Cu_ptallies.pdf}{80}
-%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
-%         \refstepcounter{subfigure} 
-%         \label{fig:92mNb}
-   \hspace{-10pt}}%
-    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
-%      \phantomcaption{}
-     \label{fig:ipf_ptallies_appendix}
-\end{figure*}
 
 
 
-
-
-\begin{figure}
- \centering
-%                                l   b      r    top
-%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
-%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/peak_stairsteps.pdf}
- % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{peak stairsteps.}
- \label{fig:peak_stairsteps}
-\end{figure}
+% \begin{figure}
+%  \centering
+% %                                l   b      r    top
+% %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+% %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth]{./figures/peak_stairsteps.pdf}
+%  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+%  \caption{peak stairsteps.}
+%  \label{fig:peak_stairsteps}
+% \end{figure}
 
 
 
@@ -614,12 +667,79 @@ The full input file for this MCNP model is included here for reference, in Appen
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.5\columnwidth]{./figures/FWHM_plot.pdf}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{the FWHM plot.}
- \label{fig:FWHM_plot}
+ \caption{FWHM for the proton energy distributions of Cu and Al foils seen in \autoref{fig:ipf_ptallies_appendix}, as a function of the flux-weighted average proton energy. }
+ \label{fig:ipf_FWHM_plot}
 \end{figure}
 
 
 
+Additionally, using this proton transport model, it is possible to plot the FWHM of the proton energy distribution in each of the Cu and Al monitor foils, as a function of its  flux-weighted average proton energy.
+This is seen in \autoref{fig:ipf_FWHM_plot}.
+As seen in the recent work of Graves \etal, this FWHM distribution can be fit via linear regression \cite{Graves2016}.
+The results of this fit (with $R^2=0.9986$) would suggest that the broadening of proton energy distribution in the target stack is linearly proportional to energy degradation, which is overwhelmingly from the aluminum degraders between energy positions.
+% , displaying a clear linear relationship  .
+This serves to build confidence, through consistency with the  results from this similar measurement.
+In the event that the FWHM of a stack element could not be directly calculated using the MCNP model output, this linear model could be used to estimate the element's FWHM through interpolation. 
+
+
+
+
+\subsubsection{\ce{^{22,24}Na} production}
+
+As discussed in \autoref{sec:proton_transport}, the observation of the \ce{^{22,24}Na} activities in Cu and Nb foils  represents an indirect measurement of the \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross sections, but  was not  reported in the journal article due to 
+% the number of assumptions involved in such a calculation.
+uncertainties in the areal density of the Si in the adhesive.
+The EoB \ce{^{22,24}Na} activities have been measured directly, but to convert these into absolute cross sections, accurate knowledge of the precise silicone composition and areal density are required.
+These have been taken as  a 10\% Si stoichiometric basis and an areal density of 4.79\,mg/cm$^2$ (based on bulk density),
+respectively, for the purposes of transport calculations, but this level of confidence is insufficient for the reporting of a cross section.
+Using these assumptions, the apparent cumulative \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross sections are included here for the purpose of completeness, tabulated in  \autoref{tab:ipf_2224na_table} and plotted in  \autoref{fig:tentative_ipf_na}, in comparison with literature data  
+\cite{Furukawa1971,R.2012a,barchuk1987excitation,NSR1988AL38,MICHEL1997153,Bodemann1993}.
+
+
+
+% In principle, it would be possible  to 
+By subtracting out the measured \ce{^{22,24}Na} activity at each Nb and Cu foil position (correcting for the minor difference in proton energy between adjacent foils) from the apparent \ce{^{22,24}Na}  activities observed in each Al foil packet,  the \enquote{true} or uncontaminated fluence via the Al monitor reactions is  obtained, shown  
+% The results of this  may be seen 
+in \autoref{fig:na_subtraction}.
+Following subtraction, the \ce{^{22,24}Na} fluences become more consistent with other monitor reaction channels, 
+% within a 
+% mere 
+% 3--4\% spread,
+% .
+% Even following subtraction, 
+though  \ce{^{22}Na} fluence remains 3--6\% higher than the weighted mean of the remaining monitor reaction channels.
+While this would circumvent the assumptions needed for reporting \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross sections, subtraction of  inaccurately quantified \ce{^{22,24}Na} activity in each Nb and Cu foil would propagate into the final fluence determination at each energy position, shifting the magnitude of all reported cross sections.
+While the dramatic improvement in monitor reaction consistency builds confidence, in the interest of surety and because they are consistent, only the \ce{^{nat}Cu}(p,x)\ce{^{56}Co}, \ce{^{nat}Cu}(p,x)\ce{^{62}Zn}, and \ce{^{nat}Cu}(p,x)\ce{^{65}Zn} monitor reaction channels will be used for fluence determination for the reported cross sections.
+% In both cases, this disparity is caused by the fact that both of these monitor reactions may also form the \ce{^{22}Na} and \ce{^{56}Co} reaction products through contamination by secondary neutron (n,x) channels, increasing the apparent fluence as observed by these monitor reactions.
+% Since no method for reliably separating the fraction of \ce{^{22}Na} and \ce{^{56}Co} activities induced through (n,x) exists, the fluences predicted by these monitor channels are not used in the final determination of the proton fluence seen by Nb foils. 
+% The fact that this \enquote{extra fluence} diminishes at lower energy is likely attributed to the fact that the \ce{^{nat}Al}(p,x)\ce{^{22}Na} and \ce{^{nat}Cu}(p,x)\ce{^{56}Co} have energetic thresholds of 23.35 and 36.76 MeV, respectively. 
+% The fraction of secondary neutrons produced by (p,xn)  which are energetic enough to populate the  \ce{^{22}Na} and \ce{^{56}Co} reaction products at the lower energy positions becomes progressively smaller.
+This serves as a pointed example of the importance of selecting monitor reaction products inaccessible through channels aside from the primary reaction (\ce{^{nat}Al}(p,x)\ce{^{22,24}Na}, in this case), as noted previously.
+% However,  the fact that both monitor reactions measure consistently higher fluence than the other channels on each foil builds confidence that the monitor reactions accurately indicate the presence of a non-negligible secondary neutron flux.
+
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\caption{Apparent cumulative \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross section measurements, as observed in this work.}
+\label{tab:ipf_2224na_table}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+                               & \multicolumn{6}{c}{Isomer branching ratio}                                                                                                                \\ \cmidrule(l){2-7} 
+E$_\text{p}$ (MeV)             & $89.74^{+0.48}_{-0.43}$ & $79.95^{+0.67}_{-0.64}$ & $70.17^{+0.91}_{-0.85}$ & $61.58^{+1.03}_{-0.98}$ & $52.10^{+1.25}_{-1.20}$ & $41.05^{+1.62}_{-1.54}$ \\ \midrule
+\ce{^{nat}Si}(p,x)\ce{^{22}Na} & $20.4\pm3.0$         & $20.4\pm3.8$         & $22.9\pm3.1$         & $20.3\pm5.5$           & $8.1\pm2.1$    & --\cmmnt{\hrulefill}    \\
+\ce{^{nat}Si}(p,x)\ce{^{24}Na} & $3.21\pm0.43$         & $2.77\pm0.33$         & $2.10\pm0.25$         & $1.08\pm0.20$         & $0.59\pm0.11$           & $0.254\pm0.038$            \vspace{1em}     \\ 
+E$_\text{p}$ (MeV)             & $89.37^{+0.47}_{-0.45}$ & $79.55^{+0.68}_{-0.64}$ & $69.70^{+0.90}_{-0.85}$ & $61.07^{+1.05}_{-0.98}$ & $51.51^{+1.25}_{-1.21}$ & $40.34^{+1.58}_{-1.55}$ \\ \midrule
+\ce{^{nat}Si}(p,x)\ce{^{22}Na}  & $22.1\pm2.8$         & $21.7\pm3.6$         & $26.0\pm2.9$         & $27.6\pm5.2$    & $9.9\pm2.0$    & --\cmmnt{\hrulefill}    \\
+\ce{^{nat}Si}(p,x)\ce{^{24}Na}  & $3.65\pm0.50$         & $3.11\pm0.45$         & $2.50\pm0.96$         & $1.54\pm0.73$         & $0.76\pm0.15$         & $0.303\pm0.056$         \\ \bottomrule
+\end{tabular}
+}
+\end{table}
 
 
 \begin{figure*}
@@ -640,10 +760,22 @@ The full input file for this MCNP model is included here for reference, in Appen
 %         \refstepcounter{subfigure} 
 %         \label{fig:92mNb}
    \hspace{-10pt}}%
-    \caption{Decay curves used to verify photopeak transition assignment. (a) Decay curve for the isomeric transition of \ce{^{115m}In}, (b) decay curve for the isomeric transition of \ce{^{113m}In}, and (c) decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+    \caption{ Apparent cumulative \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross section measurements, from production in the silicone adhesive of the Cu and Nb foils.}
 %      \phantomcaption{}
      \label{fig:tentative_ipf_na}
 \end{figure*}
+
+
+
+
+\subsubsection{Potential pathways for isotope production }
+
+
+In the published journal article, cross sections for  \ce{^{51}Cr},  \ce{^{52g}Mn}, \ce{^{52m}Mn}, \ce{^{54}Mn}, \ce{^{55}Co}, \ce{^{56}Ni}, \ce{^{57}Ni}, \ce{^{57}Co},  \ce{^{58g}Co}, \ce{^{58m}Co}, \ce{^{59}Fe}, \ce{^{60}Co}, \ce{^{61}Cu}, and \ce{^{64}Cu} were extracted for (p,x) reactions  on \ce{^{nat}Cu} foils in the 40--90 MeV region, as recorded in \autoref{tab:cu_rp_table}.
+For  (p,x) reactions on \ce{^{nat}Nb} foils, the (p,x) cross sections for \ce{^{82m}Rb}, \ce{^{83}Sr}, \ce{^{85g}Y}, \ce{^{85m}Y}, \ce{^{86}Zr}, \ce{^{86}Y}, \ce{^{87}Zr}, \ce{^{87g}Y}, \ce{^{87m}Y}, \ce{^{88}Zr}, \ce{^{88}Y}, \ce{^{89g}Nb}, \ce{^{89m}Nb}, \ce{^{89}Zr}, \ce{^{90}Mo}, \ce{^{90}Nb}, \ce{^{91m}Nb}, \ce{^{92m}Nb}, and \ce{^{93m}Mo} were extracted, as recorded in \autoref{tab:nb_rp_table}.
+As an alternative to a simple list of the various observed reaction products, these may be visualized in \autoref{fig:ipf_nb_product_table} and \autoref{fig:ipf_cu_product_table}, in the style of excerpts from the Chart of  Nuclides.
+These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,x) and \ce{^{nat}Cu}(p,x), along with all observed reaction products, to illustrate the mass range probed in this measurement. 
+
 
 
 \begin{figure}
@@ -653,7 +785,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_nb_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{the FWHM plot.}
+ \caption{Reaction products observed in the \ce{^{nat}Nb}(p,x) measurement. \textred{84Sr is stable - update plot!}}
  \label{fig:ipf_nb_product_table}
 \end{figure}
 
@@ -665,7 +797,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{the FWHM plot.}
+ \caption{Reaction products observed in the \ce{^{nat}Cu}(p,x) measurement.}
  \label{fig:ipf_cu_product_table}
 \end{figure}
 
@@ -674,38 +806,15 @@ The full input file for this MCNP model is included here for reference, in Appen
 
 
 
-% While these TENDL cross sections simply provide approximate \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} yields,  t
-There are several important  conclusions to be drawn from this simple estimate using the TENDL   \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} yields.
-The observation of the \ce{^{22,24}Na} activities in Cu and Nb foils  represents an indirect measurement of the \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross sections, but  will not be reported due to 
-% the number of assumptions involved in such a calculation.
-uncertainties in the areal density of the Si in the adhesive.
-% The EoB \ce{^{22,24}Na} activities have been measured directly, but to convert these into absolute cross sections, accurate knowledge of the precise silicone composition and areal density are required.
-% These have been taken as
-However, if we assume a 10\% Si stoichiometric basis and an areal density of 4.79\,mg/cm$^2$ (based on bulk density),
-% respectively, for the purposes of transport calculations, but this level of confidence is insufficient for the reporting of a cross section.
-% In principle, it would be possible  to 
-we can subtract out the measured \ce{^{22,24}Na} activity at each Nb and Cu foil position (correcting for the minor difference in proton energy between adjacent foils) from the apparent \ce{^{22,24}Na}  activities observed in each Al foil packet, in order to obtain the \enquote{true} or uncontaminated fluence via the Al monitor reactions, shown  
-% The results of this  may be seen 
-in \autoref{fig:na_subtraction}.
-Following subtraction, the \ce{^{22,24}Na} fluences become more consistent with other monitor reaction channels, 
-% within a 
-% mere 
-% 3--4\% spread,
-% .
-% While this would circumvent the assumptions needed for reporting \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} cross sections, subtraction of  inaccurately quantified \ce{^{22,24}Na} activity in each Nb and Cu foil would propagate into the final fluence determination at each energy position, shifting the magnitude of all reported cross sections.
-% Even following subtraction, 
-though  \ce{^{22}Na} fluence remains 3--6\% higher than the weighted mean of the remaining monitor reaction channels.
-While the dramatic improvement in monitor reaction consistency builds confidence, in the interest of surety and because they are consistent, only the \ce{^{nat}Cu}(p,x)\ce{^{56}Co}, \ce{^{nat}Cu}(p,x)\ce{^{62}Zn}, and \ce{^{nat}Cu}(p,x)\ce{^{65}Zn} monitor reaction channels will be used for fluence determination for the reported cross sections.
-% In both cases, this disparity is caused by the fact that both of these monitor reactions may also form the \ce{^{22}Na} and \ce{^{56}Co} reaction products through contamination by secondary neutron (n,x) channels, increasing the apparent fluence as observed by these monitor reactions.
-% Since no method for reliably separating the fraction of \ce{^{22}Na} and \ce{^{56}Co} activities induced through (n,x) exists, the fluences predicted by these monitor channels are not used in the final determination of the proton fluence seen by Nb foils. 
-% The fact that this \enquote{extra fluence} diminishes at lower energy is likely attributed to the fact that the \ce{^{nat}Al}(p,x)\ce{^{22}Na} and \ce{^{nat}Cu}(p,x)\ce{^{56}Co} have energetic thresholds of 23.35 and 36.76 MeV, respectively. 
-% The fraction of secondary neutrons produced by (p,xn)  which are energetic enough to populate the  \ce{^{22}Na} and \ce{^{56}Co} reaction products at the lower energy positions becomes progressively smaller.
-This serves as a pointed example of the importance of selecting monitor reaction products inaccessible through channels aside from the primary reaction (\ce{^{nat}Al}(p,x)\ce{^{22,24}Na}, in this case ), as noted previously.
-% However,  the fact that both monitor reactions measure consistently higher fluence than the other channels on each foil builds confidence that the monitor reactions accurately indicate the presence of a non-negligible secondary neutron flux.
-
-
-
-
+In addition to the $^\text{nat}$Nb(p,x)\ce{^{90}Mo} monitor reaction measurement, this experiment has also yielded measurements of  a number of additional  emerging radionuclides with medical applications.
+These include the non-standard positron emitters 
+\ce{^{57}Ni} \cite{PMID:7632762,zweit1996medium,Graves2016,Rosch2014}, 
+\ce{^{64}Cu} \cite{Lewis2003,Bandari2014,mp500671j,Szelecsenyi1993,Aslam2009,Hilgers2003,Szelecsenyi2005,Voyles2017},  \ce{^{86}Y} \cite{Valdovinos2017,Nickles2003,Qaim2008,QaimSyedM2011,Rosch1993,doi:10.1139/v67-193,levkovski1991cross,Johnson2015,Singh2013,Kiselev1974,Kandil2009}, 
+\ce{^{89}Zr}  \cite{Verel2003,Dijkers2009,Dijkers2010,PhysRevC.38.1624,Omara2009},  
+\ce{^{90}Nb} \cite{Busse2002,Radchenko2012},  
+% the $\beta^-$-therapy agent  \ce{^{64}Cu},  
+and the Auger-therapy agent \ce{^{82\text{m}}Rb} \cite{Kovacs1991,Titarenko2011}. 
+Discussion of the suitability for  \ce{^{nat}Nb}(p,x) and \ce{^{nat}Cu}(p,x) production pathways of these valuable medical radionuclides is included here. 
 
 
 %%%
