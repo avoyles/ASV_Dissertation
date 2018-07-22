@@ -1,0 +1,347 @@
+\chapter{Measurement of nuclear excitation functions for proton induced reactions (\texorpdfstring{E$_{\text{p}}$\,=\,???--55 MeV}{Ep = ???-55 MeV}) on natural Fe}\label{sec:chapter_fe}
+
+\Capinsert[4]{\textbf{B}}{ovinely} invasive brag; cerulean forebearance.
+Washable an acre. To canned, silence in foreign.
+Be a popularly. A as midnight transcript alike.
+To by recollection bleeding. That calf are infant. In clause.
+Buckaroo loquaciousness?  Aristotelian!
+Masterpiece as devoted. My primal the narcotic. For cine?
+In the glitter. For so talented. Which is confines cocoa accomplished.
+Or obstructive, or purposeful.
+And exposition? Of go. No upstairs do fingering.
+
+\vspace{1cm}
+
+
+
+% \noindent \textbf{Relevant Publications:}\\
+% 
+% \hangindent=\parindent  \textbf{A.S. Voyles}, M.S. Basunia, J.C. Batchelder, J.D. Bauer, T.A. Becker, L.A. Bernstein, E.F. Matthews, P.R. Renne, D. Rutte, M.A. Unzueta, and K.A. van Bibber, \enquote{Measurement of the \ce{^{64}Zn}, \ce{^{47}Ti}(n,p) cross sections using a DD neutron generator for medical isotope studies,} Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms, vol. 410, pp. 230--239, Nov. 2017. \cite{Voyles2017} \\
+% 
+% % T.H. Joshi, S. Sangiorgio, V. Mozin, E.B. Norman, P. Sorensen, M. Foxe, G. Bench, A. Bernstein. Design and characterization of a quasi-monoenergetic neutron source. Nuclear Instruments and Methods in Physics Research B (in press). [44]
+% 
+% 
+% 
+% The text and figures of this paper, of which I was the primary author, are
+% included in this chapter with the permission of all authors. 
+% % Additional discussion of the installation of the neutron source at CAMS and problems with the Li-target are included in Appendix A.
+
+
+
+
+
+% %
+% 
+%  Dump abstract text from HFNG (n,p) paper into this chapter
+% 
+% % 
+\section{Abstract}
+\input{../Manuscripts/fe_px_paper/fe_abstract_text}
+
+
+% % 
+% 
+%  Dump body text from HFNG (n,p) paper into this chapter
+% 
+% % 
+\input{../Manuscripts/fe_px_paper/fe_body_text}
+
+
+% % 
+% 
+%  Dump appendices text from HFNG (n,p) paper into this chapter
+% 
+% % 
+\input{../Manuscripts/fe_px_paper/fe_appendix_text}
+
+
+
+
+
+
+
+\section{Additional information on the analysis}
+
+
+% Clean this up
+
+add pictures of gafchromic films 
+
+
+
+
+\subsubsection{Beam profile measurements}
+
+\textred{Verify that we used polyethylene!!!}
+
+
+Following  tuning of the 100\,MeV proton beam into the IPF beamline, the current is measured immediately upstream of the target position using a pair of nondestructive inductive pickups.
+The final remaining step prior to loading the  target box for irradiation is to tune the beam optics and spatial profile.
+This is performed by loading a sheet of polyethylene (approximately 3\,mm thick) into the the IPF beamline, at the same location of the target box's beam entrance window. 
+This sheet acts as a beam profile monitor, and is irradiated with 5 \mmicro A-min of the proton beam.
+Following exposure, the polyethylene monitor is withdrawn back into the IPF hot cell, where it is inspected to verify the shape and location of the beam profile.
+These beam profile irradiations leave an annealable discoloration of the beam profile, which resembles a \enquote{burn mark}, and are observed to passively revert within 1--2 weeks.
+The final pre-irradiation beam spot from the Nb(p.x) measurement is seen in  \autoref{fig:ipf_preexp_beam_spot}.
+LANSCE accelerator operations staff use this feedback to fine-tune the beam, centering the beam spot upon the target stack and focusing it to ensure that it underfills the target foils.
+This process of  optics tuning via polyethylene profile monitors is repeated until an acceptable beam profile is attained.
+At this point, the target box is lowered into the beamline, and the irradiation commences.
+ 
+
+
+
+
+
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_preexp_beam_spot-cropped.pdf}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{Final beam spot profile for the IPF Nb(p.x) measurement. The 100\,MeV proton beam is confirmed to be centered on the target position, and is focused to underfill the 25$\times$25\,mm target foils.}
+ \label{fig:fe_preexp_beam_spot}
+\end{figure}
+
+
+
+
+This polyethylene beam profile monitor is useful for determining the beam profile incident upon the stack's beam entrance window.
+However, the beam broadens as it traverses the target stack, with large-angle deflections (primarily in the aluminum degraders) from scattering of the beam.
+To image the actual beam profile incident upon the first foil in the stack (Al-1), a 316 stainless steel foil (SS-6) is inserted upstream of Al-1 to serve as a beam profile monitor for the activation foils.
+Likewise, another stainless steel profile monitor (SS-1) is inserted downstream of the last foil in the stack (Nb-6).
+These stainless steel monitors are cut to the same length and width as the plastic frames used for mounting foils, and are characterized in \autoref{tab:stack_table}.
+
+
+
+% \textred{Update the type of film used at IPF, here and in the paper!!!}
+
+
+As described in \autoref{sec:target_design}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (Gafchromic EBT3), revealing the spatial profile of the beam entering and exiting the stack.
+Radiochromic films, such as Gafchromic EBT3, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
+In general, such films are commonly self-developing, containing a radiation-sensitive organic polymer dye as the active layer.
+This dye, much like the polyethylene beam profile monitors, is damaged by ionizing radiation, with multiple free radicals initiated in the process.
+These free radicals result in cross-linking, breaking of double bonds, and fragmentation of the dye polymer, which causes the damaged dye to undergo a large visible change in  color.
+The intensity of this color change is often proportional to the dose received by the film, and is preferred to be energy-independent \cite{Azam1998}.
+Many such films are sensitive to prolonged UV exposure, and will slowly develop if not kept in a  cool, dark environment, leading to systematic errors in observed dose.
+The thin dye layer in most films is extremely sensitive, so care must be taken to avoid bending or deforming, which can make them insensitive to development when irradiated.
+% Following exposure, the film may be scanned 
+For reference, the Gafchromic EBT3 film used in this work is comprised of a 28\,\mmicro m active layer containing a dye sensitive to ionizing radiation, sandwiched in between a pair of 125\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
+
+
+
+
+
+% \begin{figure}
+%     \centering
+%     \subfloat{
+%         \centering
+% %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+%         \hspace{-5pt}\subfigimg[width=0.5\textwidth]{a)}{./figures/DOC013119-cropped.pdf}{80}
+% %         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
+%          %         \refstepcounter{subfigure}
+%          \label{fig:gafchromic_nb_upstream}
+%    \hspace{-5pt}}%
+%      \subfloat{
+%         \centering
+% %         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+% %         \includegraphics[scale=0.6]{./figures/391keV_curve2.png}
+%         \subfigimg[width=0.5\textwidth]{b)}{./figures/DOC013118-cropped.pdf}{80}
+% %         \caption{ Decay curve for the isomeric transition of \ce{^{113m}In}.}
+%          %         \refstepcounter{subfigure}
+%          \label{fig:gafchromic_nb_downstream}
+%    \hspace{-5pt}}%
+%     \caption{The radiochromic films.}
+%      \label{fig:gafchromic_nb}
+% \end{figure}
+
+picture of mcnp stack model
+
+
+\begin{figure}
+ \centering
+ %trim option's parameter order: left bottom right top
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
+ \caption{Blah blah blah
+%  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
+}
+ \label{fig:fe_vised_55}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+ %trim option's parameter order: left bottom right top
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
+ \caption{Blah blah blah
+%  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
+}
+ \label{fig:fe_vised_25}
+\end{figure}
+
+
+
+
+% Example text from template file
+% 
+% \section{Faceplate Marginalia}
+% 
+% Invasive brag; gait grew Fuji Budweiser penchant walkover pus hafnium
+% financial Galway and punitive Mekong convict defect dill, opinionate
+% leprosy and grandiloquent?  Compulsory Rosa Olin
+% % Jackson\cite{waveshaping} and pediatric Jan.  Serviceman, endow buoy
+% apparatus.
+% 
+% Forbearance.  Bois; blocky crucifixion September.\footnote{Davidson
+% witting and grammatic.  Hoofmark and Avogadro ionosphere.  Placental
+% bravado catalytic especial detonate buckthorn Suzanne plastron
+% isentropic?  Glory characteristic.  Denature?  Pigeonhole sportsman
+% grin historic stockpile.  Doctrinaire marginalia and art.  Sony
+% tomography.  Aviv censor seventh, conjugal.  Faceplate emittance
+% borough airline.  Salutary, frequent seclusion Thoreau touch; known
+% ashy Bujumbura may, assess hadn't servitor.  Wash doff, algorithm.}
+% 
+% \subsection{Promenade Exeter}
+% 
+% Inertia breakup Brookline.  Hebrew, prexy, and Balfour.  Salaam
+% applaud, puff teakettle.
+% 
+% \begin{quote}
+% Ugh servant Eulerian knowledge Prexy Lyman zig wiggly.  Promenade
+% adduce.  Yugoslavia piccolo Exeter.  Grata entrench sandpiper
+% collocation; seamen northward virgin and baboon Stokes, hermetic
+% culinary cufflink Dailey transferee curlicue.  Camille, Whittaker
+% harness shatter.  Novosibirsk and Wolfe bathrobe pout Fibonacci,
+% baldpate silane nirvana; lithograph robotics.  Krakow, downpour
+% effeminate Volstead?
+% \end{quote}
+% 
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
+% Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
+% sportsman grin historic stockpile.  Doctrinaire marginalia and art.
+% Sony tomography.  Aviv censor seventh, conjugal.  Faceplate emittance
+% borough airline.  Salutary.  Frequent seclusion Thoreau touch; known
+% ashy Bujumbura may assess hadn't servitor.  Wash, Doff, and Algorithm.
+% 
+% \begin{theorem}
+% \tolerance=10000\hbadness=10000
+% Aviv censor seventh, conjugal.  Faceplate emittance borough airline.  
+% Salutary.
+% \end{theorem}
+% 
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
+% Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
+% sportsman grin historic stockpile. Doctrinaire marginalia and art.
+% Sony tomography.  Aviv censor seventh, conjugal.  Faceplate emittance
+% borough airline.  Salutary.  Frequent seclusion Thoreau touch; known
+% ashy Bujumbura may assess, hadn't servitor.  Wash, Doff, Algorithm.
+% 
+% \begin{table}
+% \begin{center}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% 1-2-3 & yes & no \\
+% \hline
+% Multiplan & yes & yes \\
+% \hline
+% Wordstar & no & no \\
+% \hline
+% \end{tabular}
+% \end{center}
+% \caption{Pigeonhole sportsman grin  historic stockpile.}
+% \end{table}
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
+% Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
+% sportsman grin historic stockpile. Doctrinaire marginalia and art.
+% Sony tomography.
+% 
+% \begin{table}
+% \begin{center}
+% \begin{tabular}{|ccccc|}
+% \hline
+% \textbf{Mitre} & \textbf{Enchantress} & \textbf{Hagstrom} &
+% \textbf{Atlantica} & \textbf{Martinez} \\
+% \hline
+% Arabic & Spicebush & Sapient & Chaos & Conquer \\
+% Jail & Syndic & Prevent & Ballerina & Canker \\
+% Discovery & Fame & Prognosticate & Corroborate & Bartend \\
+% Marquis & Regal & Accusation & Dichotomy & Soprano \\ 
+% Indestructible  & Porterhouse & Sofia & Cavalier & Trance \\
+% Leavenworth & Hidden & Benedictine & Vivacious & Utensil \\
+% \hline
+% \end{tabular}
+% \end{center}
+% \caption{Utensil wallaby Juno titanium.}
+% \end{table}
+% 
+% Aviv censor seventh, conjugal.  Faceplate emittance borough airline.
+% Salutary.  Frequent seclusion Thoreau touch; known ashy Bujumbura may,
+% % assess, hadn't servitor.  Wash\cite{cmusic}, Doff, and Algorithm.
+% 
+% \begin{figure}
+% \[ \begin{picture}(90,50)
+%   \put(0,0){\circle*{5}}
+%   \put(0,0){\vector(1,1){31.7}}
+%   \put(40,40){\circle{20}}
+%   \put(30,30){\makebox(20,20){$\alpha$}}
+%   \put(50,20){\oval(80,40)[tr]}  
+%   \put(90,20){\vector(0,-1){17.5}}
+%   \put(90,0){\circle*{5}}
+% \end{picture}
+%  \]
+% \caption{Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.  
+% Placental bravado catalytic especial detonate buckthorn Suzanne plastron 
+% isentropic?  Glory characteristic.  Denature?  Pigeonhole sportsman grin.}
+% \end{figure}
+% 
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
+% Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
+% sportsman grin historic stockpile. Doctrinaire marginalia and art.
+% Sony tomography.  Aviv censor seventh, conjugal.  Faceplate emittance
+% % borough airline.\cite{fm} Salutary.  Frequent seclusion Thoreau touch;
+% known ashy Bujumbura may, assess, hadn't servitor.  Wash, Doff, and
+% Algorithm.
+% 
+% \begin{itemize}
+% \item Davidson witting and grammatic.  Jukes foundry mesh sting speak,
+% Gillespie, Birmingham Bentley.  Hedgehog, swollen McGuire; gnat.
+% Insane Cadillac inborn grandchildren Edmondson branch coauthor
+% swingable?  Lap Kenney Gainesville infiltrate.  Leap and dump?
+% Spoilage bluegrass.  Diesel aboard Donaldson affectionate cod?
+% Vermiculite pemmican labour Greenberg derriere Hindu.  Stickle ferrule
+% savage jugging spidery and animism.
+% \item Hoofmark and Avogadro ionosphere.  
+% \item Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?
+% \item Glory characteristic.  Denature?  Pigeonhole sportsman grin
+% historic stockpile.
+% \item Doctrinaire marginalia and art.  Sony tomography.  
+% \item Aviv censor seventh, conjugal.
+% \item Faceplate emittance borough airline.  
+% \item Salutary.  Frequent seclusion Thoreau touch; known ashy
+% Bujumbura may, assess, hadn't servitor.  Wash, Doff, and Algorithm.
+% \end{itemize}
+% 
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.
+% Placental bravado catalytic especial detonate buckthorn Suzanne
+% plastron isentropic?  Glory characteristic.  Denature?  Pigeonhole
+% % sportsman grin\cite[page 45]{waveshaping} historic stockpile.
+% Doctrinaire marginalia and art. Sony tomography.  Aviv censor seventh,
+% conjugal. Faceplate emittance borough airline.  Salutary.  Frequent
+% seclusion Thoreau touch; known ashy Bujumbura may, assess, hadn't
+% servitor.  Wash, Doff, and Algorithm.
+% 
+% \begin{theorem}
+% \tolerance=10000\hbadness=10000
+% Davidson witting and grammatic.  Hoofmark and Avogadro ionosphere.  
+% Placental bravado catalytic especial detonate buckthorn Suzanne plastron 
+% isentropic?
+% \end{theorem}
