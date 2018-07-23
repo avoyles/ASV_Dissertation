@@ -1,16 +1,47 @@
 \chapter{Measurement of nuclear excitation functions for proton induced reactions (\texorpdfstring{E$_{\text{p}}$\,=\,???--55 MeV}{Ep = ???-55 MeV}) on natural Fe}\label{sec:chapter_fe}
 
-\Capinsert[4]{\textbf{B}}{ovinely} invasive brag; cerulean forebearance.
-Washable an acre. To canned, silence in foreign.
-Be a popularly. A as midnight transcript alike.
-To by recollection bleeding. That calf are infant. In clause.
-Buckaroo loquaciousness?  Aristotelian!
-Masterpiece as devoted. My primal the narcotic. For cine?
-In the glitter. For so talented. Which is confines cocoa accomplished.
-Or obstructive, or purposeful.
-And exposition? Of go. No upstairs do fingering.
+\Capinsert[4]{\textbf{L}}{ow-energy} proton beams are used to produce a wide range of radionuclides for use in medical treatments and research.
+In particular, medical cyclotrons (most commonly in K=18 or K=30 configurations) are responsible for producing the overwhelming majority of routine clinical radionuclides.
+As of 2015, an international network of more than 1,200 medical cyclotrons are currently in operation, regularly extracting proton and deuteron beams \cite{Goethals2015}.
+As a result, in developing production pathways for novel radionuclides, being able to leverage this network of cyclotrons presents one of the greatest pathways to enable widespread utilization of next-generation, personalized medical radionuclides.
+Production routes using low-energy proton and deuteron beams can be easily exploited by this network of cyclotrons, without the need for investment in additional infrastructure beyond new production targets and radiochemical modules.
+This investment pales in comparison to the costs associated with commissioning a new medical cyclotron, and likely offers the fastest pathway to mass clinical applications of novel radionuclides.
+
+It is for this reason that we chose to pursue the low-energy production of \ce{^{51}Mn} and \ce{^{52g,52m}Mn} as the first novel radionuclides in the nuclear data campaign within the Bay Area Nuclear Data Group.
+
+
+
+However, reaction modeling in this energy range remains largely untested, and there is a paucity of monitor reactions 
+in this energy range 
+needed to establish beam characteristics  for quantitative cross section measurements.  
+The development of new monitor reaction standards and the improved evaluation of existing standards is one of the areas of greatest cross-cutting need for nuclear data \cite{bernstein2015nuclear}. 
+To address this need, a stack  of thin Nb, Cu, and Al monitor foils was irradiated with the 100 MeV proton beam at  Los Alamos National Laboratory's Isotope Production Facility,  to investigate the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} nuclear reaction as a  monitor for intermediate-energy proton experiments and to benchmark state-of-the-art reaction model codes.
+This chapter details a measurement to develop new methods for the monitoring of charged-particle beams.
+In the process, a set of 38 measured  cross sections for  \ce{^{nat}Nb}(p,x) and  \ce{^{nat}Cu}(p,x) reactions between 40--90 MeV, as well as 5 independent measurements of isomer branching ratios, are reported. 
+Variance minimization techniques were employed  to correct for uncertainties in  the characterization of the stack components, often the largest cause of uncertainties in energy and  fluence assignments.
+In addition to the set of reported cross sections, this measurement serves three important purposes.
+
+
+
+
+A series of stacked target thin-foil activation experiments have been conducted at the LBNL 88-Inch Cyclotron, as part of a larger campaign to address deficiencies in cross-cutting nuclear data needs.  
+While these efforts have been targeted towards  the production cross section of the \ce{^{51,52}Mn} PET isotopes (as well as other emerging medical radionuclides), these measurements offer insight into the spin distribution of excited nuclear states, in the 10 - 55 MeV range.
+
+
+
 
 Mentiuon the april run...
+
+
+
+
+In addition, this work seeks to outline many of the small systematic issues which can be unwittingly introduced into such measurements even with careful experimental design, and the methods developed to deal with them.
+Nearly all of the issues presented in this work stem from the use of Kapton tape to encapsulate activation foils and prevent dispersible contamination.
+While the issues have been identified and accounted for in the analysis described here, they serve as a cautionary note to future stacked-target cross section measurements.
+Finally, this measurement provides some commentary on the importance and selection of monitor reactions, and how \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} fits this perfectly in the intermediate-energy region.
+The success of \ce{^{90}Mo} as a monitor reaction product is mainly due to it avoiding the co-production and contamination issues that several of the current monitor standards (namely, Al, Ti, and Ni) are plagued with.
+
+
 
 \vspace{1cm}
 
@@ -502,7 +533,7 @@ As described in \autoref{sec:target_design_fe}, all activation  foils in this wo
 The sealed foils were then mounted over the hollow center of a 1.5875 mm-thick aluminum frame.
 This gives each foil a fixed, rigid, position, preventing it from shifting out of alignment during the mounting of the target stack holder.
 In addition, the hollow center is cut out such that the  frame does not degrade and scatter the beam at each foil position.
-A number of such foils, ready to be loaded into the target holder, are seen in \autoref{fe_IMG_0305}.
+A number of such foils, ready to be loaded into the target holder, are seen in \autoref{fig:fe_IMG_0305}.
 % to minimize the 
 % One \ce{^{nat}Al}, one \ce{^{nat}Cu}, and one \ce{^{nat}Nb} mounted foil were bundled together using baling wire for each energy position.
 % One such bundle is seen in \autoref{fig:IMG_1969}, illustrating how the three foils of each bundle are aligned with each other.
@@ -532,7 +563,7 @@ Foils are bagged up, and prepared for transfer to the counting lab.
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/IMG_0305.jpg}
+ \includegraphics[width=0.5\columnwidth]{./figures/IMG_0305.jpg}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
  \caption{A stack of Fe, Cu, and Ti foils mounted on aluminum frames (Fe-01 visible on top), for the 55\,MeV Fe(p,x) target stack. All foils are mounted over the aperture of a 1.5875 mm-thick aluminum frame.}
  \label{fig:fe_IMG_0305}
@@ -545,7 +576,7 @@ Foils are bagged up, and prepared for transfer to the counting lab.
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/SAM_2528-Cu14.jpg}
+ \includegraphics[width=0.75\columnwidth]{./figures/SAM_252_Cu14.JPG}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
  \caption{The ORTEC GMX Series (model \#GMX-50220-S)  High-Purity Germanium detector used for gamma spectroscopy of the activated foils, as described in \autoref{sec:spectroscopy_fe}. The detector, counting foil Cu-14 in this figure, has a \enquote{ladder} permitting counting at various fixed distances (in 1\,cm inetrvals) from the front face of the detector. With the lead shielding lid closed (for reduced background), the ladder permits counting up to 18\,cm, and up to 75\,cm with the lid open.   }
  \label{fig:fe_IMG_1984}
@@ -580,7 +611,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
  \caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 55\,MeV Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon the \textred{Inconel beam entrance window (yellow).} The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
@@ -593,7 +624,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 \caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 25\,MeV  Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon \textred{the Inconel beam entrance window (yellow)}. The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
@@ -624,7 +655,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 %         \refstepcounter{subfigure} 
 %         \label{fig:92mNb}
    \hspace{-10pt}}%
-    \caption{Final variance minimized incident proton energy distributions for the (a) Al and (b) Cu foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, proton energy distributions become visibly broadened due to straggling, and drop in magnitude due to scattering losses.}
+    \caption{\textred{Update this figure!!!} Final variance minimized incident proton energy distributions for the (a) Cu and (b) Ti foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, proton energy distributions become visibly broadened due to straggling, and drop in magnitude due to scattering losses.}
 %      \phantomcaption{}
      \label{fig:fe_ptallies_appendix}
 \end{figure*}
@@ -632,9 +663,9 @@ The full input file for this MCNP model is included here for reference, in Appen
 
 
 Using this MCNP6 model, the proton energy distribution is tallied in all volumes of the stack assembly.
-As seen in \autoref{fig:Nb_ptallies} of \autoref{sec:proton_transport}, the corresponding incident proton  energy distributions $\frac{d\phi}{dE}$ from MCNP6 simulation (using the variance minimized degrader density) are shown for the six irradiated Cu and Al  foils in \autoref{fig:ipf_ptallies_appendix}. 
+As seen in \autoref{fig:Fe_ptallies} of \autoref{sec:proton_transport_fe}, the corresponding incident proton  energy distributions $\frac{d\phi}{dE}$ from MCNP6 simulation (using the variance minimized degrader density) are shown for the six irradiated Cu and Ti  foils in \autoref{fig:fe_ptallies_appendix}. 
 In addition, the MCNP6 model tracks the production and transport of secondary neutrons produced through (p,xn) reactions on the target stack components.
-The the proton energy distribution is tallied in all Al, Cu, and Nb foils, and is seen in \autoref{fig:ipf_ntallies}. 
+The the proton energy distribution is tallied in all Ti, Cu, and Fe foils, and is seen in \autoref{fig:fe_ntallies}. 
 The neutron flux is consistently 3--4 orders of magnitude smaller than the corresponding proton flux, and is seen to be visibly  downscattered when moving down the stack.
 
 \begin{figure*}
@@ -664,7 +695,7 @@ The neutron flux is consistently 3--4 orders of magnitude smaller than the corre
 %         \refstepcounter{subfigure}
 %          \label{fig:93mMo}
    }%
-    \caption{Final variance minimized incident neutron energy distributions for the (a) Al, (b) Cu, and (C) Nb foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, neutron energy distributions become visibly downscattered.}
+    \caption{\textred{Update this figure!!!} Final variance minimized incident neutron energy distributions for the (a) Cu, (b) Ti, and (C) Fe foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, neutron energy distributions become visibly downscattered.}
 %      \phantomcaption{}
      \label{fig:fe_ntallies}
 \end{figure*}
@@ -696,16 +727,16 @@ The neutron flux is consistently 3--4 orders of magnitude smaller than the corre
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.5\columnwidth]{./figures/FWHM_plot.pdf}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{FWHM for the proton energy distributions of Cu and Al foils seen in \autoref{fig:ipf_ptallies_appendix}, as a function of the flux-weighted average proton energy. }
+ \caption{\textred{Update this figure!!!} FWHM for the proton energy distributions of Cu and Ti foils seen in \autoref{fig:fe_ptallies_appendix}, as a function of the flux-weighted average proton energy. }
  \label{fig:fe_FWHM_plot}
 \end{figure}
 
 
 
 Additionally, using this proton transport model, it is possible to plot the FWHM of the proton energy distribution in each of the Cu and Al monitor foils, as a function of its  flux-weighted average proton energy.
-This is seen in \autoref{fig:ipf_FWHM_plot}.
+This is seen in \autoref{fig:fe_FWHM_plot}.
 As seen in the recent work of Graves \etal, this FWHM distribution can be fit via linear regression \cite{Graves2016}.
-The results of this fit (with $R^2=0.9986$) would suggest that the broadening of proton energy distribution in the target stack is linearly proportional to energy degradation, which is overwhelmingly from the aluminum degraders between energy positions.
+The results of this fit \textred{(with $R^2=0.9986$)} would suggest that the broadening of proton energy distribution in the target stack is linearly proportional to energy degradation, which is overwhelmingly from the aluminum degraders between energy positions.
 % , displaying a clear linear relationship  .
 This serves to build confidence, through consistency with the  results from this similar measurement.
 In the event that the FWHM of a stack element could not be directly calculated using the MCNP model output, this linear model could be used to estimate the element's FWHM through interpolation. 
@@ -804,8 +835,8 @@ In the event that the FWHM of a stack element could not be directly calculated u
 
 In the published journal article, cross sections for  \ce{^{51}Cr},  \ce{^{52g}Mn}, \ce{^{52m}Mn}, \ce{^{54}Mn}, \ce{^{55}Co}, \ce{^{56}Ni}, \ce{^{57}Ni}, \ce{^{57}Co},  \ce{^{58g}Co}, \ce{^{58m}Co}, \ce{^{59}Fe}, \ce{^{60}Co}, \ce{^{61}Cu}, and \ce{^{64}Cu} were extracted for (p,x) reactions  on \ce{^{nat}Cu} foils in the 40--90 MeV region, as recorded in \autoref{tab:cu_rp_table}.
 For  (p,x) reactions on \ce{^{nat}Nb} foils, the (p,x) cross sections for \ce{^{82m}Rb}, \ce{^{83}Sr}, \ce{^{85g}Y}, \ce{^{85m}Y}, \ce{^{86}Zr}, \ce{^{86}Y}, \ce{^{87}Zr}, \ce{^{87g}Y}, \ce{^{87m}Y}, \ce{^{88}Zr}, \ce{^{88}Y}, \ce{^{89g}Nb}, \ce{^{89m}Nb}, \ce{^{89}Zr}, \ce{^{90}Mo}, \ce{^{90}Nb}, \ce{^{91m}Nb}, \ce{^{92m}Nb}, and \ce{^{93m}Mo} were extracted, as recorded in \autoref{tab:nb_rp_table}.
-As an alternative to a simple list of the various observed reaction products, these may be visualized in \autoref{fig:ipf_nb_product_table} and \autoref{fig:ipf_cu_product_table}, in the style of excerpts from the Chart of  Nuclides.
-These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,x) and \ce{^{nat}Cu}(p,x), along with all observed reaction products, to illustrate the mass range probed in this measurement. 
+As an alternative to a simple list of the various observed reaction products, these may be visualized in \autoref{fig:fe_nb_product_table}, \autoref{fig:fe_cu_product_table}, and \autoref{fig:fe_ti_product_table}, in the style of excerpts from the Chart of  Nuclides.
+These figures display the target and compound nuclei  for both  \ce{^{nat}Fe}(p,x), \ce{^{nat}Cu}(p,x), and \ce{^{nat}Ti}(p,x), along with all observed reaction products, to illustrate the mass range probed in this measurement. 
 
 
 
@@ -816,7 +847,7 @@ These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_nb_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Reaction products observed in the \ce{^{nat}Nb}(p,x) measurement. \textred{84Sr is stable - update plot!}}
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Fe}(p,x) measurement.}
  \label{fig:fe_nb_product_table}
 \end{figure}
 
@@ -828,8 +859,20 @@ These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Reaction products observed in the \ce{^{nat}Cu}(p,x) measurement.}
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Cu}(p,x) measurement.}
  \label{fig:fe_cu_product_table}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Ti}(p,x) measurement.}
+ \label{fig:fe_ti_product_table}
 \end{figure}
 
 

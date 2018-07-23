@@ -1,16 +1,51 @@
 \chapter{Measurement of nuclear excitation functions for proton induced reactions (\texorpdfstring{E$_{\text{p}}$\,=\,???--55 MeV}{Ep = ???-55 MeV}) on natural Fe}\label{sec:chapter_fe}
 
-\Capinsert[4]{\textbf{B}}{ovinely} invasive brag; cerulean forebearance.
-Washable an acre. To canned, silence in foreign.
-Be a popularly. A as midnight transcript alike.
-To by recollection bleeding. That calf are infant. In clause.
-Buckaroo loquaciousness?  Aristotelian!
-Masterpiece as devoted. My primal the narcotic. For cine?
-In the glitter. For so talented. Which is confines cocoa accomplished.
-Or obstructive, or purposeful.
-And exposition? Of go. No upstairs do fingering.
+\Capinsert[4]{\textbf{L}}{ow-energy} proton beams are used to produce a wide range of radionuclides for use in medical treatments and research.
+In particular, medical cyclotrons (most commonly in K=18 or K=30 configurations) are responsible for producing the overwhelming majority of routine clinical radionuclides.
+As of 2015, an international network of more than 1,200 medical cyclotrons are currently in operation, regularly extracting proton and deuteron beams \cite{Goethals2015}.
+As a result, in developing production pathways for novel radionuclides, being able to leverage this network of cyclotrons presents one of the greatest pathways to enable widespread utilization of next-generation, personalized medical radionuclides.
+Production routes using low-energy proton and deuteron beams can be easily exploited by this network of cyclotrons, without the need for investment in additional infrastructure beyond new production targets and radiochemical modules.
+This investment pales in comparison to the costs associated with commissioning a new medical cyclotron, and likely offers the fastest pathway to mass clinical applications of novel radionuclides.
 
-Mentiuon the april run...
+It is for this reason that we chose to pursue the low-energy production of \ce{^{51}Mn} and \ce{^{52g,52m}Mn} as the first novel radionuclides in the nuclear data campaign within the Bay Area Nuclear Data Group.
+This was performed as the first science measurement in this campaign, following a successful fielding run in April 2016, to test our ability to measure cross sections in stacked-target experiments.
+The medical community's  desire for \ce{^{51,52}Mn} production was first brought to my attention while attending the \nth{16} International Workshop on Targetry and Target Chemistry (in Santa Fe, NM) in the Fall of 2016.
+Several talks were presented at this workshop, discussing the biological uptake, early imaging studies, and promise of new imaging applications based on \ce{^{51}Mn} and \ce{^{52g,52m}Mn} \cite{Graves2016}. 
+However, a common theme amongst these presentations was the lack of well-established production pathways for these radionuclides.
+Higher-energy production routes (using copper and cobalt targetry) offered decent yields, but very low radiochemical purity.
+Lower-energy production routes were identified as one of the highest-priority interests for the community, but these were impeded by the paucity of cross section data using the desired cobalt and iron targetry routes.
+Following the workshop, our group decided to take on this task by  performing a stacked-target experiment using natural iron foils, with titanium and copper monitor foils.
+
+
+
+% However, reaction modeling in this energy range remains largely untested, and there is a paucity of monitor reactions 
+% in this energy range 
+% needed to establish beam characteristics  for quantitative cross section measurements.  
+% The development of new monitor reaction standards and the improved evaluation of existing standards is one of the areas of greatest cross-cutting need for nuclear data \cite{bernstein2015nuclear}. 
+% To address this need, a stack  of thin Nb, Cu, and Al monitor foils was irradiated with the 100 MeV proton beam at  Los Alamos National Laboratory's Isotope Production Facility,  to investigate the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} nuclear reaction as a  monitor for intermediate-energy proton experiments and to benchmark state-of-the-art reaction model codes.
+This chapter details a new measurement for the production cross sections of the \ce{^{51,52}Mn} PET isotopes, using low-energy proton beams.
+A series of stacked target thin-foil activation experiments have been conducted at the LBNL 88-Inch Cyclotron, as part of a larger campaign to address deficiencies in cross-cutting nuclear data needs.  
+In the process, a set of \textred{38} measured  cross sections for  \ce{^{nat}Fe}(p,x), \ce{^{nat}Cu}(p,x), and  \ce{^{nat}Ti}(p,x) reactions between threshold and 55\,MeV, as well as \textred{5} independent measurements of isomer branching ratios, are reported. 
+Variance minimization techniques were employed  to correct for uncertainties in  the characterization of the stack components, often the largest cause of uncertainties in energy and  fluence assignments.
+% In addition to the set of reported cross sections, this measurement serves three important purposes.
+From a development perspective, this measurement provided the first evidence of the significant impact  played by the adhesives on the Kapton tape used to contain the individual stacked targets. 
+While this may seem obvious, the compounding contributions to the slowing of the beam due to the adhesive has been neglected in similar work performed at LANL-IPF to date. 
+While this is expected to play a limited role at high beam energies, it becomes increasingly important for proton energies below 25\,MeV.
+% While these efforts have been targeted towards  the production cross section of the \ce{^{51,52}Mn} PET isotopes (as well as other emerging medical radionuclides), these measurements offer insight into the spin distribution of excited nuclear states, in the 10 - 55 MeV range.
+In addition to the interest in the production of \ce{^{51,52}Mn} for PET research, this measurement  offered an opportunity to study the distribution of angular momentum in compound nuclear and direct pre-equilibrium reactions, ia observation of the \ce{^{52m}Mn} ($t_{1/2}$ = 21.1$\pm$0.2\,min; J$^\pi=2^+$) to \ce{^{52g}Mn} ($t_{1/2}$ = 5.591$\pm$0.003\,d; J$^\pi=6^+$)   ratio \cite{Dong2015,Wang2017}.
+
+
+
+
+
+
+% In addition, this work seeks to outline many of the small systematic issues which can be unwittingly introduced into such measurements even with careful experimental design, and the methods developed to deal with them.
+% Nearly all of the issues presented in this work stem from the use of Kapton tape to encapsulate activation foils and prevent dispersible contamination.
+% While the issues have been identified and accounted for in the analysis described here, they serve as a cautionary note to future stacked-target cross section measurements.
+% Finally, this measurement provides some commentary on the importance and selection of monitor reactions, and how \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} fits this perfectly in the intermediate-energy region.
+% The success of \ce{^{90}Mo} as a monitor reaction product is mainly due to it avoiding the co-production and contamination issues that several of the current monitor standards (namely, Al, Ti, and Ni) are plagued with.
+% 
+
 
 \vspace{1cm}
 
@@ -580,7 +615,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.PNG}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
  \caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 55\,MeV Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon the \textred{Inconel beam entrance window (yellow).} The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
@@ -593,7 +628,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.PNG}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 \caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 25\,MeV  Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon \textred{the Inconel beam entrance window (yellow)}. The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
