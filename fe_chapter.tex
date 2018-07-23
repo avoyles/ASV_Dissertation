@@ -10,6 +10,8 @@ In the glitter. For so talented. Which is confines cocoa accomplished.
 Or obstructive, or purposeful.
 And exposition? Of go. No upstairs do fingering.
 
+Mentiuon the april run...
+
 \vspace{1cm}
 
 
@@ -66,17 +68,70 @@ Additional discussion of the experimental and analytical details for this work, 
 \subsubsection{88-Inch Cyclotron overview}
 
 
-As discussed in \autoref{sec:experiment}, the target stack for this work was assembled and irradiated at the Isotope Production Facility (IPF) at the Los Alamos National Laboratory (LANL), using the LANSCE linear accelerator. 
-The LANSCE complex, constructed in 1972, is a large facility at the Los Alamos National Laboratory's Technical Area 53, housing many basic and applied science facilities supported by the LANSCE-LINAC linear accelerator \cite{Lisowski2006}.
-The accelerator has proton injector ion sources capable of supplying both positive- and negative-ion beams.
-The ions are accelerated up to 750\,keV, where they are injected into a drift-tube linear accelerator.
-This accelerator, which operates as a standing-wave linear accelerator in the \enquote{zero mode} (or TM$_{010}$) electromagnetic field configuration, accelerates the ions up to 100\,MeV.  
-From here, the negative-ion beam is injected into the side-coupled cavity linear accelerator (800\,m in length), which accelerates the ions up to the facility's maximum 800\,MeV.
-This beam is passed along to the various research centers at the LANSCE complex, which include the Lujan Center, Proton Radiography Center, Ultracold Neutron Source, and the Weapons Neutrons Research Facility.
-Alternatively, the 100\,MeV positive-ion beam may be \enquote{peeled off} following acceleration in the drift-tube linac, where it is diverted to the Isotope Production Facility.
-At IPF, thick production targets and thin-target stacks may be lowered through a dedicated hot cell into the IPF beamline for irradiation.
-This facility serves to produce a variety of commercial isotopes for  medical, industrial, basic science, and national security applications.
-A schematic of the LANSCE beamline is presented in \autoref{fig:ipf_beamline_schematic}, and a photograph of the LANSCE complex is seen in \autoref{fig:ipf_beamline_alternate}.
+As discussed in \autoref{sec:experiment}, the target stacks for this work were assembled and irradiated at the 88-Inch Cyclotron at the  Lawrence Berkeley National Laboratory (LBNL).
+The 88-Inch Cyclotron is part of the  Nuclear Science Division at LBNL, and  currently supports   ongoing research campaigns in nuclear structure, astrophysics, heavy element studies, and accelerator and detector technology R\&D. 
+Major instrumentation at the 88-Inch Cyclotron include the Berkeley Gas-filled Separator (BGS), and the superconducting VENUS ion source, one of the most powerful Electron Cyclotron Resonance (ECR) ion sources in the world.
+Commissioned in 1961, the 88-Inch Cyclotron  continues to operate programs of research in both basic and applied science.
+The machine is a iron-yoked, 300-ton, K=140 sector-focused isochronous cyclotron with both light- and heavy-ion capabilities. 
+The machine is supported by a series of three generations of ECR ion sources designed and commissioned in-house, giving the cyclotron the capacity to extract any stable beam (with a variety of possible charge states) between protons and fully-stripped uranium beams.
+Protons and other light-ions are routinely available at high intensities (10--20 p\mmicro A),and most heavy-ion beams (through uranium) can be accelerated to maximum energies and currents that vary with the mass and charge state.
+While current administrative policy restricts operation to stable beams, the 88-Inch Cyclotron has previously run radioactive ion beams of \ce{^{76}Kr}, produced through batch mode irradiations via \ce{^{74}Se}($\alpha$,2n)\ce{^{76}Kr}, which was then re-accelerated \cite{Cooper2004}.
+While the cyclotron has a main magnetic field capable of supporting acceleration up to K=140, at the  time of  writing, it routinely operates in a regime closer to an approximate K=60, due to RF power injection limitations.
+
+
+A  cyclotron uses a static magnetic field (typically, in the $z$-direction) to bend charged particles into a circular orbit, so that they can be repeatedly accelerated by a perpendicular and oscillating electric field. 
+Injected particles are initially \enquote{kicked} into the acceleration field ( at the 88-Inch Cyclotron, by a spiral inflector) and are attracted towards the negative electrode.
+While the particles traverse their $E\times B$ drift orbit, the polarity of the electrodes reverses, oscillating at the cyclotron frequency:
+\begin{equation}
+\omega_z\pp{r} = \dfrac{q B_z\pp{r}}{m}
+\end{equation}
+This oscillation is synchronized such that when the particles reach the acceleration gap between the \enquote{dee} electrodes, the electric field accelerates particles forwards. 
+As particles complete each half-orbit, and are accelerated across the gap, they continue to gain more and more kinetic energy:
+\begin{equation}
+E_k\pp{r} = \dfrac{m}{2} r^2 \omega_z^2\pp{r} 
+\end{equation}
+It is important to note that in this design (the  isochronous cyclotron), the magnetic field strength must increase radially, in order to maintain a constant cyclotron frequency.
+For convenience and easy translation between different tunes, the energy of a particular beam  is often alternatively reported in terms of its energy per nucleon:
+\begin{equation}
+\dfrac{E_k}{A} = \dfrac{r^2 B_z^2\pp{r} }{2 m} \dfrac{q^2}{A} = K \pp{\dfrac{Q}{A}}^2
+\end{equation}
+This gives rise to the so-called \enquote{K-factor}, which acts as a simple scaling parameter to compare the maximum acceleration energy between machines.
+It is important to note that this formulation neglects relativistic effects --- for acceleration beyond $K\gtrapprox 35$, relativistic mass corrections must be made, typically implemented through adjustments to the main field through so-called \enquote{trim coils} and \enquote{valley coils}.
+
+
+One important consequence for  isochronous cyclotrons is that, for a given tune (fixed $K$), any particles with the same charge-to-mass ratio  will follow the same orbit.
+This is valuable to operation of the 88-Inch Cyclotron, as the ECR ion sources allow selection of ions with a particular charge state.
+This is exploited to produce \enquote{cocktail beams}, mixtures of ions of near-identical charge-to-mass ratio, without the need for re-tuning the cyclotron.
+The 88-Inch Cyclotron is  home to the Berkeley Accelerator Space Effects (BASE) Facility, which uses these cocktails to provide well-characterized beams of protons, heavy ions, and other medium energy particles that simulate the space environment.
+
+
+
+
+The 88-Inch Cyclotron offers a number of experimental \enquote{caves}, each dedicated to the various research programs carried out at the facility.
+% Following extraction, the primary 
+% beam may be steered to these various caves through the various switching magnets present throughout the beamlines.
+The primary charged particle beams are extracted from the machine through the use of electrostatic deflectors, and are transported to one of several experimental caves through the use of dipole switching magnets to steer the beam, and quadrupole magnets to focus/defocus the beam's optical profile.
+For all of the work described in this chapter, the irradiations were carried out in Cave 0, a cave dedicated to high-current beams, scintillator characterization, and isotope production.
+The target stacks described in this chapter (and seen in \autoref{fig:fe_target_stack}) mount onto the end of the beamline which extends in this cave.
+A partial map of the 88-Inch Cyclotron facility and beamlines, highlighting the beam path to Cave 0, is presented in  \autoref{fig:fe_beamline_schematic}.
+
+
+
+
+% Isotope Production Facility (IPF) at the Los Alamos National Laboratory (LANL), using the LANSCE linear accelerator. 
+% The LANSCE complex, constructed in 1972, is a large facility at the Los Alamos National Laboratory's Technical Area 53, housing many basic and applied science facilities supported by the LANSCE-LINAC linear accelerator \cite{Lisowski2006}.
+% The accelerator has proton injector ion sources capable of supplying both positive- and negative-ion beams.
+% The ions are accelerated up to 750\,keV, where they are injected into a drift-tube linear accelerator.
+% This accelerator, which operates as a standing-wave linear accelerator in the \enquote{zero mode} (or TM$_{010}$) electromagnetic field configuration, accelerates the ions up to 100\,MeV.  
+% From here, the negative-ion beam is injected into the side-coupled cavity linear accelerator (800\,m in length), which accelerates the ions up to the facility's maximum 800\,MeV.
+% This beam is passed along to the various research centers at the LANSCE complex, which include the Lujan Center, Proton Radiography Center, Ultracold Neutron Source, and the Weapons Neutrons Research Facility.
+% Alternatively, the 100\,MeV positive-ion beam may be \enquote{peeled off} following acceleration in the drift-tube linac, where it is diverted to the Isotope Production Facility.
+% At IPF, thick production targets and thin-target stacks may be lowered through a dedicated hot cell into the IPF beamline for irradiation.
+% This facility serves to produce a variety of commercial isotopes for  medical, industrial, basic science, and national security applications.
+% A schematic of the LANSCE beamline is presented in \autoref{fig:ipf_beamline_schematic}, and a photograph of the LANSCE complex is seen in \autoref{fig:ipf_beamline_alternate}.
+
+
+
 
 % The stack was irradiated for approximately 2 hours with a nominal current of 1 mA, using a 50 \mmicro s pulse at a frequency of 2 Hz, for an anticipated integral current of 205.9 nAh.
 
@@ -88,22 +143,24 @@ A schematic of the LANSCE beamline is presented in \autoref{fig:ipf_beamline_sch
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/ipf_beamline_schematic.png}
+%  \includegraphics[width=0.95\columnwidth]{./figures/Control Room Map.pdf}
+ \includegraphics[height=0.90\textheight]{./figures/88beampath-cropped.pdf}
+%  \includegraphics[width=0.95\columnwidth]{./figures/88beampath-cropped.pdf}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Schematic diagram of the LANSCE beamline at LANL. From the initial injectors, a proton beam is accelerated to 100\,MeV in a drift-tube linear accelerator, where it is diverted away to the IPF beamline, highlighted in red.}
+ \caption{Schematic diagram of the 88-Inch Cyclotron facility and beamlines at LBNL, highlighting the beam path to Cave 0.  A rear view of the target stack holder used in this work is seen here, where it mounts onto the end of the Cave 0 beamline. }
  \label{fig:fe_beamline_schematic}
 \end{figure}
 
-\begin{figure}
- \centering
-%                                l   b      r    top
-%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
-%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/ipf_beamline_alternate.png}
- % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Aerial photograph of the LANSCE beamline. Proton injectors are seen in the foreground building near the arrow's tail. The IPF beamline and operations facility is seen to the left of the main LANSCE beamline, circled in red.  The target box seen in \autoref{fig:target_stack} is lowered into the beamline here, via a hot cell.}
- \label{fig:fe_beamline_alternate}
-\end{figure}
+% \begin{figure}
+%  \centering
+% %                                l   b      r    top
+% %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+% %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth]{./figures/ipf_beamline_alternate.png}
+%  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+%  \caption{Aerial photograph of the LANSCE beamline. Proton injectors are seen in the foreground building near the arrow's tail. The IPF beamline and operations facility is seen to the left of the main LANSCE beamline, circled in red.  The target box seen in \autoref{fig:target_stack} is lowered into the beamline here, via a hot cell.}
+%  \label{fig:fe_beamline_alternate}
+% \end{figure}
 
 
 
@@ -111,19 +168,71 @@ A schematic of the LANSCE beamline is presented in \autoref{fig:ipf_beamline_sch
 
 \subsubsection{Beam profile measurements}
 
-\textred{Verify that we used polyethylene!!!}
+% \textred{Verify that we used polyethylene!!!}
 
 
-Following  tuning of the 100\,MeV proton beam into the IPF beamline, the current is measured immediately upstream of the target position using a pair of nondestructive inductive pickups.
-The final remaining step prior to loading the  target box for irradiation is to tune the beam optics and spatial profile.
-This is performed by loading a sheet of polyethylene (approximately 3\,mm thick) into the the IPF beamline, at the same location of the target box's beam entrance window. 
-This sheet acts as a beam profile monitor, and is irradiated with 5 \mmicro A-min of the proton beam.
-Following exposure, the polyethylene monitor is withdrawn back into the IPF hot cell, where it is inspected to verify the shape and location of the beam profile.
-These beam profile irradiations leave an annealable discoloration of the beam profile, which resembles a \enquote{burn mark}, and are observed to passively revert within 1--2 weeks.
-The final pre-irradiation beam spot from the Nb(p.x) measurement is seen in  \autoref{fig:ipf_preexp_beam_spot}.
-LANSCE accelerator operations staff use this feedback to fine-tune the beam, centering the beam spot upon the target stack and focusing it to ensure that it underfills the target foils.
-This process of  optics tuning via polyethylene profile monitors is repeated until an acceptable beam profile is attained.
-At this point, the target box is lowered into the beamline, and the irradiation commences.
+
+Following  tuning of the 25 and 55\,MeV proton beams into Cave 0, the  final remaining step prior to loading the  target box for irradiation is to tune the beam optics and spatial profile.
+In the prior fielding run from April 2016, this was performed by loading 3 pieces of the EBT3 Gafchromic film (the same as used for imaging the beam  with stainless steel profile monitors) into the empty target stack holder, with one at the front end, one at the rear, and one in the middle.
+At this point, the target stack would be mounted into the beamline, which would be pumped down to the \textred{200\,mtorr} beamline pressure for a run.
+Following pumpdown, the \enquote{stack} of films would be exposed to an extremely short, low-current pulse of the tuned proton beam (approximately 0.1\,nAh for 1\,s), to directly expose the films and image the beam profile and optics.
+Running any more beam fluence than this would cause the entire film to be massively overexposed, nullifying its usefulness.
+At this point, the beamline would be brought up to atmosphere, and  the films removed for interpretation.
+The cyclotron operator would then use the films to adjust the beam's horizontal and vertical position, and tune the beam optics to produce a \enquote{pencil-beam} spatial profile.
+This is to ensure that the beam spot will be centered on the mounted target foils, and fully constrained within the foils, under-filling them.
+After tuning the beam's optics, more films would be loaded, and this process would be repeated multiple times, confirming any adjustments made to improve the optics, until an acceptable beam spot was achieved. 
+Each cycle of loading and unloading a set of films would take approximately 45\,min, followed by approximately another 30\,min to make any beam adjustments, followed by the 1\,s film exposure.
+As a result, during this fielding run, optical tuning took nearly an entire day of beam time, which would be infeasible for future experiments.
+
+
+To improve this process, I designed a phosphor target to mount into the end of the beamline during optics tuning, sealing onto the beamline during pumpdown via an inset o-ring.
+This design was based off of designs for the beam stop component of the target stack holder, but instead of featuring a solid aluminum end cap, it has a circular opening, designed to hold a glass puck.
+This puck forms a vacuum seal through an inset o-ring, and is held against the rear of the target by an aluminum frame.
+The blueprints for this phosphor are seen in \autoref{fig:fe_phosphor}.
+On the inside (beamline-facing) side of the glass puck, a thin layer of vacuum greased was painted on, and mixed with a powdered phosphorescent paint, to create a thin phosphorescent layer.
+This target is mounted onto the end of the beamline during optics tuning, and has been used in all experiments since.
+When exposed to a low-current (approximately 0.1\,nAh) beam, the phosphor glows brightly, outlining the beam profile.
+A low current is used, to ensure that the phosphor layer does not get overly heated and burn or flake off during tuning.
+By patching in a camera to the cave, the operators may tune the beam optics in real time, moving the beam spot and improving its spatial profile, while watching on a video feed from the remote camera.
+This has drastically shorted the optics tuning process down to less than a single hour, and has made all subsequent experiments far easier in the process.
+A remote view of this phosphor target during tuning is seen in \autoref{fig:fe_preexp_beam_spot}.
+
+
+
+\begin{figure}
+    \centering
+    \subfloat{
+        \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \hspace{-1pt}\subfigimg[width=0.925\textwidth]{a)}{./figures/Phosphor_Cap_Blueprints.pdf}{50}
+%         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
+         %         \refstepcounter{subfigure}
+%          \label{fig:fe_before_minimization}
+   \hspace{-5pt}}%
+     \subfloat{
+        \centering
+\\
+%         \subfigimg[width=0.5\textwidth]{b)}{./figures/after_minimization_plot.pdf}{50}
+        \subfigimg[width=0.4\textwidth]{\textcolor{white}{b)}}{./figures/perspective.png}{50}
+         %         \refstepcounter{subfigure}
+%          \label{fig:fe_after_minimization}
+   \hspace{-5pt}}%
+    \caption{Blueprints (a) and 3D cutaway rendering (b) of the phosphor target used for real-time beam optics tuning at the 88-Inch Cyclotron.} 
+%     Following minimization, additional apparent fluence is observed in the  \ce{^{nat}Al}(p,x)\ce{^{22}Na} and \ce{^{nat}Al}(p,x)\ce{^{24}Na} monitor channels, due to contamination from \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} on the silicone adhesive used for sealing foil packets.}
+     \label{fig:fe_phosphor}
+\end{figure}
+
+
+However, this phosphor target offers a fairly low-resolution image of the beam profile, mostly useful as a qualitative guide for tuning.
+As a result, a final film exposure is done after beam, optics appear satisfactory on the phosphor, to confirm the optics tune.
+After verifying that 
+% loading a sheet of polyethylene (approximately 3\,mm thick) into the the IPF beamline, at the same location of the target box's beam entrance window. 
+% This sheet acts as a beam profile monitor, and is irradiated with 5 \mmicro A-min of the proton beam.
+% Following exposure, the polyethylene monitor is withdrawn back into the IPF hot cell, where it is inspected to verify the shape and location of the beam profile.
+% These beam profile irradiations leave an annealable discoloration of the beam profile, which resembles a \enquote{burn mark}, and are observed to passively revert within 1--2 weeks.
+% The final pre-irradiation beam spot from the Nb(p.x) measurement is seen in  \autoref{fig:ipf_preexp_beam_spot}.
+% LANSCE accelerator operations staff use this feedback to fine-tune the beam, 
+the beam spot is centered upon the target stack and focusing it to ensure that it underfills the target foils, the foils are loaded into the stack target holder, mounted in the beamline, and the irradiation commences.
  
 
 
@@ -138,63 +247,89 @@ At this point, the target box is lowered into the beamline, and the irradiation 
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/ipf_preexp_beam_spot-cropped.pdf}
+ \includegraphics[width=0.75\columnwidth]{./figures/IMG_0337.jpg}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Final beam spot profile for the IPF Nb(p.x) measurement. The 100\,MeV proton beam is confirmed to be centered on the target position, and is focused to underfill the 25$\times$25\,mm target foils.}
+ \caption{View of the remote feed of the phosphor target during beam optics tuning. The low-current proton beam used for tuning is visible as the bright glow around the reference crosshairs.}
  \label{fig:fe_preexp_beam_spot}
+\end{figure}
+
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/25MeV_optics_films.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{Final beam spot profile for the 25\,MeV LBNL Fe(p.x) measurement. The  proton beam is confirmed to be centered on the target position, and is focused to underfill the 25$\times$25\,mm target foils.}
+ \label{fig:fe25_preexp_beam_spot}
+\end{figure}
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/25MeV_optics_films.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{\textred{Update this figure!!!} Final beam spot profile for the 55\,MeV LBNL Fe(p.x) measurement. The  proton beam is confirmed to be centered on the target position, and is focused to underfill the 25$\times$25\,mm target foils.}
+ \label{fig:fe55_preexp_beam_spot}
 \end{figure}
 
 
 
 
 
-This polyethylene beam profile monitor is useful for determining the beam profile incident upon the stack's beam entrance window.
+These films are useful for determining the beam profile incident upon the front of each stack.
 However, the beam broadens as it traverses the target stack, with large-angle deflections (primarily in the aluminum degraders) from scattering of the beam.
-To image the actual beam profile incident upon the first foil in the stack (Al-1), a 316 stainless steel foil (SS-6) is inserted upstream of Al-1 to serve as a beam profile monitor for the activation foils.
-Likewise, another stainless steel profile monitor (SS-1) is inserted downstream of the last foil in the stack (Nb-6).
-These stainless steel monitors are cut to the same length and width as the plastic frames used for mounting foils, and are characterized in \autoref{tab:stack_table}.
+To image the actual beam profile incident upon the first foil in the stack (Fe-01 and Fe-08), a 316 stainless steel foil (SS-3 and SS-5) is inserted upstream of Fe-01 and Fe-08, for the 55 and 25\,MeV stacks, respectively, to serve as a beam profile monitor for the activation foils.
+Likewise, another stainless steel profile monitor (SS-4 and SS-6) is inserted downstream of the last foil in the stack (H-02 and Cu-20).
+These stainless steel monitors are cut to the same length and width as the aluminum frames used for mounting foils, and are characterized in \autoref{tab:fe_stack_table}.
 
 
 
 % \textred{Update the type of film used at IPF, here and in the paper!!!}
 
 
-As described in \autoref{sec:target_design}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (Gafchromic EBT), revealing the spatial profile of the beam entering and exiting the stack.
-Radiochromic films, such as Gafchromic EBT, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
-In general, such films are commonly self-developing, containing a radiation-sensitive organic polymer dye as the active layer.
-This dye, much like the polyethylene beam profile monitors, is damaged by ionizing radiation, with multiple free radicals initiated in the process.
-These free radicals result in cross-linking, breaking of double bonds, and fragmentation of the dye polymer, which causes the damaged dye to undergo a large visible change in  color.
-The intensity of this color change is often proportional to the dose received by the film, and is preferred to be energy-independent \cite{Azam1998}.
-Many such films are sensitive to prolonged UV exposure, and will slowly develop if not kept in a  cool, dark environment, leading to systematic errors in observed dose.
-The thin dye layer in most films is extremely sensitive, so care must be taken to avoid bending or deforming, which can make them insensitive to development when irradiated.
-% Following exposure, the film may be scanned 
-For reference, the Gafchromic EBT film used in this work is comprised of a pair of 25\,\mmicro m active layers containing the radiation-sensitive EBT emulsion dye, separated by a 3\,\mmicro m surface layer and sandwiched in between a pair of 97\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
-
-
-
-
-
-
-%  Move these first two commented sentences into PhD thesis.
+As described in \autoref{sec:target_design_fe}, decay radiation emitted from the activated stainless steel foils were used to develop radiochromic film (Gafchromic EBT3), revealing the spatial profile of the beam entering and exiting the stack.
+% Radiochromic films, such as Gafchromic EBT, come in multiple varieties, depending on the   dose range and the type of ionizing radiation desired to provide sensitivity to. 
+% In general, such films are commonly self-developing, containing a radiation-sensitive organic polymer dye as the active layer.
+% This dye, much like the polyethylene beam profile monitors, is damaged by ionizing radiation, with multiple free radicals initiated in the process.
+% These free radicals result in cross-linking, breaking of double bonds, and fragmentation of the dye polymer, which causes the damaged dye to undergo a large visible change in  color.
+% The intensity of this color change is often proportional to the dose received by the film, and is preferred to be energy-independent \cite{Azam1998}.
+% Many such films are sensitive to prolonged UV exposure, and will slowly develop if not kept in a  cool, dark environment, leading to systematic errors in observed dose.
+% The thin dye layer in most films is extremely sensitive, so care must be taken to avoid bending or deforming, which can make them insensitive to development when irradiated.
+% % Following exposure, the film may be scanned 
+% For reference, the Gafchromic EBT film used in this work is comprised of a pair of 25\,\mmicro m active layers containing the radiation-sensitive EBT emulsion dye, separated by a 3\,\mmicro m surface layer and sandwiched in between a pair of 97\,\mmicro m layers of clear polyester, acting as a supportive and protective backing. 
 % 
-% % % 
-% An accurate integrated proton current is one of the most important factors in performing high-fidelity cross section measurements.
-% At the time of this work, the nondestructive beam current monitors in the LANSCE-IPF beamline had a  resolution of 100 nAh.
-% For a low-current irradiation such as this work, where a nominal fluence of 200 nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified EoB activities into cross sections.
-
-
-The radiochromic films developed by the SS-6 and SS-1 stainless steel beam profile monitors are seen in \autoref{fig:gafchromic_nb}.
-In addition, extra aluminum monitor foils mounted on  plastic frames are superimposed behind each film.
-It is clear from the upstream (SS-6) film that the proton beam profile was consistent with that seen in the final pre-irradiation beam spot check of  \autoref{fig:ipf_preexp_beam_spot}.
-The downstream (SS-1) film  reveals that the beam was not completely attenuated,  
+% 
+% 
+% 
+% 
+% 
+% %  Move these first two commented sentences into PhD thesis.
+% % 
+% % % % 
+% % An accurate integrated proton current is one of the most important factors in performing high-fidelity cross section measurements.
+% % At the time of this work, the nondestructive beam current monitors in the LANSCE-IPF beamline had a  resolution of 100 nAh.
+% % For a low-current irradiation such as this work, where a nominal fluence of 200 nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified EoB activities into cross sections.
+% 
+The radiochromic films developed by the 55\,MeV stack's SS-3 and SS-4 stainless steel beam profile monitors are seen in \autoref{fig:gafchromic_fe}.
+In addition, extra \textred{aluminum} monitor foils mounted on  aluminum frames are superimposed behind each film.
+It is clear from the upstream (SS-3) film that the proton beam profile was consistent with that seen in the final pre-irradiation beam spot check of  \autoref{fig:fe55_preexp_beam_spot}.
+The downstream (SS-4) film  reveals that the beam was not completely attenuated,  
 % in the target stack
 and clearly displays the  broadening expected due to scattering in the target stack. 
 More importantly, the beam profiles in both films appears to be completely contained within the 25$\times$25\,mm activation foils, including the beam envelope.
-If the beam were to be misaligned on the foils, or were to have sufficiently broadened such that it greatly overfilled the foils, the activation foils would be exposed to only a fraction of the total beam current.
-If  fluence measurements are purely taken from an external  current monitor (such as an inductive pickup upstream of a target, or an electrically-isolated target in a Faraday cup), the  fraction of current which misses the foils will not be detected.
-This leads to reporting a false, larger  fluence, which will cause all cross sections to be erroneously reported with a reduced magnitude.
-Thus, it is for this  reason that having monitor foils at each energy position builds confidence in reported cross sections, as they serve to screen for systematic errors such as this.
-However, profile monitors play a vital role in the detection of lost beam fluence when monitor foils are unavailable. 
+As discussed previously in \autoref{sec:nb_profile_measurements}, this confirms that the activation foils were exposed to  the total beam current.
+
+
+% If the beam were to be misaligned on the foils, or were to have sufficiently broadened such that it greatly overfilled the foils, the activation foils would be exposed to only a fraction of the total beam current.
+% If  fluence measurements are purely taken from an external  current monitor (such as an inductive pickup upstream of a target, or an electrically-isolated target in a Faraday cup), the  fraction of current which misses the foils will not be detected.
+% This leads to reporting a false, larger  fluence, which will cause all cross sections to be erroneously reported with a reduced magnitude.
+% Thus, it is for this  reason that having monitor foils at each energy position builds confidence in reported cross sections, as they serve to screen for systematic errors such as this.
+% However, profile monitors play a vital role in the detection of lost beam fluence when monitor foils are unavailable. 
 % Additionally, 
 
 
@@ -203,39 +338,39 @@ However, profile monitors play a vital role in the detection of lost beam fluenc
 
 
 
-Since the color change developed by irradiation is proportional to the dose deposited in the film, the optical density of the film may be used to measure dose.
-In clinical external-beam radiation therapy, these films are commonly used in quality assurance  to map and verify  the dose contours for therapeutic gamma-ray fields.
-However, the dose sensitivity of these films is often greater than the ability to be visually distinguished beyond simple qualitative inspection.
-As a result, following exposure, the film may be digitized using any flatbed scanner.
-Image analysis may be thus used to measure the optical density profile as a surrogate for dose or beam intensity profiles.
-The optical density is often fit to a curve of the form
-\begin{equation}
-d_x\pp{D} = a + \dfrac{b}{D-c}
-\end{equation}
-where $d_x\pp{D}$ is the optical density of exposed radiochromic film in scanner color channel $x$ at dose $D$, and $a$, $b$, and $c$ are calibration parameters.
-Using a standard irradiation source (commonly a collimated \ce{^{60}Co} source), a calibration curve can thus be measured to convert optical density into an absolute dose.
-This is most common in clinical and quality assurance applications.
-In addition, modern radiochromic films are often designed such that the characteristic exposure curve for the active layer dye differs between the red, green, and blue color channels, offering even further enhanced sensitivity to dose \cite{bushberg2011essential,Andre2011,David2012}.
+% Since the color change developed by irradiation is proportional to the dose deposited in the film, the optical density of the film may be used to measure dose.
+% In clinical external-beam radiation therapy, these films are commonly used in quality assurance  to map and verify  the dose contours for therapeutic gamma-ray fields.
+% However, the dose sensitivity of these films is often greater than the ability to be visually distinguished beyond simple qualitative inspection.
+% As a result, following exposure, the film may be digitized using any flatbed scanner.
+% Image analysis may be thus used to measure the optical density profile as a surrogate for dose or beam intensity profiles.
+% The optical density is often fit to a curve of the form
+% \begin{equation}
+% d_x\pp{D} = a + \dfrac{b}{D-c}
+% \end{equation}
+% where $d_x\pp{D}$ is the optical density of exposed radiochromic film in scanner color channel $x$ at dose $D$, and $a$, $b$, and $c$ are calibration parameters.
+% Using a standard irradiation source (commonly a collimated \ce{^{60}Co} source), a calibration curve can thus be measured to convert optical density into an absolute dose.
+% This is most common in clinical and quality assurance applications.
+% In addition, modern radiochromic films are often designed such that the characteristic exposure curve for the active layer dye differs between the red, green, and blue color channels, offering even further enhanced sensitivity to dose \cite{bushberg2011essential,Andre2011,David2012}.
 
 
 
 
 
-However, for cases where an absolute dose is not necessary, the optical density can still be used for a qualitative measure of relative beam intensity, or relative dose.
-Using the image analysis code  ImageJ-2.0.0,  profiles of the total optical density were extracted for both the SS-1 and SS-6 radiochromic films \cite{Rueden2017}.
-These are seen in \autoref{fig:gafchromic_nb_profiles}, as relative beam intensity profiles along the major and minor axis of each film.
-As seen visually, for both axes, the peak beam intensity drops from SS-6 to SS-1, as the proton fluence is clearly broadened by scattering reactions in the target stack.
+% However, for cases where an absolute dose is not necessary, the optical density can still be used for a qualitative measure of relative beam intensity, or relative dose.
+Using the image analysis code  ImageJ-2.0.0,  profiles of the total optical density were extracted for both the SS-3 and SS-4 radiochromic films \cite{Rueden2017}.
+These are seen in \autoref{fig:gafchromic_fe_profiles}, as relative beam intensity profiles along the major and minor axis of each film.
+As seen visually, for both axes, the peak beam intensity drops from SS-3 to SS-4, as the proton fluence is clearly broadened by scattering reactions in the target stack.
 % As seen visually, there is a clear broadening of the beam spot in the rear of the target stack.
-Along the major (\enquote{horizontal}) axis, the FWHM of the beam profile broadens from 0.679\,cm to 1.039\,cm, and along the minor (\enquote{vertical}) axis, the FWHM of the beam profile broadens from 0.453\,cm to 0.902\,cm.
-In addition, the centroid position of the minor axis appears to shift by approximately 0.19\,cm between the front and rear of the stack. 
+Along the major (\enquote{horizontal}) axis, the FWHM of the beam profile broadens from \textred{0.679\,cm to 1.039\,cm}, and along the minor (\enquote{vertical}) axis, the FWHM of the beam profile broadens from \textred{0.453\,cm to 0.902\,cm.}
+In addition, the centroid position of the minor axis appears to shift by approximately \textred{0.19\,cm} between the front and rear of the stack. 
 The measured beam profiles were fit using a Gaussian model with linear background, to aid in comparing the widths of each profile.
 The Gaussian model does well to fit the beam profiles overall, though it overestimates the peak height for a given Gaussian width.
 This is likely due to the fact that the beam itself has an intrinsic spatial width before any interactions with the target stack; this leads to more broadening of the beam envelope than of its core.
 
     
 
-
-
+% 55\, MeV
+% 
 \begin{figure}
     \centering
     \subfloat{
@@ -255,7 +390,7 @@ This is likely due to the fact that the beam itself has an intrinsic spatial wid
          %         \refstepcounter{subfigure}
          \label{fig:gafchromic_fe_downstream}
    \hspace{-5pt}}%
-    \caption{Radiochromic films for the IPF Nb(p,x) measurement, developed by the stainless steel beam profile monitors in (a) the front of the stack (SS-6) and (b) the rear of the stack (SS-1). An unused Al monitor foils is aligned behind each film, confirming that both the beam core and envelope underfilled the activation foils.}
+    \caption{\textred{Update this figure!!!} Radiochromic films for the 55\,MeV LBNL Fe(p,x) measurement, developed by the stainless steel beam profile monitors in (a) the front of the stack (SS-3) and (b) the rear of the stack (SS-4). An unused \textred{Al} monitor foils is aligned behind each film, confirming that both the beam core and envelope underfilled the activation foils.}
      \label{fig:gafchromic_fe}
 \end{figure}
 
@@ -278,8 +413,84 @@ This is likely due to the fact that the beam itself has an intrinsic spatial wid
 %         \refstepcounter{subfigure} 
 %         \label{fig:55Co}
    \hspace{-10pt}}%
-    \caption{Relative beam intensity profiles for the radiochromic films seen in \autoref{fig:gafchromic_nb}. The intensity profiles were analyzed using ImageJ along (a) the major axis and (b) minor axis of each beam spot. }
+    \caption{\textred{Update this figure!!!} Relative beam intensity profiles for the radiochromic films seen in \autoref{fig:gafchromic_fe}. The intensity profiles were analyzed using ImageJ along (a) the major axis and (b) minor axis of each beam spot. }
      \label{fig:gafchromic_fe_profiles}
+\end{figure}
+
+
+
+
+Similar profile measurement results are presented here for the 25\,MeV stack as well.
+The radiochromic films developed by the 25\,MeV stack's SS-5 and SS-6 stainless steel beam profile monitors are seen in \autoref{fig:gafchromic_fe_25}.
+In addition, extra \textred{aluminum} monitor foils mounted on  aluminum frames are superimposed behind each film.
+It is clear from the upstream (SS-5) film that the proton beam profile was consistent with that seen in the final pre-irradiation beam spot check of  \autoref{fig:fe25_preexp_beam_spot}.
+However, in a significant departure from the 55\,MeV stack, no exposure is seen in the  downstream (SS-6) film.
+This confirms the observation (based on a lack of HPGe-observed activity in the Ti-20 and Cu-20 monitor foils) that the beam was completely attenuated before the end of target stack.
+As discussed in \autoref{sec:proton_transport_fe}, this is primarily due to the actual target stack having a greater areal density than estimated during the stack design phase.
+The majority of this additional unaccounted areal density arises from the acrylic adhesive in the multiple Kapton tape layers.  
+% in the target stack
+% and clearly displays the  broadening expected due to scattering in the target stack. 
+However,  the beam profile in the upstream film appears to be completely contained within the 25$\times$25\,mm activation foils, including the beam envelope.
+This small consolation confirms that the stack received the full entrance fluence, so the validity of the cross sections extracted from this stack still holds.
+% As discussed previously in \autoref{sec:nb_profile_measurements}, this confirms that the activation foils were exposed to  the total beam current.
+Profiles of the total optical density were extracted for  the SS-5 radiochromic film,  seen in \autoref{fig:gafchromic_fe_profiles_25}, as relative beam intensity profiles along the major and minor axis of the film.
+% For both axes, the peak beam intensity drops from SS-3 to SS-14, as the proton fluence is clearly broadened by scattering reactions in the target stack.
+% As seen visually, there is a clear broadening of the beam spot in the rear of the target stack.
+While no commentary on the peak intensity and broadening can be provided due to the attenuation of the beam within the stack, the entrance profile may at least be reported.
+Along the major (\enquote{horizontal}) axis, the FWHM of the beam is \textred{0.679\,cm}, and along the minor (\enquote{vertical}) axis, the FWHM of the beam profile is \textred{0.453\,cm.}
+
+
+
+
+
+
+
+% 25\, MeV
+% 
+\begin{figure}
+    \centering
+    \subfloat{
+        \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \hspace{-5pt}\subfigimg[width=0.5\textwidth]{a)}{./figures/DOC013119-cropped.pdf}{80}
+%         \caption{ Decay curve for the isomeric transition of \ce{^{115m}In}.}
+         %         \refstepcounter{subfigure}
+         \label{fig:gafchromic_fe_upstream_25}
+   \hspace{-5pt}}%
+     \subfloat{
+        \centering
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+%         \includegraphics[scale=0.6]{./figures/391keV_curve2.png}
+        \subfigimg[width=0.5\textwidth]{b)}{./figures/DOC013118-cropped.pdf}{80}
+%         \caption{ Decay curve for the isomeric transition of \ce{^{113m}In}.}
+         %         \refstepcounter{subfigure}
+         \label{fig:gafchromic_fe_downstream_25}
+   \hspace{-5pt}}%
+    \caption{\textred{Update this figure!!!} Radiochromic films for the 25\,MeV LBNL Fe(p,x) measurement, developed by the stainless steel beam profile monitors in (a) the front of the stack (SS-5) and (b) the rear of the stack (SS-6). An unused \textred{Al} monitor foils is aligned behind each film, confirming that both the beam core and envelope underfilled the activation foils. No exposure is seen in the SS-6 film, as the beam was stopped upstream within the target stack, between Fe-14 and Ti-20.}
+     \label{fig:gafchromic_fe_25}
+\end{figure}
+
+
+
+
+\begin{figure}
+    \centering
+    \subfloat{
+        \centering
+%         \includegraphics[width=\textwidth]{./figures/target2.png}
+        \subfigimg[width=0.496\textwidth]{a)}{./figures/horz_ipf_beam_profile.pdf}{100}
+%         \caption{Decay curve for the $\beta^-$ decay of \ce{^{116}In}.}
+        %         \refstepcounter{subfigure}
+%          \label{fig:54Mn}
+%
+%         \includegraphics[width=\columnwidth]{./figures/Capture.PNG}
+        \subfigimg[width=0.496\textwidth]{b)}{./figures/vert_ipf_beam_profile.pdf}{50}
+%         \caption{ Decay curve for the $\beta^+$ decay of \ce{^{64}Cu}.}
+%         \refstepcounter{subfigure} 
+%         \label{fig:55Co}
+   \hspace{-10pt}}%
+    \caption{\textred{Update this figure!!!} Relative beam intensity profiles for the radiochromic films seen in \autoref{fig:gafchromic_fe_25}. The intensity profiles were analyzed using ImageJ along (a) the major axis and (b) minor axis of each beam spot. }
+     \label{fig:gafchromic_fe_profiles_25}
 \end{figure}
 
 
@@ -287,22 +498,32 @@ This is likely due to the fact that the beam itself has an intrinsic spatial wid
 
 \subsubsection{Target preparation}
 
-As described in \autoref{sec:target_design}, all activation  foils in this work were   tightly sealed into \enquote{packets} using two pieces of  3M 5413-Series Kapton polyimide film tape.
-The sealed foils were then mounted over the hollow center of a 1.575 mm-thick plastic frame.
-This gives each foil a fixed, rigid, position, preventing it from shifting out of alignment as the target stack is lowered into the beamline.
-In addition, the hollow center is cut out such that the plastic frame does not degrade and scatter the beam at each foil position.
+As described in \autoref{sec:target_design_fe}, all activation  foils in this work were   tightly sealed into \enquote{packets} using two pieces of  3M 1205-Series Kapton polyimide film tape.
+The sealed foils were then mounted over the hollow center of a 1.5875 mm-thick aluminum frame.
+This gives each foil a fixed, rigid, position, preventing it from shifting out of alignment during the mounting of the target stack holder.
+In addition, the hollow center is cut out such that the  frame does not degrade and scatter the beam at each foil position.
+A number of such foils, ready to be loaded into the target holder, are seen in \autoref{fig:fe_IMG_0305}.
 % to minimize the 
-One \ce{^{nat}Al}, one \ce{^{nat}Cu}, and one \ce{^{nat}Nb} mounted foil were bundled together using baling wire for each energy position.
-One such bundle is seen in \autoref{fig:IMG_1969}, illustrating how the three foils of each bundle are aligned with each other.
-This is primarily to maintain a comparable area of exposed foil at each energy position, in the case of significant beam spot broadening
-These foil packet bundles were lowered into the beamline by inserting them into a  water-cooled production target box.
-After sealing the target box, it is inserted into the IPF hot cell, seen in \autoref{fig:IMG_1984}. 
-In the hot cell, robotic manipulators are used to attach a mounting frame to the top of the target box.
-The frame is used to mount the target box onto a motorized track, which extends  below the hot cell, and is used to lower the target box by approximately 12\,m into its position in the IPF beamline.
-Following irradiation, the track raises the target box back into the hot cell, where it is detached and opened via manipulators.
-Foil removal is performed in the hot cell via the manipulators, as the target box becomes highly activated with short-lived Al activation products, which makes manual handling hazardous.
-The foil bundles are removed using the baling wire loop \enquote{handles}, and  removed from the hot cell via a pass-through, for decontamination and transfer to the counting lab.
-
+% One \ce{^{nat}Al}, one \ce{^{nat}Cu}, and one \ce{^{nat}Nb} mounted foil were bundled together using baling wire for each energy position.
+% One such bundle is seen in \autoref{fig:IMG_1969}, illustrating how the three foils of each bundle are aligned with each other.
+% This is primarily to maintain a comparable area of exposed foil at each energy position, in the case of significant beam spot broadening
+The width of the target stack holder is sized to match (within an approximately 1\,mm tolerance) the width of the aluminum mounting frames, such that the frames are unable to slide or rotate once they are loaded.
+This is primarily to maintain a comparable area of exposed foil at each energy position, in the case of significant beam spot broadening, as well as to prevent movement of the frames.
+However, as an added precaution, a spring is inserted into the empty space between the stacked frames and the front of the target holder.
+The diameter of the spring is sized to be wider than the diameter of the   hollow center  cut out of the aluminum frames, to ensure that it is fully out of the beam's path.
+This spring is placed in the stack purely to provide additional compression on the stacked target frames, preventing them from sliding or rotating out of their intended position during irradiation.
+After loading all frames into the stack holder and securing them with the spring, the holder is mounted into the beamline, which is pumped down to \textred{200\,mtorr} for irradiation.
+% These foil packet bundles were lowered into the beamline by inserting them into a  water-cooled production target box.
+% After sealing the target box, it is inserted into the IPF hot cell, seen in \autoref{fig:IMG_1984}. 
+% In the hot cell, robotic manipulators are used to attach a mounting frame to the top of the target box.
+% The frame is used to mount the target box onto a motorized track, which extends  below the hot cell, and is used to lower the target box by approximately 12\,m into its position in the IPF beamline.
+Following irradiation, the beamline is raised back to atmospheric pressure, and the target holder is removed to a nearby work area.
+Foil removal is performed in this area, working quickly to separate the activated foils from the aluminum degraders and the stack holder's beam stop, which
+% e hot cell via the manipulators, as the target box 
+become highly activated with short-lived Al activation products.
+% ,  manual handling hazardous.
+% The foil bundles are removed using the baling wire loop \enquote{handles}, and  removed from the hot cell via a pass-through, for decontamination and 
+Foils are bagged up, and prepared for transfer to the counting lab.
 
 
 
@@ -311,10 +532,10 @@ The foil bundles are removed using the baling wire loop \enquote{handles}, and  
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/IMG_1969.JPG}
+ \includegraphics[width=0.5\columnwidth]{./figures/IMG_0305.jpg}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{A stacked bundle of Nb (visible on top), Cu, and Al activation foils, for the 60\,MeV position of the Nb(p,x) target stack. All foils are mounted over the aperture of a 1.575 mm-thick plastic frame and bundled together with baling wire.}
- \label{fig:fe_IMG_1969}
+ \caption{A stack of Fe, Cu, and Ti foils mounted on aluminum frames (Fe-01 visible on top), for the 55\,MeV Fe(p,x) target stack. All foils are mounted over the aperture of a 1.5875 mm-thick aluminum frame.}
+ \label{fig:fe_IMG_0305}
 \end{figure}
 
 
@@ -324,9 +545,9 @@ The foil bundles are removed using the baling wire loop \enquote{handles}, and  
 %                                l   b      r    top
 %  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
- \includegraphics[width=0.75\columnwidth]{./figures/image2993.png}
+ \includegraphics[width=0.75\columnwidth]{./figures/SAM_252_Cu14.JPG}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{The IPF hot cell, used for lowering and retrieving the target stack (circled in black) and polyethylene beam profile monitors from the IPF beamline. Robotic manipulators are used for handling of all components in the hot cell, including mounting them onto a motorized track for insertion into the beamline. This track and mount are seen circled in red.}
+ \caption{The ORTEC GMX Series (model \#GMX-50220-S)  High-Purity Germanium detector used for gamma spectroscopy of the activated foils, as described in \autoref{sec:spectroscopy_fe}. The detector, counting foil Cu-14 in this figure, has a \enquote{ladder} permitting counting at various fixed distances (in 1\,cm inetrvals) from the front face of the detector. With the lead shielding lid closed (for reduced background), the ladder permits counting up to 18\,cm, and up to 75\,cm with the lid open.   }
  \label{fig:fe_IMG_1984}
 \end{figure}
 
@@ -337,21 +558,23 @@ The foil bundles are removed using the baling wire loop \enquote{handles}, and  
 
 
 
-A rendering of the IPF Nb(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:ipf_vised}.
+A rendering of the 55\,MeV Fe(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:fe_vised_55}.
 % This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
-This model is the same described in \autoref{sec:proton_transport} for simulation of proton transport.
-The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:ipf_mcnp_deck}.
-In this figure, the 100\,MeV proton beam enters from the left of the figure, where it is incident (in the positive $x$ direction) upon the Inconel beam entrance window (yellow).
-The other stack elements, described in  \autoref{tab:stack_table} are illustrated here, as well.
-The green cell is the cooling water channel for the target box, the air filling the target box is shown in light blue, and the 6061 aluminum beam degraders are shown in dark blue.  
-The thin black lines seen in between degraders are the Nb, Cu, and Al activation points at each energy position, sealed in Kapton tape. 
+This model is the same described in \autoref{sec:proton_transport_fe} for simulation of proton transport.
+The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:88_mcnp_deck}.
+In this figure, the 55\,MeV proton beam enters from the left of the figure, where it is incident (in the positive $x$ direction) upon the \textred{Inconel beam entrance window (yellow).}
+The other stack elements, described in  \autoref{tab:fe_stack_table} are illustrated here, as well.
+\textred{The green cell is the cooling water channel for the target box, the air filling the target box is shown in light blue, and the 6061 aluminum beam degraders are shown in dark blue.  
+The thin black lines seen in between degraders are the Nb, Cu, and Al activation points at each energy position, sealed in Kapton tape. }
 The detail of each foil sealed in the Kapton is not visible here, simply due to the size scale of the stack assembly.
+Similarly, a rendering of the 25\,MeV Fe(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:fe_vised_25}.
+% This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
+% This model is the same described in \autoref{sec:proton_transport_fe} for simulation of proton transport.
+The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:88_mcnp_deck_lowE}.
 
 
 
 
-
-picture of mcnp stack model
 
 
 \begin{figure}
@@ -360,7 +583,7 @@ picture of mcnp stack model
  \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
- \caption{Blah blah blah
+ \caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 55\,MeV Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon the \textred{Inconel beam entrance window (yellow).} The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 %  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
 }
  \label{fig:fe_vised_55}
@@ -373,7 +596,7 @@ picture of mcnp stack model
  \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/mcnp_vised2.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
-\caption{Blah blah blah
+\caption{\textred{Update this figure!!!} Simplified top-down MCNP6 model of the 25\,MeV  Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon \textred{the Inconel beam entrance window (yellow)}. The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 %  MCNP6 model of the HFNG target chamber, with reference scale. The co-loaded foils can be seen in the target chamber center.  The ovals indicate the location of water cooling channels.
 }
  \label{fig:fe_vised_25}
@@ -401,7 +624,7 @@ picture of mcnp stack model
 %         \refstepcounter{subfigure} 
 %         \label{fig:92mNb}
    \hspace{-10pt}}%
-    \caption{Final variance minimized incident proton energy distributions for the (a) Al and (b) Cu foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, proton energy distributions become visibly broadened due to straggling, and drop in magnitude due to scattering losses.}
+    \caption{\textred{Update this figure!!!} Final variance minimized incident proton energy distributions for the (a) Cu and (b) Ti foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, proton energy distributions become visibly broadened due to straggling, and drop in magnitude due to scattering losses.}
 %      \phantomcaption{}
      \label{fig:fe_ptallies_appendix}
 \end{figure*}
@@ -409,9 +632,9 @@ picture of mcnp stack model
 
 
 Using this MCNP6 model, the proton energy distribution is tallied in all volumes of the stack assembly.
-As seen in \autoref{fig:Nb_ptallies} of \autoref{sec:proton_transport}, the corresponding incident proton  energy distributions $\frac{d\phi}{dE}$ from MCNP6 simulation (using the variance minimized degrader density) are shown for the six irradiated Cu and Al  foils in \autoref{fig:ipf_ptallies_appendix}. 
+As seen in \autoref{fig:Fe_ptallies} of \autoref{sec:proton_transport_fe}, the corresponding incident proton  energy distributions $\frac{d\phi}{dE}$ from MCNP6 simulation (using the variance minimized degrader density) are shown for the six irradiated Cu and Ti  foils in \autoref{fig:fe_ptallies_appendix}. 
 In addition, the MCNP6 model tracks the production and transport of secondary neutrons produced through (p,xn) reactions on the target stack components.
-The the proton energy distribution is tallied in all Al, Cu, and Nb foils, and is seen in \autoref{fig:ipf_ntallies}. 
+The the proton energy distribution is tallied in all Ti, Cu, and Fe foils, and is seen in \autoref{fig:fe_ntallies}. 
 The neutron flux is consistently 3--4 orders of magnitude smaller than the corresponding proton flux, and is seen to be visibly  downscattered when moving down the stack.
 
 \begin{figure*}
@@ -441,7 +664,7 @@ The neutron flux is consistently 3--4 orders of magnitude smaller than the corre
 %         \refstepcounter{subfigure}
 %          \label{fig:93mMo}
    }%
-    \caption{Final variance minimized incident neutron energy distributions for the (a) Al, (b) Cu, and (C) Nb foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, neutron energy distributions become visibly downscattered.}
+    \caption{\textred{Update this figure!!!} Final variance minimized incident neutron energy distributions for the (a) Cu, (b) Ti, and (C) Fe foils, as simulated in MCNP6. The distribution tallies in each foil are all normalized to be per source proton, which was $10^8$ in all simulations. As the beam is degraded, neutron energy distributions become visibly downscattered.}
 %      \phantomcaption{}
      \label{fig:fe_ntallies}
 \end{figure*}
@@ -473,16 +696,16 @@ The neutron flux is consistently 3--4 orders of magnitude smaller than the corre
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.5\columnwidth]{./figures/FWHM_plot.pdf}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{FWHM for the proton energy distributions of Cu and Al foils seen in \autoref{fig:ipf_ptallies_appendix}, as a function of the flux-weighted average proton energy. }
+ \caption{\textred{Update this figure!!!} FWHM for the proton energy distributions of Cu and Ti foils seen in \autoref{fig:fe_ptallies_appendix}, as a function of the flux-weighted average proton energy. }
  \label{fig:fe_FWHM_plot}
 \end{figure}
 
 
 
 Additionally, using this proton transport model, it is possible to plot the FWHM of the proton energy distribution in each of the Cu and Al monitor foils, as a function of its  flux-weighted average proton energy.
-This is seen in \autoref{fig:ipf_FWHM_plot}.
+This is seen in \autoref{fig:fe_FWHM_plot}.
 As seen in the recent work of Graves \etal, this FWHM distribution can be fit via linear regression \cite{Graves2016}.
-The results of this fit (with $R^2=0.9986$) would suggest that the broadening of proton energy distribution in the target stack is linearly proportional to energy degradation, which is overwhelmingly from the aluminum degraders between energy positions.
+The results of this fit \textred{(with $R^2=0.9986$)} would suggest that the broadening of proton energy distribution in the target stack is linearly proportional to energy degradation, which is overwhelmingly from the aluminum degraders between energy positions.
 % , displaying a clear linear relationship  .
 This serves to build confidence, through consistency with the  results from this similar measurement.
 In the event that the FWHM of a stack element could not be directly calculated using the MCNP model output, this linear model could be used to estimate the element's FWHM through interpolation. 
@@ -581,8 +804,8 @@ In the event that the FWHM of a stack element could not be directly calculated u
 
 In the published journal article, cross sections for  \ce{^{51}Cr},  \ce{^{52g}Mn}, \ce{^{52m}Mn}, \ce{^{54}Mn}, \ce{^{55}Co}, \ce{^{56}Ni}, \ce{^{57}Ni}, \ce{^{57}Co},  \ce{^{58g}Co}, \ce{^{58m}Co}, \ce{^{59}Fe}, \ce{^{60}Co}, \ce{^{61}Cu}, and \ce{^{64}Cu} were extracted for (p,x) reactions  on \ce{^{nat}Cu} foils in the 40--90 MeV region, as recorded in \autoref{tab:cu_rp_table}.
 For  (p,x) reactions on \ce{^{nat}Nb} foils, the (p,x) cross sections for \ce{^{82m}Rb}, \ce{^{83}Sr}, \ce{^{85g}Y}, \ce{^{85m}Y}, \ce{^{86}Zr}, \ce{^{86}Y}, \ce{^{87}Zr}, \ce{^{87g}Y}, \ce{^{87m}Y}, \ce{^{88}Zr}, \ce{^{88}Y}, \ce{^{89g}Nb}, \ce{^{89m}Nb}, \ce{^{89}Zr}, \ce{^{90}Mo}, \ce{^{90}Nb}, \ce{^{91m}Nb}, \ce{^{92m}Nb}, and \ce{^{93m}Mo} were extracted, as recorded in \autoref{tab:nb_rp_table}.
-As an alternative to a simple list of the various observed reaction products, these may be visualized in \autoref{fig:ipf_nb_product_table} and \autoref{fig:ipf_cu_product_table}, in the style of excerpts from the Chart of  Nuclides.
-These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,x) and \ce{^{nat}Cu}(p,x), along with all observed reaction products, to illustrate the mass range probed in this measurement. 
+As an alternative to a simple list of the various observed reaction products, these may be visualized in \autoref{fig:fe_nb_product_table}, \autoref{fig:fe_cu_product_table}, and \autoref{fig:fe_ti_product_table}, in the style of excerpts from the Chart of  Nuclides.
+These figures display the target and compound nuclei  for both  \ce{^{nat}Fe}(p,x), \ce{^{nat}Cu}(p,x), and \ce{^{nat}Ti}(p,x), along with all observed reaction products, to illustrate the mass range probed in this measurement. 
 
 
 
@@ -593,7 +816,7 @@ These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_nb_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Reaction products observed in the \ce{^{nat}Nb}(p,x) measurement. \textred{84Sr is stable - update plot!}}
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Fe}(p,x) measurement.}
  \label{fig:fe_nb_product_table}
 \end{figure}
 
@@ -605,8 +828,20 @@ These figures display the target and compound nuclei  for both  \ce{^{nat}Nb}(p,
 %  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
  \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
  % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
- \caption{Reaction products observed in the \ce{^{nat}Cu}(p,x) measurement.}
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Cu}(p,x) measurement.}
  \label{fig:fe_cu_product_table}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+%                                l   b      r    top
+%  \includegraphics[clip=true,trim=5pt 1000pt 10pt 900pt,width=0.75\columnwidth,angle=90]{./figures/IMG_8840.JPG}
+%  \includegraphics[width=0.75\columnwidth,angle=270]{./figures/IMG_8840.JPG}
+ \includegraphics[width=0.75\columnwidth]{./figures/ipf_cu_product_table.png}
+ % IMG_8840.JPG: 4032x3024 pixel, 72dpi, 142.24x106.68 cm, bb=0 0 4032 3024
+ \caption{\textred{Update this figure!!!} Reaction products observed in the \ce{^{nat}Ti}(p,x) measurement.}
+ \label{fig:fe_ti_product_table}
 \end{figure}
 
 
