@@ -1,0 +1,20 @@
+% (This file is included by thesis.tex; you do not latex it by itself.)
+
+\begin{abstract}
+
+% The text of the abstract goes here.  If you need to use a \section
+% command you will need to use \section*, \subsection*, etc. so that
+% you don't get any numbering.  You probably won't be using any of
+% these commands in the abstract anyway.
+
+The future of nuclear medicine would appear to be the paradigm of personalized medicine --- targeted radionuclide therapy to spare healthy tissue, and theranostic medicine, which pairs an imaging isotope with a therapeutic isotope to provide simultaneous, real-time dose delivery and verification, leading to drastic reductions in prescribed patient dose.
+Candidate isotopes to meet these needs have been identified based on their chemical and radioactive decay properties. 
+As part this dissertation, I have lead a series of  targeted, high-priority measurements of thin-target cross section, as part of a larger campaign to address deficiencies in cross-cutting nuclear data needs. 
+These studies will serve to facilitate the production of pre-clinical quantities of radioactivity for emerging and novel medical radionuclides. 
+
+This dissertation details a series of three  experiments, focusing on production pathways for the radionuclides \ce{^{90}Mo}, \ce{^{51}Mn}, \ce{^{52m}Mn}, \ce{^{52g}Mn}, \ce{^{64}Cu}, and \ce{^{47}Sc}.
+Each of these experiments has been designed as part of efforts to measure production cross sections for emerging medical radionuclides and develop new methods for the monitoring of charged-particle beams.
+
+
+
+\end{abstract}
