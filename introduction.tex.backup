@@ -26,7 +26,7 @@
 % These chemically complementary medical radionuclides are further desired for their ability to be generated in theranostic pairs, or even triplets, for next-generation combined therapeutic and imaging treatment applications. 
 % The lack of widespread access to clinically relevant quantities of these radionuclides has typically the greatest impediment to advancing their widespread use in pre-clinical studies. 
 % Building the capability for production of activity in such quantities will thus help to enable more development of these radionuclides for clinical application. 
-Recent studies suggest that on average, nearly one in three individuals will be diagnosed with cancer during their lifetime. 
+\Capinsert[4]{\textbf{R}}{ecent} studies suggest that on average, nearly one in three individuals will be diagnosed with cancer during their lifetime. 
 Current treatment options, including surgery, conventional cytotoxins, chemotherapy, and external beam radiation therapy, face several obstacles in effectively treating these diseases. 
 Long-term survival is especially challenging for aggressive and invasive strains, as well as metastatic and recurrent cancers. 
 In these cases, the cure may be worse than the disease itself, as the aggressive treatment approaches used to combat the spread of disease often cause significant side effects through widespread damage to organs and healthy tissues. 
@@ -79,7 +79,7 @@ These favorable decay properties, along with the cellular lethality of  alpha pa
 Many emerging alpha emitter candidates are also prized for their ability to be easily coupled to monoclonal antibodies  as a targeting vector for selective delivery of the radionuclide.
 
 
-Most Auger emitters are commonly radionuclides which undergo electron capture decay, leading to the emission of a cascade of low-energy (10\,eV--10\,keV) Auger electrons and Coster–Kronig electrons. 
+Most Auger emitters are commonly radionuclides which undergo electron capture decay, leading to the emission of a cascade of low-energy (10\,eV--10\,keV) Auger electrons and Coster-Kronig electrons. 
 Such electrons possess an LET of 5--25\,keV/$\mmicro$m, which corresponds to a range of 2--500\,nm. 
 In addition, due to the electron vacancy cascade mechanism behind their emission, most Auger emitters release between 5--20 electrons in the span of a few femtoseconds following the decay of a single radionuclide, leading to a massive accumulated dose in a volume comparable to the nucleus of a single cell. 
 The magnitude of this energy transfer makes Auger emitters suitable for directly inducing double-strand breaks in the DNA of a targeted cancerous cell, from which it is nearly impossible for the cell to repair itself in a way which permits it to survive and divide.  
@@ -103,49 +103,49 @@ This same development effort can be employed for facilitate  non-invasive imagin
 For these applications, positron emission tomography (PET) imaging is the unquestioned standard, with established quantitative capability for assay in scales as low as  nanomolar concentrations of diagnostic radionuclides. 
 The biodistribution signals of these  labeled compounds may be coupled to conventional three-dimensional tomography (CT, MRI), to produce time-dependent uptake studies in anatomical models.
 Such studies are noninvasive and minimally perturb living subjects, making these combined imaging modalities one of the most useful tools for pharmacokinetics studies in developing new radiopharmaceuticals.
+In helping to develop novel PET isotopes, a current trend is the pursuit of radionuclides with a low Q-value for  $\beta^+$/$\epsilon$ decay.
+Since the finite range of an emitted positron before it annihilates is one of the fundamental limits of spatial resolution in PET imaging, radionuclides with a low $Q_\beta$ will produce short-range positrons  \cite{bushberg2011essential}.
+However, one of the most useful considerations for developing novel PET radionuclides is the option for a wide range of lifetimes, to target a range of biological processes.
+Longer-lived PET isotopes are useful as a  radiotracer for slow biological processes, such as neurological systems, immune studies, and \emph{in vivo} tracking of  monoclonal antibodies.
+When considering theranostic applications, these PET isotopes are well-suited for pairing with an Auger-therapeutic agent, as they often rely on slower mechanisms for cellular uptake, including integration into targeted DNA.
+Conversely, short-lived PET isotopes are preferred for rapid biological processes such as metabolic studies, or for pairing with a complementary short-lived therapeutic radionuclide.
+In considering such theranostic applications, it is preferable to combine together a therapeutic and diagnostic radionuclde from the same chemical group, exploiting their nearly-identical chemical properties to deliver with the same biological uptake a mixture of labeled targeting vectors for simultaneous, real-time dose delivery and verification. 
 
 
 
 
 
 
-softer betas = lower finite range, better resolution  \cite{bushberg2011essential}
-
-
-
-In contrast, 76Br (t1/2 = 16.2 hr) has limited therapeutic potential, but instead emits a number of positrons and high-intensity discrete gamma rays in its electron capture decay. This decay radiation makes it useful as a diagnostic isotope, in particular as a radiotracer for slow biological processes, including as a tracer for mAbs. However, due to its similar chemical properties to the radiohalogens 211At and 77Br, 76Br may be used as a PET / SPECT diagnostic surrogate for these therapeutic radionuclides. This is particularly valuable for 77Br, which can be used to form a theranostic pair with 76Br, exploiting their nearly-identical chemical properties to deliver a mixture of 76Br- and 77Br-labeled targeting vectors for simultaneous, real-time dose delivery and verification. However, as a chemical analogue for both radiohalogens, 76Br may be used to facilitate biodistribution and uptake studies of both 211At and 77Br, to help with preclinical planning of dose prescriptions. 
+% In contrast, 76Br (t1/2 = 16.2 hr) has limited therapeutic potential, but instead emits a number of positrons and high-intensity discrete gamma rays in its electron capture decay. This decay radiation makes it useful as a diagnostic isotope, in particular as a radiotracer for slow biological processes, including as a tracer for mAbs. However, due to its similar chemical properties to the radiohalogens 211At and 77Br, 76Br may be used as a PET / SPECT diagnostic surrogate for these therapeutic radionuclides. This is particularly valuable for 77Br, which can be used to form a theranostic pair with 76Br, exploiting their nearly-identical chemical properties to deliver a mixture of 76Br- and 77Br-labeled targeting vectors for simultaneous, real-time dose delivery and verification. However, as a chemical analogue for both radiohalogens, 76Br may be used to facilitate biodistribution and uptake studies of both 211At and 77Br, to help with preclinical planning of dose prescriptions. 
 
 
 
 
 
 
+A general  workflow exists in developing capabilities for routine charged-particle production of an emerging medical radionuclide, though the details of each will vary due to the specific challenges involved with each particular radionuclide. 
+Any optimal design of a production target for these radionuclides requires well-established knowledge of each of the production cross sections over the energy range being considered. 
+In general, the first step of production development begins with a series of low-activity thin-target nuclear activation experiments, utilizing a cyclotron or linac to measure the production cross section (in mb) of each radionuclide, using a high-purity germanium (HPGe) detector to quantify the activities produced in each activation experiment. 
+% The development of the methodology and analytical process for measurements of this nature is one of my areas of expertise, forming the basis of my PhD research and publication history 2. 
+These cross sections will be used in designing the production targets used to produce the larger quantities of each radionuclide for the later purification and labeling work. 
+The data from these measurements will be used to design  production targets for each radionuclide, determining the beam energy range which maximizes yield of each radionuclide, while minimizing contamination from other unwanted co-produced isotopes of the product radionuclides. 
+These contaminant isotopes serve to lower the specific activity of the final labeled radionuclides, as they cannot be feasibly chemically separated, and serve to deliver unnecessary extra dose to the patients. 
+Thus, minimizing their production is the most efficient method of maximizing the use of optimum production targets.
 
-% 
-% 
-% 
-
-
-In addition, this work seeks to outline many of the small systematic issues which can be unwittingly introduced into such measurements even with careful experimental design, and the methods developed to deal with them.
-Nearly all of the issues presented in this work stem from the use of Kapton tape to encapsulate activation foils and prevent dispersible contamination.
-While the issues have been identified and accounted for in the analysis described here, they serve as a cautionary note to future stacked-target cross section measurements.
-Finally, this measurement provides some commentary on the importance and selection of monitor reactions, and how \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} fits this perfectly in the intermediate-energy region.
-The success of \ce{^{90}Mo} as a monitor reaction product is mainly due to it avoiding the co-production and contamination issues that several of the current monitor standards (namely, Al, Ti, and Ni) are plagued with.
-
-
-
-
-mention toolkit of options
-
-
-
-give description of pathway to pre-clnical work 
+Utilizing this data, production targets will be designed and tuned to match the beam energy for maximum high-purity radionuclide production. 
+These will be activated using the accelerated ion beams, to measure the thick-target integral yields (in mCi/$\mmicro$Ah) for each target, in the process of producing the mCi-scale activities of each radionuclide needed for the purification and labelling work tasks. 
+Ultimately, this quantity (along with the radioisotopic purity of the product) is the desired figure-of-merit in the commercial sector for production.
+Following the production run, the desired radionuclide products will be recovered from their  targets and purified, generally  using a combination of radiochemical and dry distillation methodologies. 
+% These techniques have been explored at OCL for similar activities in the past, but this would be adapted to the specific challenges of these particular radionuclides. 
+This work (along with the thick-target yields) is then disseminated, as the combination of target designs and recovery workflow would provide the foundation for exploitation of these results through commercial production target design. 
+Finally,  the purified products are  coupled to appropriate targeting vectors, forming a nicely \enquote{packaged} batch of each labeled radionuclide, ready to be used in pre-clinical studies for bio-uptake investigations. 
 
 
-The four work packages for this project will result in the delivery of capabilities for routine production for three labelled medical radionuclides: 211At, 77Br, and 76Br. This project will start with the basic nuclear physics thin-target measurements for each production reaction, which will be used in designing production targets for large-scale activity production. Following production using these targets, radiochemical workups will purify the desired 211At, 77Br, and 76Br reaction products, and then couple the purified radionuclides to appropriate targeting vectors. Thus, the project will cover a scope leading from basic physics measurements, all the way up to delivering routine quantities of labelled radionuclides, ready to be used in early pre-clinical studies. The synthesis of the chemistry, nuclear physics, and novel target design skills necessary to complete this bench-to-preclinical production is a requirement for developing and bringing a new medical radionuclide to market. This is often an obstacle, as many active research groups focus on a particular stage of this “pipeline,” but without targeted collaboration or integrated campaigns for complete production development, many novel radionuclides remain stuck in this development pipeline.
 
-Due to the breadth of chemistry, physics, and biomedical science which this spans, it is clear that this project is inherently interdisciplinary. As such, the focus will be on collaboratively building routine production capabilities at Oslo for these three new radionuclides. Individually, many of the challenges involved in this work have been addressed for the cases of other radioisotopes in the previous work of both myself and the Oslo group. While novel contributions will be made to advance the state of the technical art in the different work packages along the way, this project will primarily focus on the synthesis of these different disciplines and past experience to create new production capabilities.  Assuming this project is successful, not only will I have gained the necessary skills for the next step in my professional career advancement, but Oslo will be capable of routinely producing the medical radionuclides 211At, 77Br, and 76Br in purified, labelled form. These will be able to be utilized for preclinical studies in other groups at the University of Oslo, as well as other academic and research laboratories throughout Norway and Europe, to help aid in their development for clinical use in treating a variety of cancers plaguing humankind. 
+The work detailed in this dissertation focuses on the first step of production development, the basic science measurement of excitation functions for the production of a number of emerging medical radionuclides.  
 
+
+The development of the methodology and analytical process for measurements of this nature is one of my areas of expertise, forming the basis of my PhD research and publication history 2. 
 
 
 
@@ -166,20 +166,20 @@ This is primarily done to describe the challenges observed in performing this wo
 % To this end, 
 
 
-\autoref{sec:chapter_ipf} is dedicated to describing the experimental measurement of the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} reaction as an intermediate-energy proton monitor.
+Chapter \ref{sec:chapter_ipf} is dedicated to describing the experimental measurement of the \ce{^{93}Nb}(p,4n)\ce{^{90}Mo} reaction as an intermediate-energy proton monitor.
 This was carried out through a stacked-target irradiation of thin niobium, copper, and aluminum foils at LANSCE-IPF.
 An accurate integrated beam current is one of the most important factors in performing high-fidelity cross section measurements.
 At the time of this work, the nondestructive beam current monitors in the LANSCE-IPF beamline had a  resolution of 100\,nAh.
 For a low-current irradiation such as this work, where a nominal fluence of 200\,nAh is desired, additional fluence sensitivity is thus needed to accurately normalize quantified end-of-bombardment activities into cross sections.
 Developing  new activation foil-based methods for charged particle beam monitors allows users to also gain valuable information about beam energy and systematics, as well as enable measurement of beam fluence at multiple points within a target stack.
 The work described in this chapter is the first step in an effort to characterize this reaction as a robust and reliable, contamination-free monitor reaction channel for 40--200\,MeV.
-This work also presents an explanation for evidence of \ce{^{nat}Si}(p,x)\ce{^{22,24}Na contamination, arising from silicone adhesive in the Kapton tape used to encapsulate monitor foils. 
+This work also presents an explanation for evidence of \ce{^{nat}Si}(p,x)\ce{^{22,24}Na} contamination, arising from silicone adhesive in the Kapton tape used to encapsulate monitor foils. 
 This contamination is frequently seen in stacked-target activation experiments and has the potential to systematically dampen the magnitude of reported cross sections by as much as 50\%. 
 This is discussed as a cautionary note to future stacked-target cross section measurements.
 
 
 
-\autoref{sec:chapter_fe} is dedicated to describing the experimental measurement of the excitation function for production of the  \ce{^{nat}Fe}(p,x)\ce{^{51,52m,52g}Mn} novel PET isotopes.
+Chapter \ref{sec:chapter_fe} is dedicated to describing the experimental measurement of the excitation function for production of the  \ce{^{nat}Fe}(p,x)\ce{^{51,52m,52g}Mn} novel PET isotopes.
 This was carried out through a stacked-target irradiation of thin iron, copper, and titanium foils at the Lawrence Berkeley National Laboratory's 88-Inch Cyclotron.
 These radionuclides show great promise for a variety of medical applications, but the medical community has been unable to pursue pre-clinical and clinical development due to the lack of well-established production pathways.
 This chapter focuses on describing the experimental methods and analysis used for this measurement, and illustrates the importance of accurate knowledge of target composition.
@@ -189,7 +189,7 @@ While plays a limited role at high beam energies, it becomes increasingly import
 
 
 
-\autoref{sec:chapter_hfng} is dedicated to describing the experimental measurement of the \ce{^{64}Zn}, \ce{^{47}Ti}(n,p) cross sections.
+Chapter \ref{sec:chapter_hfng} is dedicated to describing the experimental measurement of the \ce{^{64}Zn}, \ce{^{47}Ti}(n,p) cross sections.
 This was carried out at the recently-commissioned UC Berkeley High Flux Neutron Generator, a compact DD neutron generator designed originally for geochronology measurements.
 This work was motivated by the production of  \ce{^{64}Cu} and \ce{^{47}Sc}, a pair of  emerging medical radionuclides prized in particular for their capacity for theranostic applications. 
 Notably, the work presented in this chapter was the first scientific measurement to be carried out in this new research facility, and served to characterize the generator for future neutron production experiments.
