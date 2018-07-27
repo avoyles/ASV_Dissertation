@@ -250,7 +250,7 @@
 % For some environments we switch back to single-spacing, also
 % provides \dsp in case you need double-spacing where single-spacing
 % is otherwise used.
-
+\renewcommand{\baselinestretch}{1.1} 
 \newcommand\ssp{\SingleSpacing}
 \newcommand\dsp{\setSpacing{1.37}}
 
