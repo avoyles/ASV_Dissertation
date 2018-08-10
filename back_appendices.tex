@@ -83,25 +83,26 @@ breaklines=true
 
 \section{88-Inch Cyclotron 55 MeV Fe(p,x) Target Stack Input} \label{sec:88_mcnp_deck}
 
-\textred{Update references and specifics here!}
+% \textred{Update references and specifics here!}
 
 
 The following MCNP code simulates the irradiation of the 55 MeV\,\ce{^{nat}Fe}(p,x) target stack, used for the experiments described in  \autoref{sec:chapter_fe}.
 The model consists of a 3D simulation of the full target stack, as outlined in \autoref{sec:target_design_fe} and  \autoref{tab:fe_stack_table}.
-This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25\,\mmicro m \ce{^{nat}Nb} target foils, and the nominal 25\,\mmicro m \ce{^{nat}Al}  and 50\,\mmicro m \ce{^{nat}Cu} monitor foils.
-The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 43.2\,\mmicro m of a silicone adhesive (nominal 4.79\,mg/cm$^2$) on 25.4\,\mmicro m of a polyimide backing (nominal 3.61\,mg/cm$^2$).
-The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
-The target stack is not pumped down to the beamline vacuum, but exists at the local atmospheric pressure of approximately 77.6\,kPa.
+This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25\,\mmicro m \ce{^{nat}Fe} target foils, and the nominal 25\,\mmicro m \ce{^{nat}Ti}  and 25\,\mmicro m \ce{^{nat}Cu} monitor foils.
+The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 38.1\,\mmicro m of an acrylic adhesive (nominal 4.49\,mg/cm$^2$) on 25.4\,\mmicro m of a polyimide backing (nominal 3.61\,mg/cm$^2$).
+% The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
+The target stack is  pumped down to the beamline vacuum  of approximately 40\,$\mmicro$torr.
 A rendering of the target stack model  is seen in \autoref{fig:fe_vised_55}.
 
 
 
-Incident upon the front of the stack is  beam of protons in an elliptical beam spot, with a major axis 1.696\,cm in diameter, and a minor axis 0.784\,cm in diameter.  
-This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \textred{\autoref{fig:gafchromic_nb}}.
-Based on historical beam characterization at LANSCE-IPF, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 1.696\,cm, to avoid under-representing beam filling of target foils.
-The beam intensity has a linear radial $\sfrac{1}{r}$ intensity, and an average energy of 100\,MeV  with a Gaussian energy distribution width of 0.1\,MeV.
+
+Incident upon the front of the stack is  beam of protons in an approximately circular beam spot, with a major axis 0.431\,cm in diameter, and a minor axis 0.396\,cm in diameter.  
+This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \autoref{fig:gafchromic_fe}.
+Based on historical beam characterization, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 0.431\,cm, to avoid under-representing beam filling of target foils.
+The beam intensity has a uniform spatial intensity, and an average energy of 55\,MeV  with a Gaussian energy distribution width of 1\,MeV.
 This beam definition is transported through the target stack, accounting for both attenuation, secondary reactions, and energy loss throughout the stack.
-The proton energy-differential flux is calculated in each stack element --- as described in \textred{\autoref{sec:proton_transport_fe}},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
+The proton energy-differential flux is calculated in each stack element --- as described in \autoref{sec:proton_transport_fe},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
 In addition, this transport model allows one to estimate the fluence loss down the stack, due to (p,x) reactions and scattering of the beam.
 
 
@@ -116,27 +117,30 @@ breaklines=true
 
 \section{88-Inch Cyclotron 25 MeV Fe(p,x) Target Stack Input} \label{sec:88_mcnp_deck_lowE}
 
-\textred{Update references and specifics here!}
 
 
 The following MCNP code simulates the irradiation of the 25 MeV\,\ce{^{nat}Fe}(p,x) target stack, used for the experiments described in  \autoref{sec:chapter_fe}.
 The model consists of a 3D simulation of the full target stack, as outlined in \autoref{sec:target_design_fe} and  \autoref{tab:fe_stack_table}.
-This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25\,\mmicro m \ce{^{nat}Nb} target foils, and the nominal 25\,\mmicro m \ce{^{nat}Al}  and 50\,\mmicro m \ce{^{nat}Cu} monitor foils.
-The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 43.2\,\mmicro m of a silicone adhesive (nominal 4.79\,mg/cm$^2$) on 25.4\,\mmicro m of a polyimide backing (nominal 3.61\,mg/cm$^2$).
-The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
-The target stack is not pumped down to the beamline vacuum, but exists at the local atmospheric pressure of approximately 77.6\,kPa.
+This includes the stainless steel profile monitors, aluminum energy degraders, nominal 25\,\mmicro m \ce{^{nat}Fe} target foils, and the nominal 25\,\mmicro m \ce{^{nat}Ti}  and 25\,\mmicro m \ce{^{nat}Cu} monitor foils.
+The target and monitor foils each include two pieces of of Kapton polyimide film tape, with each piece of  tape consisting of 38.1\,\mmicro m of an acrylic adhesive (nominal 4.49\,mg/cm$^2$) on 25.4\,\mmicro m of a polyimide backing (nominal 3.61\,mg/cm$^2$).
+% The target stack also includes the target box's Inconel beam entrance window and aluminum chassis, its cooling water-filled cavity, and all other structural components used for mounting the target box in the beamline.
+The target stack is  pumped down to the beamline vacuum  of approximately 40\,$\mmicro$torr.
 A rendering of the target stack model  is seen in \autoref{fig:fe_vised_25}.
 
 
 
 
-Incident upon the front of the stack is  beam of protons in an elliptical beam spot, with a major axis 1.696\,cm in diameter, and a minor axis 0.784\,cm in diameter.  
-This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \textred{\autoref{fig:gafchromic_nb}}.
-Based on historical beam characterization at LANSCE-IPF, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 1.696\,cm, to avoid under-representing beam filling of target foils.
-The beam intensity has a linear radial $\sfrac{1}{r}$ intensity, and an average energy of 100\,MeV  with a Gaussian energy distribution width of 0.1\,MeV.
+Incident upon the front of the stack is  beam of protons in an approximately circular beam spot, with a major axis 0.600\,cm in diameter, and a minor axis 0.512\,cm in diameter.  
+This upstream spot size is determined from the radiochromic film developed by the  stainless steel beam profile monitor at the front of the stack, seen in \autoref{fig:gafchromic_fe_25}.
+Based on historical beam characterization, the beam is modeled in MCNP as a circular pencil beam (no divergence/convergence) with a diameter of 0.600\,cm, to avoid under-representing beam filling of target foils.
+The beam intensity has a uniform spatial intensity, and an average energy of 25\,MeV  with a Gaussian energy distribution width of 0.5\,MeV.
 This beam definition is transported through the target stack, accounting for both attenuation, secondary reactions, and energy loss throughout the stack.
-The proton energy-differential flux is calculated in each stack element --- as described in \textred{\autoref{sec:proton_transport_fe}},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
+The proton energy-differential flux is calculated in each stack element --- as described in \autoref{sec:proton_transport_fe},  these distributions are used to assign energy bins  to each foil, as well as for the variance minimization minimization techniques employed in this work.
 In addition, this transport model allows one to estimate the fluence loss down the stack, due to (p,x) reactions and scattering of the beam.
+
+
+
+
 
 
 \lstinputlisting[basicstyle=\tiny,linewidth=\columnwidth,

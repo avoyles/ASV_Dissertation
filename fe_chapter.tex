@@ -602,21 +602,14 @@ The ORTEC GMX Series  High-Purity Germanium  detector used for all gamma ray spe
 
 
 
-% 
-% Update description of both of the simulation pictures here
-% 
-%
 A rendering of the 55\,MeV Fe(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:fe_vised_55}.
 % This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
 This model is the same described in \autoref{sec:proton_transport_fe} for simulation of proton transport.
 The full input file for this MCNP model is included here for reference, in Appendix \ref{sec:88_mcnp_deck}.
 In this figure, the 55\,MeV proton beam enters from the left of the figure, where it is incident (in the positive $x$ direction) upon the SS-3 profile monitor.
 The other stack elements, described in  \autoref{tab:fe_stack_table} are illustrated here, as well.
-% 
-% Add this back in after updating
-% 
-% \textred{The green cell is the cooling water channel for the target box, the air filling the target box is shown in light blue, and the 6061 aluminum beam degraders are shown in dark blue.  
-% The thin black lines seen in between degraders are the Nb, Cu, and Al activation points at each energy position, sealed in Kapton tape. }
+The air filling the target box is shown in teal, and the 6061 aluminum beam degraders are shown in dark blue.  
+The thin black lines seen in between degraders are the Fe, Cu, and Ti activation points at each energy position, sealed in Kapton tape. 
 The detail of each foil sealed in the Kapton is not visible here, simply due to the size scale of the stack assembly.
 Similarly, a rendering of the 25\,MeV Fe(p,x) target stack, as modeled in MCNP6, is seen in \autoref{fig:fe_vised_25}.
 % This figure presents a small subset of the full MCNP6 model of the HFNG,  to better illustrate the geometry of the target chamber.
@@ -626,15 +619,10 @@ The full input file for this MCNP model is included here for reference, in Appen
 
 
 
-% 
-% Update the descriptions of tehse figures
-% 
-%
-
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.PNG}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/88_55MeV_stack_nolabels_axes.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
  \caption{Simplified top-down MCNP6 model of the 55\,MeV Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon the SS-3 profile monitor. The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
@@ -647,7 +635,7 @@ The full input file for this MCNP model is included here for reference, in Appen
 \begin{figure}
  \centering
  %trim option's parameter order: left bottom right top
- \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/ipf_stack_nolabels_axes.PNG}
+ \includegraphics[trim = 0mm 0mm 2mm 0mm, clip,width=0.75\columnwidth]{./figures/88_25MeV_stack_nolabels_axes.png}
  % mcnp_vised2.PNG.png: 688x443 pixel, 96dpi, 18.21x11.72 cm, bb=0 0 516 332
 %   \caption{Simplified top-down MCNP6 model of the IPF Nb(p,x) target stack. The 100\,MeV proton beam enters from the left of the figure, where it is incident upon the Inconel beam entrance window (yellow). The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
 \caption{Simplified top-down MCNP6 model of the 25\,MeV  Fe(p,x) target stack. The  proton beam enters from the left of the figure, where it is incident upon the SS-5 profile monitor. The beam is transported down the length of the stack, towards the rear of the stack on the right side of the figure.
